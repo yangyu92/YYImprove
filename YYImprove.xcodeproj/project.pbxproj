@@ -10,13 +10,15 @@
 		65B32B614BE2F733674029C4 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D151AD2E70C33AE8F17AC4 /* Pods_YYImproveUITests.framework */; };
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
-		F22A098820935FC200757897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A098720935FC200757897 /* AppDelegate.swift */; };
-		F22A098A20935FC200757897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A098920935FC200757897 /* ViewController.swift */; };
-		F22A098D20935FC200757897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A098B20935FC200757897 /* Main.storyboard */; };
-		F22A098F20935FD000757897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22A098E20935FD000757897 /* Assets.xcassets */; };
-		F22A099220935FD000757897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A099020935FD000757897 /* LaunchScreen.storyboard */; };
 		F22A099D20935FD000757897 /* YYImproveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A099C20935FD000757897 /* YYImproveTests.swift */; };
 		F22A09A820935FD100757897 /* YYImproveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A09A720935FD100757897 /* YYImproveUITests.swift */; };
+		F22A0A1C2094982900757897 /* YYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A1B2094982900757897 /* YYConstants.swift */; };
+		F22A0A212094998B00757897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A202094998B00757897 /* AppDelegate.swift */; };
+		F22A0A232094999400757897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A222094999300757897 /* ViewController.swift */; };
+		F22A0A27209499A800757897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A26209499A800757897 /* Assets.xcassets */; };
+		F22A0A34209499FB00757897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A30209499FB00757897 /* LaunchScreen.storyboard */; };
+		F22A0A35209499FB00757897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A32209499FB00757897 /* Main.storyboard */; };
+		F22A0A3720949FC500757897 /* YYApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3620949FC500757897 /* YYApiURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,18 +48,21 @@
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F22A098420935FC200757897 /* YYImprove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYImprove.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F22A098720935FC200757897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F22A098920935FC200757897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F22A098C20935FC200757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F22A098E20935FD000757897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F22A099120935FD000757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F22A099320935FD000757897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22A099820935FD000757897 /* YYImproveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYImproveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099C20935FD000757897 /* YYImproveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYImproveTests.swift; sourceTree = "<group>"; };
 		F22A099E20935FD100757897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22A09A320935FD100757897 /* YYImproveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYImproveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A09A720935FD100757897 /* YYImproveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYImproveUITests.swift; sourceTree = "<group>"; };
 		F22A09A920935FD100757897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22A0A1B2094982900757897 /* YYConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYConstants.swift; sourceTree = "<group>"; };
+		F22A0A202094998B00757897 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F22A0A222094999300757897 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F22A0A24209499A000757897 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22A0A26209499A800757897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YYImprove-Bridging-Header.h"; sourceTree = "<group>"; };
+		F22A0A31209499FB00757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F22A0A33209499FB00757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F22A0A3620949FC500757897 /* YYApiURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYApiURL.swift; sourceTree = "<group>"; };
 		FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,12 +142,12 @@
 		F22A098620935FC200757897 /* YYImprove */ = {
 			isa = PBXGroup;
 			children = (
-				F22A098720935FC200757897 /* AppDelegate.swift */,
-				F22A098920935FC200757897 /* ViewController.swift */,
-				F22A098B20935FC200757897 /* Main.storyboard */,
-				F22A098E20935FD000757897 /* Assets.xcassets */,
-				F22A099020935FD000757897 /* LaunchScreen.storyboard */,
-				F22A099320935FD000757897 /* Info.plist */,
+				F22A09BA2094961300757897 /* AppDelegate */,
+				F22A09B92094960000757897 /* Main */,
+				F22A09BB2094962400757897 /* Expand */,
+				F22A09B8209495F000757897 /* Resource */,
+				F22A09BD2094964100757897 /* Vender */,
+				F22A09BC2094963400757897 /* SDKFile */,
 			);
 			path = YYImprove;
 			sourceTree = "<group>";
@@ -163,6 +168,161 @@
 				F22A09A920935FD100757897 /* Info.plist */,
 			);
 			path = YYImproveUITests;
+			sourceTree = "<group>";
+		};
+		F22A09B8209495F000757897 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A1D2094985800757897 /* Global */,
+				F22A0A1E2094986200757897 /* Image */,
+				F22A0A1F2094986500757897 /* Plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F22A09B92094960000757897 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A152094976300757897 /* Public */,
+				F22A0A142094975800757897 /* Login */,
+				F22A0A132094974D00757897 /* Base */,
+				F22A0A222094999300757897 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F22A09BA2094961300757897 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A202094998B00757897 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F22A09BB2094962400757897 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A10209496A600757897 /* Const */,
+				F22A0A11209496CD00757897 /* Macros */,
+				F22A0A0F2094969500757897 /* Category */,
+				F22A0A12209496D700757897 /* Network */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		F22A09BC2094963400757897 /* SDKFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SDKFile;
+			sourceTree = "<group>";
+		};
+		F22A09BD2094964100757897 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		F22A0A0F2094969500757897 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A16209497B900757897 /* Foundation */,
+				F22A0A17209497C300757897 /* UIKit */,
+				F22A0A18209497C800757897 /* Other */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F22A0A10209496A600757897 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A3620949FC500757897 /* YYApiURL.swift */,
+				F22A0A1B2094982900757897 /* YYConstants.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		F22A0A11209496CD00757897 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		F22A0A12209496D700757897 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F22A0A132094974D00757897 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F22A0A142094975800757897 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F22A0A152094976300757897 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		F22A0A16209497B900757897 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F22A0A17209497C300757897 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F22A0A18209497C800757897 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F22A0A1D2094985800757897 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A32209499FB00757897 /* Main.storyboard */,
+				F22A0A30209499FB00757897 /* LaunchScreen.storyboard */,
+				F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		F22A0A1E2094986200757897 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A26209499A800757897 /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F22A0A1F2094986500757897 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A24209499A000757897 /* Info.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +397,7 @@
 				TargetAttributes = {
 					F22A098320935FC200757897 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					F22A099720935FD000757897 = {
 						CreatedOnToolsVersion = 9.3;
@@ -273,9 +434,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22A099220935FD000757897 /* LaunchScreen.storyboard in Resources */,
-				F22A098F20935FD000757897 /* Assets.xcassets in Resources */,
-				F22A098D20935FC200757897 /* Main.storyboard in Resources */,
+				F22A0A34209499FB00757897 /* LaunchScreen.storyboard in Resources */,
+				F22A0A27209499A800757897 /* Assets.xcassets in Resources */,
+				F22A0A35209499FB00757897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,8 +560,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22A098A20935FC200757897 /* ViewController.swift in Sources */,
-				F22A098820935FC200757897 /* AppDelegate.swift in Sources */,
+				F22A0A3720949FC500757897 /* YYApiURL.swift in Sources */,
+				F22A0A232094999400757897 /* ViewController.swift in Sources */,
+				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
+				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,20 +599,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F22A098B20935FC200757897 /* Main.storyboard */ = {
+		F22A0A30209499FB00757897 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F22A098C20935FC200757897 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F22A099020935FD000757897 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F22A099120935FD000757897 /* Base */,
+				F22A0A31209499FB00757897 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F22A0A32209499FB00757897 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F22A0A33209499FB00757897 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -574,15 +737,20 @@
 			baseConfigurationReference = 21157AEF3AB73FBC6ADECCF4 /* Pods-YYImprove.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
-				INFOPLIST_FILE = YYImprove/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YYImprove/Resource/Global/YYImprove-Bridging-Header.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/YYImprove/Resource/Plist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImprove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YYImprove/Resource/Global/YYImprove-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -593,15 +761,19 @@
 			baseConfigurationReference = CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
-				INFOPLIST_FILE = YYImprove/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YYImprove/Resource/Global/YYImprove-Bridging-Header.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/YYImprove/Resource/Plist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImprove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YYImprove/Resource/Global/YYImprove-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
