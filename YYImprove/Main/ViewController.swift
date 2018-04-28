@@ -10,6 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - 布局初始化相关
+    // MARK: - 类生命周期相关
+    // MARK: - Base类方法重写
+    // MARK: - 系统的Delegate
+    // MARK: - 所有的Actions
+    // MARK: - 通知回调，具体可以细分
+    // MARK: - 自定义View、初始化等
+    // MARK: - 自定义类的Delegate
+    // MARK: - 类的Public方法
+    // MARK: - 类私有方法
+    // MARK: - api调用方法
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +31,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
