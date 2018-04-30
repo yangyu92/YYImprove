@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.2)
   - ESTabBarController-swift (2.6.2)
+  - Hue (3.0.1)
   - Kingfisher (4.7.0)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -21,10 +22,12 @@ PODS:
     - XCGLogger/Core (= 6.0.2)
   - XCGLogger/Core (6.0.2):
     - ObjcExceptionBridging
+  - YPNavigationBarTransition (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
   - ESTabBarController-swift (= 2.6.2)
+  - Hue (= 3.0.1)
   - Kingfisher (= 4.7.0)
   - Moya (= 11.0.2)
   - RxSwift (= 4.1.2)
@@ -34,11 +37,13 @@ DEPENDENCIES:
   - Swinject (= 2.4.0)
   - URLNavigator (= 2.0.4)
   - XCGLogger (= 6.0.2)
+  - YPNavigationBarTransition (= 2.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - ESTabBarController-swift
+    - Hue
     - Kingfisher
     - Moya
     - ObjcExceptionBridging
@@ -50,10 +55,12 @@ SPEC REPOS:
     - Swinject
     - URLNavigator
     - XCGLogger
+    - YPNavigationBarTransition
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
+  Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
@@ -65,7 +72,8 @@ SPEC CHECKSUMS:
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
   URLNavigator: af5582fbbb3586c958be16835d799bfdb23a4793
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
+  YPNavigationBarTransition: 465490b5b5011ba80c5d5c90de49f409e438693c
 
-PODFILE CHECKSUM: 5c712f7429f36e2dfeb25a509fc708f9b7a70c12
+PODFILE CHECKSUM: bdcac97892fe52d28abed03daa5c1fd4506478c2
 
 COCOAPODS: 1.5.0

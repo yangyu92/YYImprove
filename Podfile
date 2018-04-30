@@ -30,12 +30,14 @@ target 'YYImprove' do
     # 导航
     pod 'URLNavigator', '2.0.4'
     pod 'ESTabBarController-swift', '2.6.2'
+    pod 'YPNavigationBarTransition', '2.0.1'
 
     # 加载内容页
     pod 'SkeletonView', '1.1.1'
 
     # 皮肤
     # pod 'SwiftTheme', '0.4.1'
+    pod 'Hue', '3.0.1'
 
     # 依赖注入框架
     pod 'Swinject', '2.4.0'

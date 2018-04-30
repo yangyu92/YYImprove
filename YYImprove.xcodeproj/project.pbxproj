@@ -17,8 +17,11 @@
 		F22A0A232094999400757897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A222094999300757897 /* ViewController.swift */; };
 		F22A0A27209499A800757897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A26209499A800757897 /* Assets.xcassets */; };
 		F22A0A34209499FB00757897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A30209499FB00757897 /* LaunchScreen.storyboard */; };
-		F22A0A35209499FB00757897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A32209499FB00757897 /* Main.storyboard */; };
 		F22A0A3720949FC500757897 /* YYApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3620949FC500757897 /* YYApiURL.swift */; };
+		F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3B209585A500757897 /* YYRootTabBarController.swift */; };
+		F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3D2095873200757897 /* AnimationTabBarView.swift */; };
+		F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */; };
+		F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A482097361800757897 /* UIImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +64,11 @@
 		F22A0A26209499A800757897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YYImprove-Bridging-Header.h"; sourceTree = "<group>"; };
 		F22A0A31209499FB00757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F22A0A33209499FB00757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F22A0A3620949FC500757897 /* YYApiURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYApiURL.swift; sourceTree = "<group>"; };
+		F22A0A3B209585A500757897 /* YYRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRootTabBarController.swift; sourceTree = "<group>"; };
+		F22A0A3D2095873200757897 /* AnimationTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTabBarView.swift; sourceTree = "<group>"; };
+		F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseNavigationController.swift; sourceTree = "<group>"; };
+		F22A0A482097361800757897 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,6 +272,9 @@
 		F22A0A152094976300757897 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				F22A0A3B209585A500757897 /* YYRootTabBarController.swift */,
+				F22A0A3D2095873200757897 /* AnimationTabBarView.swift */,
+				F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 		F22A0A17209497C300757897 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F22A0A482097361800757897 /* UIImageExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -294,7 +304,6 @@
 		F22A0A1D2094985800757897 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				F22A0A32209499FB00757897 /* Main.storyboard */,
 				F22A0A30209499FB00757897 /* LaunchScreen.storyboard */,
 				F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */,
 			);
@@ -429,7 +438,6 @@
 			files = (
 				F22A0A34209499FB00757897 /* LaunchScreen.storyboard in Resources */,
 				F22A0A27209499A800757897 /* Assets.xcassets in Resources */,
-				F22A0A35209499FB00757897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +485,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
@@ -488,11 +497,13 @@
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/YPNavigationBarTransition/YPNavigationBarTransition.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
@@ -504,6 +515,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLNavigator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPNavigationBarTransition.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -568,8 +580,12 @@
 			files = (
 				F22A0A3720949FC500757897 /* YYApiURL.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
+				F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */,
+				F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */,
+				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
+				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,14 +627,6 @@
 				F22A0A31209499FB00757897 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F22A0A32209499FB00757897 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F22A0A33209499FB00757897 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
