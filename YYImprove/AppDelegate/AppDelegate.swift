@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let container = Container()
+    private var appCoordinator: AppCoordinator!
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+        setupLogging()
+        
+        return true
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -20,15 +30,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         loadRootViewController()
         
+        window = UIWindow()
+        appCoordinator = AppCoordinator(window: window!, container: container)
+        appCoordinator.start()
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
     func loadRootViewController() {
-        window = UIWindow(frame: kScreenBounds)
-        self.window!.makeKeyAndVisible()
         
-        let tabBarController = YYRootTabBarController()
-        self.window?.rootViewController = tabBarController
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

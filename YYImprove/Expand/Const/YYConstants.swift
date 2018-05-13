@@ -12,5 +12,9 @@ public let kSCREENWIDTH: CGFloat = UIScreen.main.bounds.size.width
 public let kSCREENHEIGHT: CGFloat = UIScreen.main.bounds.size.height
 public let kScreenBounds: CGRect = UIScreen.main.bounds
 
+// 绘制一像素的线
+public let kSINGLELINEWIDTH: CGFloat = (1 / UIScreen.main.scale)
+public let kSINGLELINEADJUSTOFFSET: CGFloat = ((1 / UIScreen.main.scale) / 2)
+
 public let IGNavigationTitleColor = UIColor(hex: "#FFFFFF")
 public let IGNavigationBackgroundColor = UIColor(hex: "78C9CC")

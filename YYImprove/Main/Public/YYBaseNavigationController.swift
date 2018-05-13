@@ -16,7 +16,7 @@ class YYBaseNavigationController: UINavigationController {
         appearance.setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: 0.0, vertical: -60), for: .default)
         
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18.0)]
-        self.navigationBar.barTintColor=IGNavigationBackgroundColor
+        self.navigationBar.barTintColor = IGNavigationBackgroundColor
         
         //文字颜色
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: IGNavigationTitleColor]

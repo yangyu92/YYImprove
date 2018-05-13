@@ -22,6 +22,10 @@
 		F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3D2095873200757897 /* AnimationTabBarView.swift */; };
 		F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */; };
 		F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A482097361800757897 /* UIImageExtensions.swift */; };
+		F26AB46B20A5C8BC00AEF1E5 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AB46A20A5C8BC00AEF1E5 /* AppDelegate+Setup.swift */; };
+		F26AB48320A5DE8F00AEF1E5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AB48220A5DE8F00AEF1E5 /* AppCoordinator.swift */; };
+		F26AB48920A5DF3F00AEF1E5 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AB48720A5DF3E00AEF1E5 /* NavigationCoordinator.swift */; };
+		F26AB48A20A5DF3F00AEF1E5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AB48820A5DF3F00AEF1E5 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		F22A0A3D2095873200757897 /* AnimationTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTabBarView.swift; sourceTree = "<group>"; };
 		F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseNavigationController.swift; sourceTree = "<group>"; };
 		F22A0A482097361800757897 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		F26AB46A20A5C8BC00AEF1E5 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		F26AB48220A5DE8F00AEF1E5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F26AB48720A5DF3E00AEF1E5 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		F26AB48820A5DF3F00AEF1E5 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -200,7 +208,9 @@
 		F22A09BA2094961300757897 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				F26AB48420A5DF2400AEF1E5 /* Coordinators */,
 				F22A0A202094998B00757897 /* AppDelegate.swift */,
+				F26AB46A20A5C8BC00AEF1E5 /* AppDelegate+Setup.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -324,6 +334,16 @@
 				F22A0A24209499A000757897 /* Info.plist */,
 			);
 			path = Plist;
+			sourceTree = "<group>";
+		};
+		F26AB48420A5DF2400AEF1E5 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F26AB48820A5DF3F00AEF1E5 /* Coordinator.swift */,
+				F26AB48720A5DF3E00AEF1E5 /* NavigationCoordinator.swift */,
+				F26AB48220A5DE8F00AEF1E5 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,9 +600,13 @@
 			files = (
 				F22A0A3720949FC500757897 /* YYApiURL.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
+				F26AB48320A5DE8F00AEF1E5 /* AppCoordinator.swift in Sources */,
 				F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */,
+				F26AB48920A5DF3F00AEF1E5 /* NavigationCoordinator.swift in Sources */,
 				F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
+				F26AB46B20A5C8BC00AEF1E5 /* AppDelegate+Setup.swift in Sources */,
+				F26AB48A20A5DF3F00AEF1E5 /* Coordinator.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,

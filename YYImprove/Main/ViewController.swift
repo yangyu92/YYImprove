@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         NSLog("ViewDidLoad")
+        
         self.view.backgroundColor = UIColor(hex: "#ffffff")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
