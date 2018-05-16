@@ -7,17 +7,51 @@
 //
 
 import UIKit
+import XCGLogger
+
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+let log: XCGLogger = {
+    let log = XCGLogger.default
+    log.remove(destinationWithIdentifier: XCGLogger.Constants.baseConsoleDestinationIdentifier)
+//    log.add(destination: AppleSystemLogDestination(identifier: XCGLogger.Constants.systemLogDestinationIdentifier))
+    
+    // Create a file log destination
+    let logPath: URL = appDelegate.cacheDirectory.appendingPathComponent("XCGLogger_Log.txt")
+    let autoRotatingFileDestination = AutoRotatingFileDestination(writeToFile: logPath,
+                                                                  identifier: "advancedLogger.fileDestination",
+                                                                  shouldAppend: true,
+                                                                  attributes: [.protectionKey: FileProtectionType.completeUntilFirstUserAuthentication],
+                                                                  maxFileSize: 1024 * 5,
+                                                                  maxTimeInterval: 60)
+    autoRotatingFileDestination.targetMaxLogFiles = 10
+    autoRotatingFileDestination.logQueue = XCGLogger.logQueue
+    log.add(destination: autoRotatingFileDestination)
+    
+    log.logAppDetails()
+    return log
+}()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let documentsDirectory: URL = {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return urls[urls.endIndex - 1]
+    }()
+    
+    let cacheDirectory: URL = {
+        let urls = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
+        return urls[urls.endIndex - 1]
+    }()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         Thread.sleep(forTimeInterval: 1.0)
-
+        
         loadRootViewController()
         
         return true

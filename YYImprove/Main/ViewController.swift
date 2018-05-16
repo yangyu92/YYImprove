@@ -23,7 +23,12 @@ class ViewController: UIViewController {
     // MARK: - api调用方法
     
     override func viewDidLoad() {
-        NSLog("ViewDidLoad")
+        log.verbose("Verbose")
+        log.debug("Debug")
+        log.info("Info")
+        log.warning("Warning")
+        log.error("Error")
+        log.severe("Severe")
         self.view.backgroundColor = UIColor(hex: "#ffffff")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
