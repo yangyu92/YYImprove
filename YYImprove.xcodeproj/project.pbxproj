@@ -10,6 +10,7 @@
 		65B32B614BE2F733674029C4 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D151AD2E70C33AE8F17AC4 /* Pods_YYImproveUITests.framework */; };
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
+		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
 		F22A099D20935FD000757897 /* YYImproveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A099C20935FD000757897 /* YYImproveTests.swift */; };
 		F22A09A820935FD100757897 /* YYImproveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A09A720935FD100757897 /* YYImproveUITests.swift */; };
 		F22A0A1C2094982900757897 /* YYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A1B2094982900757897 /* YYConstants.swift */; };
@@ -50,6 +51,7 @@
 		C5D6EFCF8C9BE393A4E4CBDB /* Pods-YYImproveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
 		F22A098420935FC200757897 /* YYImprove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYImprove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099820935FD000757897 /* YYImproveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYImproveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099C20935FD000757897 /* YYImproveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYImproveTests.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				F22A0A202094998B00757897 /* AppDelegate.swift */,
+				F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
+				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
