@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class ViewController: UIViewController {
 
@@ -31,6 +32,16 @@ class ViewController: UIViewController {
         log.severe("Severe")
         self.view.backgroundColor = UIColor(hex: "#ffffff")
         super.viewDidLoad()
+        
+        // UserDefault使用
+        Defaults[.username] = "你好"
+        let username = Defaults[.username]
+        log.info(String(format: "%@", username!))
+        
+        Defaults[.launchCount] += 1
+        let launchCount = Defaults[.launchCount]
+        log.info(launchCount)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

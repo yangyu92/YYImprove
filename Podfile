@@ -28,9 +28,8 @@ target 'YYImprove' do
     # pod 'DZNEmptyDataSet', '1.8.1’
 
     # 导航
-    pod 'URLNavigator', '2.0.4'
+    # pod 'URLNavigator', '2.0.4'
     pod 'ESTabBarController-swift', '2.6.2'
-    pod 'YPNavigationBarTransition', '2.0.1'
 
     # 加载内容页
     pod 'SkeletonView', '1.1.1'
@@ -44,6 +43,9 @@ target 'YYImprove' do
 
     # 信息提示
     pod 'SwiftMessages', '4.1.2'
+    
+    # 数据持久化
+    pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
     
     # 日志
     pod 'XCGLogger', '6.0.2'

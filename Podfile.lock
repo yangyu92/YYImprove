@@ -16,13 +16,12 @@ PODS:
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
   - SwiftMessages (4.1.2)
+  - SwiftyUserDefaults (4.0.0-alpha.1)
   - Swinject (2.4.0)
-  - URLNavigator (2.0.4)
   - XCGLogger (6.0.2):
     - XCGLogger/Core (= 6.0.2)
   - XCGLogger/Core (6.0.2):
     - ObjcExceptionBridging
-  - YPNavigationBarTransition (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
@@ -34,10 +33,9 @@ DEPENDENCIES:
   - SkeletonView (= 1.1.1)
   - SnapKit (= 4.0.0)
   - SwiftMessages (= 4.1.2)
+  - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - Swinject (= 2.4.0)
-  - URLNavigator (= 2.0.4)
   - XCGLogger (= 6.0.2)
-  - YPNavigationBarTransition (= 2.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -52,10 +50,9 @@ SPEC REPOS:
     - SkeletonView
     - SnapKit
     - SwiftMessages
+    - SwiftyUserDefaults
     - Swinject
-    - URLNavigator
     - XCGLogger
-    - YPNavigationBarTransition
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -69,11 +66,10 @@ SPEC CHECKSUMS:
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
+  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
-  URLNavigator: af5582fbbb3586c958be16835d799bfdb23a4793
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
-  YPNavigationBarTransition: 465490b5b5011ba80c5d5c90de49f409e438693c
 
-PODFILE CHECKSUM: bdcac97892fe52d28abed03daa5c1fd4506478c2
+PODFILE CHECKSUM: b6925bc16c71c07067b01b05ba518fd03a6d9273
 
 COCOAPODS: 1.5.0
