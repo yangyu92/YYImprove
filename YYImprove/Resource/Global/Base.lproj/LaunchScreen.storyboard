@@ -18,15 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©YY improve coding level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-Nb-VzJ">
-                                <rect key="frame" x="94" y="621" width="187" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="EN1-de-GN7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-KI-Sj5">
                                 <rect key="frame" x="142" y="288" width="90" height="90"/>
                                 <constraints>
@@ -34,12 +25,20 @@
                                     <constraint firstAttribute="width" constant="90" id="c8E-ht-4m4"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©YY improve coding level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-Nb-VzJ">
+                                <rect key="frame" x="109" y="617" width="156.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EN1-de-GN7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.47058823529411764" green="0.78823529411764703" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zrg-KI-Sj5" firstAttribute="centerX" secondItem="7ht-Nb-VzJ" secondAttribute="centerX" id="Pkt-Ew-h5a"/>
-                            <constraint firstItem="7ht-Nb-VzJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="hCc-os-6gc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ht-Nb-VzJ" secondAttribute="bottom" constant="25" id="hOs-Nm-naY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ht-Nb-VzJ" secondAttribute="bottom" constant="20" id="hOs-Nm-naY"/>
                             <constraint firstItem="Zrg-KI-Sj5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sTb-PT-VSw"/>
                             <constraint firstItem="Zrg-KI-Sj5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vPX-rx-Nvk"/>
                         </constraints>

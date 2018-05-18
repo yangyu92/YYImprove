@@ -12,13 +12,15 @@
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
 		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
 		F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */; };
+		F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F228793120AEAFB100A6B9E0 /* Localizable.strings */; };
+		F228793E20AEBC8E00A6B9E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F228794020AEBC8E00A6B9E0 /* InfoPlist.strings */; };
+		F228795320AECB5200A6B9E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F228795120AECB5200A6B9E0 /* LaunchScreen.storyboard */; };
 		F22A099D20935FD000757897 /* YYImproveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A099C20935FD000757897 /* YYImproveTests.swift */; };
 		F22A09A820935FD100757897 /* YYImproveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A09A720935FD100757897 /* YYImproveUITests.swift */; };
 		F22A0A1C2094982900757897 /* YYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A1B2094982900757897 /* YYConstants.swift */; };
 		F22A0A212094998B00757897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A202094998B00757897 /* AppDelegate.swift */; };
 		F22A0A232094999400757897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A222094999300757897 /* ViewController.swift */; };
 		F22A0A27209499A800757897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A26209499A800757897 /* Assets.xcassets */; };
-		F22A0A34209499FB00757897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22A0A30209499FB00757897 /* LaunchScreen.storyboard */; };
 		F22A0A3720949FC500757897 /* YYApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3620949FC500757897 /* YYApiURL.swift */; };
 		F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3B209585A500757897 /* YYRootTabBarController.swift */; };
 		F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3D2095873200757897 /* AnimationTabBarView.swift */; };
@@ -54,6 +56,11 @@
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
 		F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+YYConst.swift"; sourceTree = "<group>"; };
+		F228793B20AEBB4500A6B9E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F228793F20AEBC8E00A6B9E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F228794120AEBC9200A6B9E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F228794E20AEC8AB00A6B9E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F228795220AECB5200A6B9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F22A098420935FC200757897 /* YYImprove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYImprove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099820935FD000757897 /* YYImproveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYImproveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099C20935FD000757897 /* YYImproveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYImproveTests.swift; sourceTree = "<group>"; };
@@ -67,7 +74,6 @@
 		F22A0A24209499A000757897 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22A0A26209499A800757897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YYImprove-Bridging-Header.h"; sourceTree = "<group>"; };
-		F22A0A31209499FB00757897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F22A0A3620949FC500757897 /* YYApiURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYApiURL.swift; sourceTree = "<group>"; };
 		F22A0A3B209585A500757897 /* YYRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRootTabBarController.swift; sourceTree = "<group>"; };
 		F22A0A3D2095873200757897 /* AnimationTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTabBarView.swift; sourceTree = "<group>"; };
@@ -310,8 +316,10 @@
 		F22A0A1D2094985800757897 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				F22A0A30209499FB00757897 /* LaunchScreen.storyboard */,
+				F228795120AECB5200A6B9E0 /* LaunchScreen.storyboard */,
 				F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */,
+				F228794020AEBC8E00A6B9E0 /* InfoPlist.strings */,
+				F228793120AEAFB100A6B9E0 /* Localizable.strings */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -422,8 +430,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
+				en,
 			);
 			mainGroup = F22A097B20935FC200757897;
 			productRefGroup = F22A098520935FC200757897 /* Products */;
@@ -442,7 +451,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22A0A34209499FB00757897 /* LaunchScreen.storyboard in Resources */,
+				F228795320AECB5200A6B9E0 /* LaunchScreen.storyboard in Resources */,
+				F228793E20AEBC8E00A6B9E0 /* InfoPlist.strings in Resources */,
+				F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */,
 				F22A0A27209499A800757897 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,10 +638,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F22A0A30209499FB00757897 /* LaunchScreen.storyboard */ = {
+		F228793120AEAFB100A6B9E0 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F22A0A31209499FB00757897 /* Base */,
+				F228793B20AEBB4500A6B9E0 /* en */,
+				F228794E20AEC8AB00A6B9E0 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F228794020AEBC8E00A6B9E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F228793F20AEBC8E00A6B9E0 /* en */,
+				F228794120AEBC9200A6B9E0 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F228795120AECB5200A6B9E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F228795220AECB5200A6B9E0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -642,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -702,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
