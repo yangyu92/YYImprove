@@ -15,6 +15,8 @@
 		F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F228793120AEAFB100A6B9E0 /* Localizable.strings */; };
 		F228793E20AEBC8E00A6B9E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F228794020AEBC8E00A6B9E0 /* InfoPlist.strings */; };
 		F228795320AECB5200A6B9E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F228795120AECB5200A6B9E0 /* LaunchScreen.storyboard */; };
+		F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228795C20AFF2B900A6B9E0 /* AssetsImages.swift */; };
+		F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228795D20AFF2B900A6B9E0 /* L10n-Constants.swift */; };
 		F22A099D20935FD000757897 /* YYImproveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A099C20935FD000757897 /* YYImproveTests.swift */; };
 		F22A09A820935FD100757897 /* YYImproveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A09A720935FD100757897 /* YYImproveUITests.swift */; };
 		F22A0A1C2094982900757897 /* YYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A1B2094982900757897 /* YYConstants.swift */; };
@@ -61,6 +63,8 @@
 		F228794120AEBC9200A6B9E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F228794E20AEC8AB00A6B9E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F228795220AECB5200A6B9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F228795C20AFF2B900A6B9E0 /* AssetsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImages.swift; sourceTree = "<group>"; };
+		F228795D20AFF2B900A6B9E0 /* L10n-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n-Constants.swift"; sourceTree = "<group>"; };
 		F22A098420935FC200757897 /* YYImprove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYImprove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099820935FD000757897 /* YYImproveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYImproveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22A099C20935FD000757897 /* YYImproveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYImproveTests.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F228795B20AFF2B900A6B9E0 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				F228795C20AFF2B900A6B9E0 /* AssetsImages.swift */,
+				F228795D20AFF2B900A6B9E0 /* L10n-Constants.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		F22A097B20935FC200757897 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 		F22A09B8209495F000757897 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F228795B20AFF2B900A6B9E0 /* Generated */,
 				F22A0A1D2094985800757897 /* Global */,
 				F22A0A1E2094986200757897 /* Image */,
 				F22A0A1F2094986500757897 /* Plist */,
@@ -352,7 +366,8 @@
 				F22A098120935FC200757897 /* Frameworks */,
 				F22A098220935FC200757897 /* Resources */,
 				5A6E2DC69E635BC62EFBFD1C /* [CP] Embed Pods Frameworks */,
-				F22A0A382094A25C00757897 /* ShellScript */,
+				F22A0A382094A25C00757897 /* swiftlint */,
+				F228795920AFD59000A6B9E0 /* Swiftgen */,
 			);
 			buildRules = (
 			);
@@ -573,13 +588,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F22A0A382094A25C00757897 /* ShellScript */ = {
+		F228795920AFD59000A6B9E0 /* Swiftgen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Swiftgen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/en.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+		};
+		F22A0A382094A25C00757897 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +627,9 @@
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
 				F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */,
 				F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */,
+				F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
+				F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
