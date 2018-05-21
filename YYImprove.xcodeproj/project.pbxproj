@@ -600,7 +600,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/en.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/zh-Hans.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
 		};
 		F22A0A382094A25C00757897 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
