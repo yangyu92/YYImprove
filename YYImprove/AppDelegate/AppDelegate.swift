@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -29,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func loadRootViewController() {
+        
+        Defaults[.launchCount] += 1
+        let launchCount = Defaults[.launchCount]
+        log.info("启动次数:\(launchCount)")
+        
         window = UIWindow(frame: kScreenBounds)
         self.window!.makeKeyAndVisible()
         

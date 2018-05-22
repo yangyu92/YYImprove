@@ -8,11 +8,12 @@ target 'YYImprove' do
 
     # 基于Alamofire的网络抽象层
     pod 'Moya', '11.0.2’
-    # pod 'Moya/RxSwift','11.0.2'
+    pod 'Moya/RxSwift', '11.0.2'
     pod 'RxSwift', '4.1.2'
     pod 'Alamofire', '4.7.2’
 
     # JSON 解析
+    pod 'ObjectMapper', '3.1.0'
     # pod 'SwiftyJSON', '4.1.0’
     
     # 页面布局

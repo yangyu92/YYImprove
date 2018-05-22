@@ -36,17 +36,28 @@ class ViewController: UIViewController {
         // UserDefault使用
         Defaults[.username] = "你好"
         let username = Defaults[.username]
-        log.info(String(format: "%@", username!))
+        log.info(username)
         
-        Defaults[.launchCount] += 1
-        let launchCount = Defaults[.launchCount]
-        log.info(launchCount)
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        apiManagerProvider.request(ApiManager.rigister(username: "13397470679", password: "123456", email: "yangyu@qq.com")) { (result) in
+            var message = "Couldn't access API"
+            if case let .success(response) = result {
+                let jsonString = try? response.mapString()
+                message = jsonString ?? message
+            }
+            self.showAlert("Zen", message: message)
+        }
+    }
+    
+    fileprivate func showAlert(_ title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
