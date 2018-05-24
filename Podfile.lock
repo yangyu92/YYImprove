@@ -22,6 +22,7 @@ PODS:
   - SwiftMessages (4.1.2)
   - SwiftyUserDefaults (4.0.0-alpha.1)
   - Swinject (2.4.0)
+  - Then (2.3.0)
   - XCGLogger (6.0.2):
     - XCGLogger/Core (= 6.0.2)
   - XCGLogger/Core (6.0.2):
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - SwiftMessages (= 4.1.2)
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - Swinject (= 2.4.0)
+  - Then (= 2.3.0)
   - XCGLogger (= 6.0.2)
 
 SPEC REPOS:
@@ -59,6 +61,7 @@ SPEC REPOS:
     - SwiftMessages
     - SwiftyUserDefaults
     - Swinject
+    - Then
     - XCGLogger
 
 SPEC CHECKSUMS:
@@ -76,8 +79,9 @@ SPEC CHECKSUMS:
   SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+  Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 8440ebc1e52bcedc7800d979c6d0545d44cdac79
+PODFILE CHECKSUM: 7f2529921113a292717162ba60516f7b522e5d1b
 
 COCOAPODS: 1.5.0

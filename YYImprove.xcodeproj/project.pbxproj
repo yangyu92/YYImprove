@@ -11,6 +11,12 @@
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
 		F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */; };
+		F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A1420B6F717007A88E9 /* LoginViewController.swift */; };
+		F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */; };
+		F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A2C20B6F91B007A88E9 /* MeViewController.swift */; };
+		F2247A2F20B6F933007A88E9 /* FoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A2E20B6F933007A88E9 /* FoundViewController.swift */; };
+		F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3020B6F947007A88E9 /* ArticleViewController.swift */; };
+		F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3220B6F953007A88E9 /* HomeViewController.swift */; };
 		F226FC5620B438A600A01398 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiManager.swift */; };
 		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
 		F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */; };
@@ -60,6 +66,12 @@
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPlugin.swift; sourceTree = "<group>"; };
+		F2247A1420B6F717007A88E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
+		F2247A2C20B6F91B007A88E9 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		F2247A2E20B6F933007A88E9 /* FoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewController.swift; sourceTree = "<group>"; };
+		F2247A3020B6F947007A88E9 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		F2247A3220B6F953007A88E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F226FC5520B438A600A01398 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
 		F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+YYConst.swift"; sourceTree = "<group>"; };
@@ -143,6 +155,196 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F2247A0C20B6F5B2007A88E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2247A0D20B6F5BE007A88E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2247A0E20B6F5C6007A88E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2247A0F20B6F65F007A88E9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A1420B6F717007A88E9 /* LoginViewController.swift */,
+				F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2247A1820B6F753007A88E9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A2820B6F8CD007A88E9 /* ViewControllers */,
+				F2247A2920B6F8DD007A88E9 /* ViewModels */,
+				F2247A2A20B6F8E5007A88E9 /* Views */,
+				F2247A2B20B6F8EB007A88E9 /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F2247A1920B6F770007A88E9 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A2420B6F8A3007A88E9 /* ViewControllers */,
+				F2247A2620B6F8BB007A88E9 /* ViewModels */,
+				F2247A2520B6F8AE007A88E9 /* Views */,
+				F2247A2720B6F8C7007A88E9 /* Models */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		F2247A1A20B6F78A007A88E9 /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A2020B6F878007A88E9 /* ViewControllers */,
+				F2247A2120B6F889007A88E9 /* ViewModels */,
+				F2247A2220B6F890007A88E9 /* Views */,
+				F2247A2320B6F899007A88E9 /* Models */,
+			);
+			path = Found;
+			sourceTree = "<group>";
+		};
+		F2247A1B20B6F7A5007A88E9 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A1C20B6F82E007A88E9 /* ViewControllers */,
+				F2247A1F20B6F84E007A88E9 /* ViewModels */,
+				F2247A1E20B6F847007A88E9 /* Views */,
+				F2247A1D20B6F83E007A88E9 /* Models */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		F2247A1C20B6F82E007A88E9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A2C20B6F91B007A88E9 /* MeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2247A1D20B6F83E007A88E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2247A1E20B6F847007A88E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2247A1F20B6F84E007A88E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2247A2020B6F878007A88E9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A2E20B6F933007A88E9 /* FoundViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2247A2120B6F889007A88E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2247A2220B6F890007A88E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2247A2320B6F899007A88E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2247A2420B6F8A3007A88E9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A3020B6F947007A88E9 /* ArticleViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2247A2520B6F8AE007A88E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2247A2620B6F8BB007A88E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2247A2720B6F8C7007A88E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2247A2820B6F8CD007A88E9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2247A3220B6F953007A88E9 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2247A2920B6F8DD007A88E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2247A2A20B6F8E5007A88E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2247A2B20B6F8EB007A88E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F228795B20AFF2B900A6B9E0 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,9 +421,13 @@
 		F22A09B92094960000757897 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F22A0A132094974D00757897 /* Base */,
 				F22A0A152094976300757897 /* Public */,
 				F22A0A142094975800757897 /* Login */,
-				F22A0A132094974D00757897 /* Base */,
+				F2247A1820B6F753007A88E9 /* Home */,
+				F2247A1920B6F770007A88E9 /* Article */,
+				F2247A1A20B6F78A007A88E9 /* Found */,
+				F2247A1B20B6F7A5007A88E9 /* Me */,
 				F22A0A222094999300757897 /* ViewController.swift */,
 			);
 			path = Main;
@@ -299,6 +505,10 @@
 		F22A0A142094975800757897 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F2247A0F20B6F65F007A88E9 /* ViewControllers */,
+				F2247A0C20B6F5B2007A88E9 /* ViewModels */,
+				F2247A0D20B6F5BE007A88E9 /* Views */,
+				F2247A0E20B6F5C6007A88E9 /* Models */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -519,7 +729,7 @@
 		};
 		5A6E2DC69E635BC62EFBFD1C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -538,6 +748,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -556,6 +767,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +827,7 @@
 		};
 		F22A0A382094A25C00757897 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -634,9 +846,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */,
 				F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
 				F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */,
+				F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */,
+				F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */,
+				F2247A2F20B6F933007A88E9 /* FoundViewController.swift in Sources */,
 				F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */,
 				F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
@@ -646,7 +862,9 @@
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
 				F226FC5620B438A600A01398 /* ApiManager.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
+				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
+				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
 			);

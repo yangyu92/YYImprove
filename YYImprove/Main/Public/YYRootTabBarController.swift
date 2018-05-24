@@ -24,21 +24,21 @@ class YYRootTabBarController: ESTabBarController {
 //        self.tabBarItem.imageInsets = UIEdgeInsetsMake(-2, 0, 2, 0)
 //        self.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -10)
         
-        let controller1 = ViewController()
-        let controller2 = ViewController()
-        let controller3 = ViewController()
-        let controller4 = ViewController()
+        let controller1 = HomeViewController()
+        let controller2 = ArticleViewController()
+        let controller3 = FoundViewController()
+        let controller4 = MeViewController()
         
         controller1.tabBarItem = ESTabBarItem.init(AnimationTabBarView(),
                                                    title: L10n.tabTitleHome,
                                                    image: UIImage(asset: Asset.Navication.tabHome),
                                                    selectedImage: UIImage(asset: Asset.Navication.tabHomeSelected))
         controller2.tabBarItem = ESTabBarItem.init(AnimationTabBarView(),
-                                                   title: L10n.tabTitlePhoto,
+                                                   title: L10n.tabTitleArticle,
                                                    image: UIImage(asset: Asset.Navication.tabPhoto),
                                                    selectedImage: UIImage(asset: Asset.Navication.tabPhotoSelected))
         controller3.tabBarItem = ESTabBarItem.init(AnimationTabBarView(),
-                                                   title: L10n.tabTitleFavor,
+                                                   title: L10n.tabTitleFound,
                                                    image: UIImage(asset: Asset.Navication.tabFavor),
                                                    selectedImage: UIImage(asset: Asset.Navication.tabFavorSelected))
         controller4.tabBarItem = ESTabBarItem.init(AnimationTabBarView(),
@@ -52,8 +52,8 @@ class YYRootTabBarController: ESTabBarController {
         let navigation4 = YYBaseNavigationController.init(rootViewController: controller4)
         
         controller1.title = L10n.tabTitleHome
-        controller2.title = L10n.tabTitlePhoto
-        controller3.title = L10n.tabTitleFavor
+        controller2.title = L10n.tabTitleArticle
+        controller3.title = L10n.tabTitleFound
         controller4.title = L10n.tabTitleMe
         
         self.viewControllers = [navigation1, navigation2, navigation3, navigation4]

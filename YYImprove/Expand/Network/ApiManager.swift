@@ -21,7 +21,9 @@ private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
 
 enum ApiManager {
     
+    /// 注册
     case rigister(username:String, password:String, email:String)
+    /// 登录
     case login(phone:String, password:String)
 }
 

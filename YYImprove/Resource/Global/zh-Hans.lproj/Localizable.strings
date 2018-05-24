@@ -7,6 +7,6 @@
 */
 
 "TabTitleHome" = "首页";
-"TabTitlePhoto" = "文章";
-"TabTitleFavor" = "发现";
+"TabTitleArticle" = "文章";
+"TabTitleFound" = "发现";
 "TabTitleMe" = "我的";

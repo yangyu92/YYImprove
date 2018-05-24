@@ -6,7 +6,7 @@
   Copyright © 2018年 com.canyou. All rights reserved.
 */
 
-"TabTitleHome" = "Home";
-"TabTitlePhoto" = "Photo";
-"TabTitleFavor" = "Favor";
-"TabTitleMe" = "Me";
+"TabTitleHome" = "首页";
+"TabTitleArticle" = "文章";
+"TabTitleFound" = "发现";
+"TabTitleMe" = "我的";

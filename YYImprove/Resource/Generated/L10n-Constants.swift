@@ -7,14 +7,14 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
+  /// 文章
+  internal static let tabTitleArticle = L10n.tr("Localizable", "TabTitleArticle")
   /// 发现
-  internal static let tabTitleFavor = L10n.tr("Localizable", "TabTitleFavor")
+  internal static let tabTitleFound = L10n.tr("Localizable", "TabTitleFound")
   /// 首页
   internal static let tabTitleHome = L10n.tr("Localizable", "TabTitleHome")
   /// 我的
   internal static let tabTitleMe = L10n.tr("Localizable", "TabTitleMe")
-  /// 文章
-  internal static let tabTitlePhoto = L10n.tr("Localizable", "TabTitlePhoto")
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

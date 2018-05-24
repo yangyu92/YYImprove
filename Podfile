@@ -16,6 +16,9 @@ target 'YYImprove' do
     pod 'ObjectMapper', '3.1.0'
     # pod 'SwiftyJSON', '4.1.0’
     
+    # Then语法糖
+    pod 'Then', '2.3.0'
+    
     # 页面布局
     pod 'SnapKit', '4.0.0’
 
