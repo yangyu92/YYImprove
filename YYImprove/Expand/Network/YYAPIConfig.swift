@@ -11,7 +11,8 @@ import UIKit
 let baseApiProduction: URL = URL.init(string: "http://apicloud.mob.com")!
 let baseApiDevelopment: URL = URL.init(string: "http://apicloud.mob.com")!
 
-let headerFields: [String: String] = ["system": "iOS", "sys_ver": String(UIDevice.version())]
+let headerFields: [String: String] = ["platform": "iOS",
+                                      "sys_ver": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String,
+                                      "language": UIDevice.deviceLanguage]
 
 let mobAppKey: NSString = "25886d42994ac"
-let publicParameters: [String: Any] = ["language": UIDevice.deviceLanguage, "key": mobAppKey]

@@ -10,6 +10,7 @@
 		65B32B614BE2F733674029C4 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D151AD2E70C33AE8F17AC4 /* Pods_YYImproveUITests.framework */; };
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
+		F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */; };
 		F226FC5620B438A600A01398 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiManager.swift */; };
 		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
 		F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */; };
@@ -58,6 +59,7 @@
 		C5D6EFCF8C9BE393A4E4CBDB /* Pods-YYImproveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPlugin.swift; sourceTree = "<group>"; };
 		F226FC5520B438A600A01398 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
 		F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+YYConst.swift"; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		F22A0A12209496D700757897 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */,
 				F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */,
 				F226FC5520B438A600A01398 /* ApiManager.swift */,
 			);
@@ -644,6 +647,7 @@
 				F226FC5620B438A600A01398 /* ApiManager.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
+				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,17 +9,18 @@
 import Foundation
 import Moya
 
-let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping, plugins: [NetworkLoggerPlugin(verbose: true)])
+let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping, plugins: [NetworkLoggerPlugin(verbose: true), AuthPlugin(token: "")])
 
 private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
+    
     log.info("请求连接：\(target.baseURL)\(target.path) \n方法：\(target.method)\n参数：\(String(describing: target.headers))")
     let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
-    let baseUrl = defaultEndpoint.url.appending("?language=\(UIDevice.deviceLanguage)&key=\(mobAppKey)")
-    
+    let baseUrl = defaultEndpoint.url.appending("?key=\(mobAppKey)")
     return Endpoint(url: baseUrl, sampleResponseClosure: { .networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
 }
 
 enum ApiManager {
+    
     case rigister(username:String, password:String, email:String)
     case login(phone:String, password:String)
 }
