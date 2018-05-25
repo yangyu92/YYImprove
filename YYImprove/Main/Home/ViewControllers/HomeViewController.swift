@@ -9,9 +9,14 @@
 import UIKit
 import Then
 import SnapKit
+import RxSwift
+import RxCocoa
+import SwiftMessages
 
 class HomeViewController: UIViewController {
 
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,17 +43,42 @@ class HomeViewController: UIViewController {
             $0.text = L10n.tabTitleHome
         }
         self.view.addSubview(label)
-        
         label.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
         }
         
-        // Do any additional setup after loading the view.
+        let button = UIButton().then {
+            $0.setTitle("确认", for: UIControlState.normal)
+        }
+        self.view.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 80, height: 45))
+            make.centerX.equalTo(label.snp.centerX)
+            make.top.equalTo(label.snp.bottom).offset(15)
+        }
+        //按钮点击响应
+        button.rx.tap.subscribe({_ in
+            
+//            self.showAlert("提示", message: "点击按钮啦")
+            
+            SwiftMessages.showInfo(msg: "点击按钮")
+            
+        }).disposed(by: disposeBag)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func showAlert(_ title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     /*

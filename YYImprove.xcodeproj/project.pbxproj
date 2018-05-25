@@ -19,6 +19,7 @@
 		F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3220B6F953007A88E9 /* HomeViewController.swift */; };
 		F226FC5620B438A600A01398 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiManager.swift */; };
 		F227045A20B7F6E6003ABAD8 /* AppDelegate+Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */; };
+		F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */; };
 		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
 		F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */; };
 		F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F228793120AEAFB100A6B9E0 /* Localizable.strings */; };
@@ -75,6 +76,7 @@
 		F2247A3220B6F953007A88E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F226FC5520B438A600A01398 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Reachability.swift"; sourceTree = "<group>"; };
+		F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessageExtensions.swift; sourceTree = "<group>"; };
 		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
 		F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+YYConst.swift"; sourceTree = "<group>"; };
 		F228793B20AEBB4500A6B9E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -347,6 +349,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F227045B20B8116D003ABAD8 /* SwiftMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */,
+			);
+			path = SwiftMessage;
+			sourceTree = "<group>";
+		};
 		F228795B20AFF2B900A6B9E0 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +555,7 @@
 		F22A0A18209497C800757897 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F227045B20B8116D003ABAD8 /* SwiftMessage */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -872,6 +883,7 @@
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
+				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,

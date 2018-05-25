@@ -48,7 +48,7 @@ target 'YYImprove' do
     pod 'Swinject', '2.4.0'
 
     # 信息提示
-    pod 'SwiftMessages', '4.1.2'
+    pod 'SwiftMessages', '4.1.3'
     
     # 数据持久化
     pod 'SwiftyUserDefaults', '4.0.0-alpha.1'

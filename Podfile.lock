@@ -22,7 +22,9 @@ PODS:
   - RxSwift (4.1.2)
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
-  - SwiftMessages (4.1.2)
+  - SwiftMessages (4.1.3):
+    - SwiftMessages/App (= 4.1.3)
+  - SwiftMessages/App (4.1.3)
   - SwiftyUserDefaults (4.0.0-alpha.1)
   - Swinject (2.4.0)
   - Then (2.3.0)
@@ -44,7 +46,7 @@ DEPENDENCIES:
   - RxSwift (= 4.1.2)
   - SkeletonView (= 1.1.1)
   - SnapKit (= 4.0.0)
-  - SwiftMessages (= 4.1.2)
+  - SwiftMessages (= 4.1.3)
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - Swinject (= 2.4.0)
   - Then (= 2.3.0)
@@ -85,12 +87,12 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
+  SwiftMessages: 690caf708d608062dc2e13df7277adbb98da32b4
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 998583fb00db06442bb0a2d9b54c23bee9d9d640
+PODFILE CHECKSUM: de8b3b7571e035a761cd39bb812e539e2c7c9402
 
 COCOAPODS: 1.5.0

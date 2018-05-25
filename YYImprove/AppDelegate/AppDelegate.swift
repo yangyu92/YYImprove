@@ -10,6 +10,7 @@ import UIKit
 import SwiftyUserDefaults
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let tabBarController = YYRootTabBarController()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: kScreenBounds)
         self.window!.makeKeyAndVisible()
         
-        let tabBarController = YYRootTabBarController()
         self.window?.rootViewController = tabBarController
     }
     
