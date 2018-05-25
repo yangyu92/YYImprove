@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupXCGLogger()
         
-        // Override point for customization after application launch.
+        setupReachability()
         
         Thread.sleep(forTimeInterval: 1.0)
         

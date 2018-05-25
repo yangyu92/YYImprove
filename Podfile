@@ -10,7 +10,9 @@ target 'YYImprove' do
     pod 'Moya', '11.0.2’
     pod 'Moya/RxSwift', '11.0.2'
     pod 'RxSwift', '4.1.2'
+    pod 'RxCocoa', '4.1.2'
     pod 'Alamofire', '4.7.2’
+    pod 'ReachabilitySwift', '4.1.0'
 
     # JSON 解析
     pod 'ObjectMapper', '3.1.0'

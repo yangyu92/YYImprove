@@ -18,6 +18,7 @@
 		F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3020B6F947007A88E9 /* ArticleViewController.swift */; };
 		F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3220B6F953007A88E9 /* HomeViewController.swift */; };
 		F226FC5620B438A600A01398 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiManager.swift */; };
+		F227045A20B7F6E6003ABAD8 /* AppDelegate+Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */; };
 		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
 		F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */; };
 		F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F228793120AEAFB100A6B9E0 /* Localizable.strings */; };
@@ -73,6 +74,7 @@
 		F2247A3020B6F947007A88E9 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		F2247A3220B6F953007A88E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F226FC5520B438A600A01398 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Reachability.swift"; sourceTree = "<group>"; };
 		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
 		F228792B20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+YYConst.swift"; sourceTree = "<group>"; };
 		F228793B20AEBB4500A6B9E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 			children = (
 				F22A0A202094998B00757897 /* AppDelegate.swift */,
 				F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */,
+				F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -741,7 +744,9 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -760,7 +765,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -853,6 +860,7 @@
 				F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */,
 				F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */,
 				F2247A2F20B6F933007A88E9 /* FoundViewController.swift in Sources */,
+				F227045A20B7F6E6003ABAD8 /* AppDelegate+Reachability.swift in Sources */,
 				F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */,
 				F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
