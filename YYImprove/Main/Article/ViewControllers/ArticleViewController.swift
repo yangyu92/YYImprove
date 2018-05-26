@@ -15,6 +15,7 @@ import SwiftMessages
 class ArticleViewController: UIViewController {
 
     let disposeBag = DisposeBag()
+    let otherMessages = SwiftMessages()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class ArticleViewController: UIViewController {
         let button = UIButton().then {
             $0.setTitle("确认", for: UIControlState.normal)
             $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.tag = 1
         }
         self.view.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -47,10 +49,11 @@ class ArticleViewController: UIViewController {
             SwiftMessages.showSuccess(msg: "点击按钮")
             SwiftMessages.showError(msg: "异常提示")
         }).disposed(by: disposeBag)
-        
+
         let button1 = UIButton().then {
             $0.setTitle("确认", for: UIControlState.normal)
             $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.tag = 2
         }
         self.view.addSubview(button1)
         button1.snp.makeConstraints { (make) in
@@ -61,7 +64,7 @@ class ArticleViewController: UIViewController {
         //按钮点击响应
         button1.rx.tap.subscribe({_ in
             log.info("点击第二个按钮")
-            SwiftMessages.showWarning(msg: "点击按钮")
+            SwiftMessages.showWarning(msg: "点击按钮2")
         }).disposed(by: disposeBag)
     }
     

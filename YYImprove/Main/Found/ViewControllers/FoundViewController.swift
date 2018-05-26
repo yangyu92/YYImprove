@@ -25,10 +25,8 @@ class FoundViewController: UIViewController {
         label.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
         }
-        
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

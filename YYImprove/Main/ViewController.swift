@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyUserDefaults
+import SwiftMessages
 
 class ViewController: UIViewController {
 
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
                 let jsonString = try? response.mapString()
                 message = jsonString ?? message
             }
-            self.showAlert("Zen", message: message)
+            SwiftMessages.showInfo(msg: message)
         }
     }
     
@@ -60,4 +61,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+        
+    override func viewWillAppear(_ animated: Bool) {
+        title = "设置"
+        reachabilitySwiftMessage.hide()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        appDelegate.reachabilityShow()
+    }
+
 }

@@ -1,22 +1,21 @@
 //
 //  AppDelegate+Reachability.swift
 //  YYImprove
-//
+//  网络监测类
 //  Created by canyou on 2018/5/25.
 //  Copyright © 2018年 com.canyou. All rights reserved.
 //
 
 import Foundation
 import Reachability
+import SwiftMessages
 
-var reachability: Reachability?
+let reachability = Reachability()
+let reachabilitySwiftMessage = SwiftMessages()
 
 extension AppDelegate {
     
     func setupReachability() {
-        
-        reachability = Reachability()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do {
             try reachability?.startNotifier()
@@ -24,24 +23,39 @@ extension AppDelegate {
             log.error("启动网络监听失败")
         }
     }
-    func stopNotifier() {
+    
+    func stopReachabilityNotifier() {
         reachability?.stopNotifier()
         NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: nil)
-        reachability = nil
     }
     
-    @objc func reachabilityChanged(note: Notification) {
-        let reachability = note.object as! Reachability
-        switch reachability.connection {
-        case .wifi:
-            log.info("有wifi")
-            self.showAlert("提示", message: "有wifi")
-        case .cellular:
-            log.info("移动网络")
-            self.showAlert("提示", message: "移动网络")
+    @objc private func reachabilityChanged(note: Notification) {
+//        let reachability = note.object as! Reachability
+//        switch reachability.connection {
+//        case .wifi, .cellular:
+//            reachabilitySwiftMessage.hide()
+////            reachabilitySwiftMessage.show { _ in
+////                reachabilitySwiftMessage.hide()
+////            }
+//        case .none:
+//            reachabilitySwiftMessage.show { _ in
+//                self.showAlert("提示信息", message: "点击查看网络设置")
+//            }
+//        }
+        reachabilityShow()
+    }
+    
+    func reachabilityShow() {
+        switch reachability!.connection {
+        case .wifi, .cellular:
+            reachabilitySwiftMessage.hide()
         case .none:
-            log.info("没有网络")
-            self.showAlert("提示", message: "没有网络")
+            reachabilitySwiftMessage.show { _ in
+//                self.showAlert("提示信息", message: "点击查看网络设置")
+                let controller = ViewController()
+                let navigation = tabBarController.viewControllers![tabBarController.selectedIndex] as! YYBaseNavigationController
+                navigation.pushViewController(controller, animated: true)
+            }
         }
     }
     
@@ -53,4 +67,5 @@ extension AppDelegate {
         alertController.addAction(okAction)
         self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
+    
 }

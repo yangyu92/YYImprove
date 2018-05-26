@@ -1,7 +1,7 @@
 //
 //  AppDelegate+XCGLog.swift
 //  YYImprove
-//
+//  日志管理类
 //  Created by canyou on 2018/5/18.
 //  Copyright © 2018年 com.canyou. All rights reserved.
 //
@@ -30,5 +30,4 @@ extension AppDelegate {
         log.add(destination: autoRotatingFileDestination)
         log.logAppDetails()
     }
-    
 }

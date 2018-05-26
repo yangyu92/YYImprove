@@ -7,6 +7,8 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
+  /// 返回
+  internal static let back = L10n.tr("Localizable", "back")
   /// 文章
   internal static let tabTitleArticle = L10n.tr("Localizable", "TabTitleArticle")
   /// 发现

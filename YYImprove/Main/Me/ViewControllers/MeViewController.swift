@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Then
+import SnapKit
+import RxSwift
+import RxCocoa
 
 class MeViewController: UIViewController {
 
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +31,24 @@ class MeViewController: UIViewController {
         label.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
         }
+        
+        let button = UIButton().then {
+            $0.setTitle("确认", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+        }
+        self.view.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 80, height: 45))
+            make.centerX.equalTo(label.snp.centerX)
+            make.top.equalTo(label.snp.bottom).offset(15)
+        }
+        //按钮点击响应
+        button.rx.tap.subscribe({_ in
+            DispatchQueue.main.async(execute: {
+                let controller = ViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            })
+        }).disposed(by: disposeBag)
         
         // Do any additional setup after loading the view.
     }

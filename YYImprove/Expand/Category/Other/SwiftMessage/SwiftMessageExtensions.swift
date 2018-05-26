@@ -15,8 +15,9 @@ extension SwiftMessages {
     ///
     /// - Parameter msg: 提示信息
     public static func showInfo(msg: String) {
-        var config = SwiftMessages.Config()
-        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        var config = SwiftMessages.defaultConfig
+//        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        config.presentationStyle = .center
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(.info, iconStyle: .light)
         view.accessibilityPrefix = "info"
@@ -31,8 +32,9 @@ extension SwiftMessages {
     ///
     /// - Parameter msg: 提示信息
     public static func showSuccess(msg: String) {
-        var config = SwiftMessages.Config()
-        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        var config = SwiftMessages.defaultConfig
+//        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        config.presentationStyle = .center
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(.success, iconStyle: .light)
         view.accessibilityPrefix = "success"
@@ -47,8 +49,9 @@ extension SwiftMessages {
     ///
     /// - Parameter msg: 提示信息
     public static func showWarning(msg: String) {
-        var config = SwiftMessages.Config()
-        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        var config = SwiftMessages.defaultConfig
+//        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        config.presentationStyle = .center
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(.warning, iconStyle: .light)
         view.accessibilityPrefix = "warning"
@@ -63,8 +66,9 @@ extension SwiftMessages {
     ///
     /// - Parameter msg: 提示信息
     public static func showError(msg: String) {
-        var config = SwiftMessages.Config()
-        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        var config = SwiftMessages.defaultConfig
+//        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        config.presentationStyle = .center
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(.error, iconStyle: .light)
         view.accessibilityPrefix = "error"
@@ -75,4 +79,33 @@ extension SwiftMessages {
         SwiftMessages.show(config: config, view: view)
     }
     
+}
+
+extension SwiftMessages {
+    
+    typealias ReachabilityFunction = (_ view: BaseView) -> Void
+    
+    func show(reachabilityFunction: @escaping (_ view: BaseView) -> Void) {
+        var config = SwiftMessages.defaultConfig
+        config.duration = .forever
+        config.presentationStyle = .top
+        config.interactiveHide = false
+        config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+        
+        var view: ReachabilityMessageView
+        do {
+            try view = SwiftMessages.viewFromNib()
+        } catch {
+            log.error("类型转换错误")
+            view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.error, iconStyle: .light)
+            view.accessibilityPrefix = "error"
+        }
+        view.tapHandler = reachabilityFunction
+        view.configureDropShadow()
+        view.titleLabel?.isHidden = true
+        view.button?.isHidden = true
+        view.bodyLabel?.text = "网络状态不佳,请前往设置"
+        self.show(config: config, view: view)
+    }
 }

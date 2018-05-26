@@ -60,15 +60,15 @@ class HomeViewController: UIViewController {
         button.rx.tap.subscribe({_ in
             
 //            self.showAlert("提示", message: "点击按钮啦")
-            
-            SwiftMessages.showInfo(msg: "点击按钮")
-            
+            DispatchQueue.main.async(execute: {
+                SwiftMessages.showInfo(msg: "点击按钮")
+            })
         }).disposed(by: disposeBag)
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     

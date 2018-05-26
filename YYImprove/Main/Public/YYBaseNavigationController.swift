@@ -12,11 +12,9 @@ class YYBaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appearance = UIBarButtonItem.appearance()
-        appearance.setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: 0.0, vertical: -60), for: .default)
-        
+
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18.0)]
-        self.navigationBar.barTintColor=IGNavigationBackgroundColor
+        self.navigationBar.barTintColor = IGNavigationBackgroundColor
         
         //文字颜色
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: IGNavigationTitleColor]
@@ -32,6 +30,16 @@ class YYBaseNavigationController: UINavigationController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if self.viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true
+            let backButton = UIBarButtonItem()
+//            backButton.title = L10n.back
+            viewControllers.last?.navigationItem.backBarButtonItem = backButton
+        }
+        super.pushViewController(viewController, animated: animated)
     }
 
     /*
