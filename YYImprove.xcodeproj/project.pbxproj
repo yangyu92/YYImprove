@@ -37,6 +37,7 @@
 		F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A3D2095873200757897 /* AnimationTabBarView.swift */; };
 		F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */; };
 		F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A482097361800757897 /* UIImageExtensions.swift */; };
+		F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */; };
 		F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */; };
 		F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */; };
 		F2A38BFF20BAB90000A340B7 /* LodingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */; };
@@ -107,6 +108,7 @@
 		F22A0A3D2095873200757897 /* AnimationTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTabBarView.swift; sourceTree = "<group>"; };
 		F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseNavigationController.swift; sourceTree = "<group>"; };
 		F22A0A482097361800757897 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneReachabilityHelpViewController.swift; sourceTree = "<group>"; };
 		F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAPIConfig.swift; sourceTree = "<group>"; };
 		F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LodingMessageView.xib; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 		F22A0A152094976300757897 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				F23234D220BC1500001055E2 /* ViewControllers */,
 				F22A0A3B209585A500757897 /* YYRootTabBarController.swift */,
 				F22A0A3D2095873200757897 /* AnimationTabBarView.swift */,
 				F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */,
@@ -597,6 +600,14 @@
 				F22A0A24209499A000757897 /* Info.plist */,
 			);
 			path = Plist;
+			sourceTree = "<group>";
+		};
+		F23234D220BC1500001055E2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -900,6 +911,7 @@
 				F226FC5620B438A600A01398 /* ApiManager.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
+				F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,

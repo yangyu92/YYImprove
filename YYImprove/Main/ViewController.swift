@@ -64,11 +64,6 @@ class ViewController: UIViewController {
         
     override func viewWillAppear(_ animated: Bool) {
         title = "设置"
-        reachabilitySwiftMessage.hide()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        appDelegate.reachabilityShow()
-    }
-
 }

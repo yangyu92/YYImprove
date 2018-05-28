@@ -26,4 +26,7 @@ class LodingMessageView: MessageView {
         self.activityLoadingView.startAnimating()
     }
     
+    deinit {
+        self.activityLoadingView.stopAnimating()
+    }
 }

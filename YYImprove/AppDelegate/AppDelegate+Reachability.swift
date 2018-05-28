@@ -52,7 +52,7 @@ extension AppDelegate {
             reachabilitySwiftMessage.hide()
         case .none:
             reachabilitySwiftMessage.show { _ in
-                let controller = ViewController()
+                let controller = NoneReachabilityHelpViewController()
                 let navigation = tabBarController.viewControllers![tabBarController.selectedIndex] as! YYBaseNavigationController
                 navigation.pushViewController(controller, animated: true)
             }

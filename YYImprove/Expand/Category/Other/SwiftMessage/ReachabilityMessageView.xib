@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6Y-Xs-t43">
+                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6Y-Xs-t43">
                     <rect key="frame" x="20" y="80" width="335" height="35"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="opK-Nn-MuO">

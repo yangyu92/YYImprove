@@ -13,6 +13,12 @@ target 'YYImprove' do
     pod 'RxCocoa', '4.1.2'
     pod 'Alamofire', '4.7.2’
     pod 'ReachabilitySwift', '4.1.0'
+    
+    # 如果您使用的是RxSwift，那么您可能会多次遇到以下代码。使用此库将"disposeBag"添加到您的任何子类NSObject
+    pod 'NSObject+Rx', '4.3.0'
+    
+    # RxSwift视图手势的反应包装
+#    pod 'RxGesture', '~> 1.2.1'
 
     # JSON 解析
     pod 'ObjectMapper', '3.1.0'
@@ -48,7 +54,7 @@ target 'YYImprove' do
     pod 'Swinject', '2.4.0'
 
     # 信息提示
-    pod 'SwiftMessages', '4.1.3'
+    pod 'SwiftMessages', '4.1.4'
     pod 'NVActivityIndicatorView', '4.2.1'
     
     # 数据持久化

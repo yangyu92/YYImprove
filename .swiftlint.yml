@@ -47,6 +47,9 @@ file_length:
 #     warning: 40
 #     error: 50
 #   excluded: iPhone # excluded via string
+function_body_length:
+  warning: 50
+  error: 150
 identifier_name:
   min_length: # only min_length
     error: 3 # only error
