@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import SwiftMessages
+import SnapKit
+import Then
 
 class FoundViewController: UIViewController {
 
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +32,43 @@ class FoundViewController: UIViewController {
         label.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
         }
+        
+        label.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view)
+        }
+        
+        let button = UIButton().then {
+            $0.setTitle("加载框", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+        }
+        self.view.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 80, height: 45))
+            make.centerX.equalTo(label.snp.centerX)
+            make.top.equalTo(label.snp.bottom).offset(15)
+        }
+        //按钮点击响应
+        button.rx.tap.subscribe({_ in
+            lodingSwiftMessage.showLoding(cancelFunction: { _ in
+                lodingSwiftMessage.hide()
+            })
+        }).disposed(by: disposeBag)
+        
+        let button1 = UIButton().then {
+            $0.setTitle("隐藏", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.tag = 2
+        }
+        self.view.addSubview(button1)
+        button1.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 80, height: 45))
+            make.centerX.equalTo(label.snp.centerX)
+            make.top.equalTo(button.snp.bottom).offset(15)
+        }
+        //按钮点击响应
+        button1.rx.tap.subscribe({_ in
+            lodingSwiftMessage.hide()
+        }).disposed(by: disposeBag)
     }
     
     override func didReceiveMemoryWarning() {

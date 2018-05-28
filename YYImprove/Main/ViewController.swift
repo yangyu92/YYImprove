@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         let username = Defaults[.username]
         log.info(username)
         
-        apiManagerProvider.request(ApiManager.rigister(username: "13397470679", password: "123456", email: "yangyu@qq.com")) { (result) in
+        apiManagerProvider.request(ApiManager.rigister(username: "13397470679", password: "123456", email: "yang_yu92@foxmail.com")) { (result) in
             var message = "Couldn't access API"
             if case let .success(response) = result {
                 let jsonString = try? response.mapString()

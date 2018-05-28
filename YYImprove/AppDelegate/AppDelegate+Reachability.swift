@@ -12,6 +12,7 @@ import SwiftMessages
 
 let reachability = Reachability()
 let reachabilitySwiftMessage = SwiftMessages()
+let lodingSwiftMessage = SwiftMessages()
 
 extension AppDelegate {
     
@@ -51,7 +52,6 @@ extension AppDelegate {
             reachabilitySwiftMessage.hide()
         case .none:
             reachabilitySwiftMessage.show { _ in
-//                self.showAlert("提示信息", message: "点击查看网络设置")
                 let controller = ViewController()
                 let navigation = tabBarController.viewControllers![tabBarController.selectedIndex] as! YYBaseNavigationController
                 navigation.pushViewController(controller, animated: true)

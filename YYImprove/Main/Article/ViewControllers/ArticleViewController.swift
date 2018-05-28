@@ -46,8 +46,10 @@ class ArticleViewController: UIViewController {
         //按钮点击响应
         button.rx.tap.subscribe({_ in
             log.info("点击第一个按钮")
-            SwiftMessages.showSuccess(msg: "点击按钮")
-            SwiftMessages.showError(msg: "异常提示")
+            SwiftMessages.showInfo(msg: "默认提示信息")
+            SwiftMessages.showSuccess(msg: "成功提示信息")
+            SwiftMessages.showWarning(msg: "警告提示信息")
+            SwiftMessages.showError(msg: "异常提示信息")
         }).disposed(by: disposeBag)
 
         let button1 = UIButton().then {
@@ -64,7 +66,7 @@ class ArticleViewController: UIViewController {
         //按钮点击响应
         button1.rx.tap.subscribe({_ in
             log.info("点击第二个按钮")
-            SwiftMessages.showWarning(msg: "点击按钮2")
+            SwiftMessages.showWarning(msg: "成功提示信息成功提示信息")
         }).disposed(by: disposeBag)
     }
     
