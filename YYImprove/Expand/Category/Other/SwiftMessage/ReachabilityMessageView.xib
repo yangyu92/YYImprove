@@ -12,31 +12,31 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ReachabilityMessageView" customModule="YYImprove" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6Y-Xs-t43">
-                    <rect key="frame" x="10" y="80" width="355" height="50"/>
+                    <rect key="frame" x="20" y="80" width="335" height="35"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="opK-Nn-MuO">
-                            <rect key="frame" x="12" y="12" width="331" height="26"/>
+                            <rect key="frame" x="12" y="10" width="313" height="15"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_noWifi" translatesAutoresizingMaskIntoConstraints="NO" id="NbH-Bh-IOm">
-                                    <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="26" id="tos-Yr-tx3"/>
+                                        <constraint firstAttribute="width" constant="15" id="tos-Yr-tx3"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD5-OP-MvS">
-                                    <rect key="frame" x="36" y="0.0" width="259" height="26"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络状态不佳,请前往设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD5-OP-MvS">
+                                    <rect key="frame" x="25" y="0.0" width="263" height="15"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-Zj-ph6">
-                                    <rect key="frame" x="305" y="0.0" width="26" height="26"/>
+                                    <rect key="frame" x="298" y="0.0" width="15" height="15"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="26" id="DTt-1L-Jhk"/>
+                                        <constraint firstAttribute="width" constant="15" id="DTt-1L-Jhk"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -44,25 +44,24 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="7Nm-9A-soC"/>
-                        <constraint firstItem="opK-Nn-MuO" firstAttribute="leading" secondItem="T6Y-Xs-t43" secondAttribute="leading" constant="12" id="ODz-kG-7oW"/>
-                        <constraint firstItem="opK-Nn-MuO" firstAttribute="top" secondItem="T6Y-Xs-t43" secondAttribute="top" constant="12" id="X2L-WJ-HHg"/>
-                        <constraint firstAttribute="trailing" secondItem="opK-Nn-MuO" secondAttribute="trailing" constant="12" id="djK-ee-QJ4"/>
-                        <constraint firstAttribute="bottom" secondItem="opK-Nn-MuO" secondAttribute="bottom" constant="12" id="nac-dy-xrq"/>
+                        <constraint firstItem="opK-Nn-MuO" firstAttribute="leading" secondItem="T6Y-Xs-t43" secondAttribute="leading" constant="12" id="4Kn-oI-b1G"/>
+                        <constraint firstItem="opK-Nn-MuO" firstAttribute="top" secondItem="T6Y-Xs-t43" secondAttribute="top" constant="10" id="GBe-8K-NSQ"/>
+                        <constraint firstAttribute="bottom" secondItem="opK-Nn-MuO" secondAttribute="bottom" constant="10" id="acx-Tn-rCN"/>
+                        <constraint firstAttribute="height" constant="35" id="dxD-4W-1fo"/>
+                        <constraint firstAttribute="trailing" secondItem="opK-Nn-MuO" secondAttribute="trailing" constant="10" id="qoX-hZ-4sb"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="25"/>
+                            <real key="value" value="17.5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="T6Y-Xs-t43" secondAttribute="trailing" constant="10" id="DJP-5d-0K7"/>
-                <constraint firstAttribute="bottom" secondItem="T6Y-Xs-t43" secondAttribute="bottom" constant="10" id="Euq-O4-Ayu"/>
-                <constraint firstItem="T6Y-Xs-t43" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="Kjp-UT-RCY"/>
-                <constraint firstItem="T6Y-Xs-t43" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="avr-bZ-xxn"/>
+                <constraint firstItem="T6Y-Xs-t43" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6RT-X0-oBd"/>
+                <constraint firstItem="T6Y-Xs-t43" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="fHV-GK-c0l"/>
+                <constraint firstAttribute="trailing" secondItem="T6Y-Xs-t43" secondAttribute="trailing" constant="20" id="yD1-8q-gEp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>
@@ -83,7 +82,7 @@
                 <outlet property="backgroundView" destination="T6Y-Xs-t43" id="jYP-f8-kf9"/>
                 <outlet property="bodyLabel" destination="YD5-OP-MvS" id="XXH-te-4AM"/>
             </connections>
-            <point key="canvasLocation" x="-27" y="-83"/>
+            <point key="canvasLocation" x="2" y="-307"/>
         </view>
     </objects>
     <resources>
