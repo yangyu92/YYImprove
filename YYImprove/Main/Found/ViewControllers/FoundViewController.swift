@@ -49,9 +49,7 @@ class FoundViewController: UIViewController {
         }
         //按钮点击响应
         button.rx.tap.subscribe({_ in
-            lodingSwiftMessage.showLoding(cancelFunction: { _ in
-                lodingSwiftMessage.hide()
-            })
+            lodingSwiftMessage.showLoding()
         }).disposed(by: disposeBag)
         
         let button1 = UIButton().then {

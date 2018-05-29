@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         let username = Defaults[.username]
         log.info(username)
         
-        apiManagerProvider.request(ApiManager.rigister(username: "13397470679", password: "123456", email: "yang_yu92@foxmail.com")) { (result) in
-            var message = "Couldn't access API"
+        apiManagerProvider.request(ApiManager.rigister(username: "13397471159", password: "123456", email: "yang_yu92@foxmail.com")) { (result) in
+            var message = "数据解析异常"
             if case let .success(response) = result {
                 let jsonString = try? response.mapString()
                 message = jsonString ?? message

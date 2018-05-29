@@ -9,7 +9,11 @@
 import Foundation
 import Moya
 
-let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping, plugins: [NetworkLoggerPlugin(verbose: true), AuthPlugin(token: "")])
+let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping,
+                                                  plugins: [NetworkLoggerPlugin(verbose: true),
+                                                            newworkActivityPlugin,
+                                                            RequestLoadingPlugin(true),
+                                                            AuthPlugin(token: "")])
 
 private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
     

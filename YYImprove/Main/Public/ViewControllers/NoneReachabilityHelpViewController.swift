@@ -19,15 +19,8 @@ private struct Metric {
 
 class NoneReachabilityHelpViewController: UIViewController {
 
-    private var lblText1: UILabel!
-    
-    private var lblText2: UILabel!
-    
-    private var lblText3: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         initUI()
     }
 
@@ -67,39 +60,39 @@ extension NoneReachabilityHelpViewController {
             $0.textColor = UIColor(hex: "#5C5F65")
             $0.font = UIFont.systemFont(ofSize: Metric.titleFontSize)
             $0.text = "请设置你的网络"
+            self.view.addSubview($0)
         }
         let lblText2 = UILabel().then {
             $0.textColor = UIColor(hex: "#979797")
             $0.font = UIFont.systemFont(ofSize: Metric.descFontSize)
             $0.text = "1.打开设备的\"系统设置\">\"无线和网络\">\"移动网络\"。"
+            self.view.addSubview($0)
         }
         let lblText3 = UILabel().then {
             $0.textColor = UIColor(hex: "#979797")
             $0.font = UIFont.systemFont(ofSize: Metric.descFontSize)
             $0.numberOfLines = 2
             $0.text = "2.打开设备的\"系统设置\">\"WLAN\"，\"启动WLAN\"后从中选择一个可用的热点连接。"
+            self.view.addSubview($0)
         }
         
         let viewLine = UIView().then {
             $0.backgroundColor = UIColor(hex: "#EEEEEE")
+            self.view.addSubview($0)
         }
         let lblText4 = UILabel().then {
             $0.textColor = UIColor(hex: "#5C5F65")
             $0.font = UIFont.systemFont(ofSize: Metric.titleFontSize)
             $0.text = "如果你已经连接Wi-Fi网络"
+            self.view.addSubview($0)
         }
         let lblText5 = UILabel().then {
             $0.textColor = UIColor(hex: "#979797")
             $0.font = UIFont.systemFont(ofSize: Metric.descFontSize)
             $0.numberOfLines = 2
             $0.text = "请确认你所接入的Wi-Fi网络已经连入互联网，或者确认你的设备是否被允许访问该热点。"
+            self.view.addSubview($0)
         }
-        self.view.addSubview(lblText1)
-        self.view.addSubview(lblText2)
-        self.view.addSubview(lblText3)
-        self.view.addSubview(viewLine)
-        self.view.addSubview(lblText4)
-        self.view.addSubview(lblText5)
         
         lblText1.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(5)

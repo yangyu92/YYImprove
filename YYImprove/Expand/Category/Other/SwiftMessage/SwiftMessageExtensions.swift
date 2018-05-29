@@ -85,9 +85,7 @@ extension SwiftMessages {
     }
     
     /// 显示加载动画
-    ///
-    /// - Parameter cancelFunction: 点击取消后执行事件
-    func showLoding(cancelFunction: @escaping (_ button: UIButton) -> Void) {
+    func showLoding() {
         var config = SwiftMessages.defaultConfig
         config.presentationContext = .window(windowLevel: UIWindowLevelAlert)
         config.duration = .forever
@@ -98,12 +96,13 @@ extension SwiftMessages {
         var view: LodingMessageView
         do {
             try view = SwiftMessages.viewFromNib()
-            view.configureBackgroundView(width: 100)
-            view.buttonTapHandler = cancelFunction
+            view.buttonTapHandler = { _ in
+                self.hide()
+            }
             view.configureDropShadow()
             view.button?.isHidden = true
             self.show(config: config, view: view)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) {
                 view.button?.isHidden = false
             }
         } catch {

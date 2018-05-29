@@ -8,6 +8,17 @@
 
 import Foundation
 import Moya
+import Result
+
+let newworkActivityPlugin = NetworkActivityPlugin { (change: NetworkActivityChangeType, target: TargetType) in
+    switch change {
+    case .ended:
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//        Thread.sleep(forTimeInterval: 3.0)
+    case .began:
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+}
 
 struct AuthPlugin: PluginType {
     let token: String
@@ -17,6 +28,26 @@ struct AuthPlugin: PluginType {
         request.timeoutInterval = 30
         request.addValue(token, forHTTPHeaderField: "token")
         return request
+    }
+}
+
+public final class RequestLoadingPlugin: PluginType {
+    var hide: Bool
+    init(_ hideView: Bool) {
+        self.hide = hideView
+        guard self.hide else {
+            return
+        }
+    }
+    
+    public func willSend(_ request: RequestType, target: TargetType) {
+        if self.hide  != false {
+            lodingSwiftMessage.showLoding()
+        }
+    }
+    
+    public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
+        lodingSwiftMessage.hide()
     }
 }
 
