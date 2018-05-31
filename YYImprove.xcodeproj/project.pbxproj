@@ -42,6 +42,7 @@
 		F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */; };
 		F2A38BFF20BAB90000A340B7 /* LodingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */; };
 		F2A38C0120BAB93F00A340B7 /* LodingMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A38C0020BAB93F00A340B7 /* LodingMessageView.swift */; };
+		F2F0F74620C0235B00571E91 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */; };
 		F2F84E4B20B90FD700B59B4A /* ReachabilityMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F84E4A20B90FD700B59B4A /* ReachabilityMessageView.swift */; };
 		F2F84E4D20B9103B00B59B4A /* ReachabilityMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F84E4C20B9103B00B59B4A /* ReachabilityMessageView.xib */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,7 @@
 		F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAPIConfig.swift; sourceTree = "<group>"; };
 		F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LodingMessageView.xib; sourceTree = "<group>"; };
 		F2A38C0020BAB93F00A340B7 /* LodingMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingMessageView.swift; sourceTree = "<group>"; };
+		F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
 		F2F84E4A20B90FD700B59B4A /* ReachabilityMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMessageView.swift; sourceTree = "<group>"; };
 		F2F84E4C20B9103B00B59B4A /* ReachabilityMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReachabilityMessageView.xib; sourceTree = "<group>"; };
 		FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,6 +548,7 @@
 				F23234D220BC1500001055E2 /* ViewControllers */,
 				F22A0A3B209585A500757897 /* YYRootTabBarController.swift */,
 				F22A0A3D2095873200757897 /* AnimationTabBarView.swift */,
+				F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */,
 				F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */,
 			);
 			path = Public;
@@ -891,6 +894,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F0F74620C0235B00571E91 /* ExampleIrregularityContentView.swift in Sources */,
 				F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */,
 				F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,

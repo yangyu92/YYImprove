@@ -45,6 +45,7 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Navication {
+    internal static let photoVerybig = ImageAsset(name: "photo_verybig")
     internal static let tabFavor = ImageAsset(name: "tab_favor")
     internal static let tabFavorSelected = ImageAsset(name: "tab_favor_selected")
     internal static let tabHome = ImageAsset(name: "tab_home")
@@ -67,6 +68,7 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    Navication.photoVerybig,
     Navication.tabFavor,
     Navication.tabFavorSelected,
     Navication.tabHome,
