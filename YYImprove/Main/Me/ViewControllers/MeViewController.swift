@@ -7,15 +7,12 @@
 //
 
 import UIKit
-import Then
 import SnapKit
 import RxSwift
 import RxCocoa
 
 class MeViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,7 +45,7 @@ class MeViewController: UIViewController {
                 let controller = ViewController()
                 self.navigationController?.pushViewController(controller, animated: true)
             })
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
         
         // Do any additional setup after loading the view.
     }

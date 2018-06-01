@@ -10,6 +10,7 @@ import Foundation
 import Moya
 
 let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping,
+                                                  stubClosure: MoyaProvider.delayedStub(3), // 延迟3秒使用sampleData中的测试数据返回
                                                   plugins: [NetworkLoggerPlugin(verbose: true),
                                                             newworkActivityPlugin,
                                                             RequestLoadingPlugin(true),

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Then
 import SnapKit
 import RxSwift
 import RxCocoa
@@ -15,8 +14,6 @@ import SwiftMessages
 
 class HomeViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,12 +55,10 @@ class HomeViewController: UIViewController {
         }
         //按钮点击响应
         button.rx.tap.subscribe({_ in
-            
-//            self.showAlert("提示", message: "点击按钮啦")
             DispatchQueue.main.async(execute: {
-                SwiftMessages.showInfo(msg: "点击按钮")
+                SwiftMessages.showInfo(msg: "默认提示信息home")
             })
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
     }
     
     override func didReceiveMemoryWarning() {

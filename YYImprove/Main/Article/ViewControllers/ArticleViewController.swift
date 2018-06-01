@@ -7,14 +7,12 @@
 //
 
 import UIKit
-import Then
 import RxSwift
 import RxCocoa
 import SwiftMessages
 
 class ArticleViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
     let otherMessages = SwiftMessages()
     
     override func viewDidLoad() {
@@ -50,7 +48,7 @@ class ArticleViewController: UIViewController {
             SwiftMessages.showSuccess(msg: "成功提示信息")
             SwiftMessages.showWarning(msg: "警告提示信息")
             SwiftMessages.showError(msg: "异常提示信息")
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
 
         let button1 = UIButton().then {
             $0.setTitle("确认", for: UIControlState.normal)
@@ -67,7 +65,7 @@ class ArticleViewController: UIViewController {
         button1.rx.tap.subscribe({_ in
             log.info("点击第二个按钮")
             SwiftMessages.showWarning(msg: "成功提示信息成功提示信息")
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
     }
     
     override func didReceiveMemoryWarning() {

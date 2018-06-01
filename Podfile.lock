@@ -11,6 +11,8 @@ PODS:
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - "NSObject+Rx (4.3.0)":
+    - RxSwift (~> 4.0)
   - NVActivityIndicatorView (4.2.1):
     - NVActivityIndicatorView/Presenter (= 4.2.1)
   - NVActivityIndicatorView/Presenter (4.2.1)
@@ -43,6 +45,7 @@ DEPENDENCIES:
   - Kingfisher (= 4.7.0)
   - Moya (= 11.0.2)
   - Moya/RxSwift (= 11.0.2)
+  - "NSObject+Rx (= 4.3.0)"
   - NVActivityIndicatorView (= 4.2.1)
   - ObjectMapper (= 3.1.0)
   - ReachabilitySwift (= 4.1.0)
@@ -63,6 +66,7 @@ SPEC REPOS:
     - Hue
     - Kingfisher
     - Moya
+    - "NSObject+Rx"
     - NVActivityIndicatorView
     - ObjcExceptionBridging
     - ObjectMapper
@@ -84,6 +88,7 @@ SPEC CHECKSUMS:
   Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  "NSObject+Rx": 9a5eeff5e08156f849fa973514456f28eef08742
   NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
@@ -99,6 +104,6 @@ SPEC CHECKSUMS:
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: dd207acadd22aa22e6655cb98cd79a1cb684e794
+PODFILE CHECKSUM: 0944c47c2461d189b402a033a0fcd2b45e32ea8d
 
 COCOAPODS: 1.5.0

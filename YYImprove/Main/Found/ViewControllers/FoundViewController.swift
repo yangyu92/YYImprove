@@ -11,12 +11,9 @@ import RxSwift
 import RxCocoa
 import SwiftMessages
 import SnapKit
-import Then
 
 class FoundViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +47,7 @@ class FoundViewController: UIViewController {
         //按钮点击响应
         button.rx.tap.subscribe({_ in
             lodingSwiftMessage.showLoding()
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
         
         let button1 = UIButton().then {
             $0.setTitle("隐藏", for: UIControlState.normal)
@@ -66,7 +63,7 @@ class FoundViewController: UIViewController {
         //按钮点击响应
         button1.rx.tap.subscribe({_ in
             lodingSwiftMessage.hide()
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
