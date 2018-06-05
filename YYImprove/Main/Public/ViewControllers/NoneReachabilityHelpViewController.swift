@@ -17,7 +17,7 @@ private struct Metric {
     static let descFontSize: CGFloat = 13.0
 }
 
-class NoneReachabilityHelpViewController: UIViewController {
+class NoneReachabilityHelpViewController: YYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,6 @@ extension NoneReachabilityHelpViewController {
     // MARK: - 初始化视图
     private func initUI() {
         self.title = "无网络连接"
-        self.view.backgroundColor = UIColor.white
         
         let lblText1 = UILabel().then {
             $0.textColor = UIColor(hex: "#5C5F65")

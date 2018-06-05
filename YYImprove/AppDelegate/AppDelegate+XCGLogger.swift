@@ -28,6 +28,12 @@ extension AppDelegate {
         autoRotatingFileDestination.targetMaxLogFiles = 10
         autoRotatingFileDestination.logQueue = XCGLogger.logQueue
         log.add(destination: autoRotatingFileDestination)
+        #if DEBUG
+            log.outputLevel = .debug
+        #else
+            log.outputLevel = .error
+        #endif
+        
         log.logAppDetails()
     }
 }

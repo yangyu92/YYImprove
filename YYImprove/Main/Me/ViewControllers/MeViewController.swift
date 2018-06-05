@@ -11,13 +11,11 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class MeViewController: UIViewController {
+class MeViewController: YYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(hex: "#ffffff")
-        
         let label = UILabel().then {
             $0.textAlignment = .center
             $0.textColor = .black

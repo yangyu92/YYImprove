@@ -8,12 +8,14 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: YYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = "登录"
+        
+        initEnableMudule()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,14 +23,25 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+// MARK: - 初始化协议
+extension LoginViewController: HCNavUniversalable {
+    
+    // MARK: - 协议组件
+    private func initEnableMudule() {
+        
+        // 登录页面 返回、注册
+        let models = [HCNavigationBarItemMetric.back,
+                      HCNavigationBarItemMetric.loginRegister]
+        self.universals(modelArr: models) { [weak self] (model) in
+            guard let `self` = self else { return }
+                log.info(model.description)
+            let type = model.type
+            switch type {
+            case .back:
+                self.navigationController?.dismiss(animated: true, completion: nil)
+            default: break
+            }
+        }
     }
-    */
-
 }

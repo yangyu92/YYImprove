@@ -11,13 +11,12 @@ import RxSwift
 import RxCocoa
 import SwiftMessages
 
-class ArticleViewController: UIViewController {
+class ArticleViewController: YYBaseViewController {
 
     let otherMessages = SwiftMessages()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(hex: "#ffffff")
         
         let label = UILabel().then {
             $0.textAlignment = .center

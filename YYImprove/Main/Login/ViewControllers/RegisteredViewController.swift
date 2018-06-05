@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisteredViewController: UIViewController {
+class RegisteredViewController: YYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

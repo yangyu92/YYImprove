@@ -12,28 +12,33 @@ import RxSwift
 import RxCocoa
 import SwiftMessages
 
-class HomeViewController: UIViewController {
+// MARK: - 常量
+private struct Metric {
+    static let searchBarLeft: CGFloat = 12.0
+    static let searchBarRight: CGFloat = 12.0
+}
 
+class HomeViewController: YYBaseViewController {
+
+    private var titleView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let gradient: CAGradientLayer = [
-            UIColor(hex: "#78C9CC"),
-            UIColor(hex: "#3bb2bb")
-            ].gradient { gradient in
-                gradient.speed = 0
-                gradient.timeOffset = 0
-                gradient.locations = [0.0, 1.0]
-                gradient.startPoint = CGPoint(x: 0, y: 0)
-                gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-                gradient.frame = self.view.frame
-                return gradient
-        }
+//        let gradient: CAGradientLayer = [
+//            UIColor(hex: "#78C9CC"),
+//            UIColor(hex: "#3bb2bb")
+//            ].gradient { gradient in
+//                gradient.speed = 0
+//                gradient.timeOffset = 0
+//                gradient.locations = [0.0, 1.0]
+//                gradient.startPoint = CGPoint(x: 0, y: 0)
+//                gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+//                gradient.frame = self.view.frame
+//                return gradient
+//        }
+//        self.view.layer.addSublayer(gradient)
         
-        self.view.layer.addSublayer(gradient)
-        
-//        self.view.backgroundColor = UIColor(hex: "#ffffff")
-
         let label = UILabel().then {
             $0.textAlignment = .center
             $0.textColor = .black
@@ -46,6 +51,7 @@ class HomeViewController: UIViewController {
         
         let button = UIButton().then {
             $0.setTitle("确认", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
         }
         self.view.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -59,6 +65,17 @@ class HomeViewController: UIViewController {
                 SwiftMessages.showInfo(msg: "默认提示信息home")
             })
         }).disposed(by: rx.disposeBag)
+        
+        initTitleView()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        titleView?.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().offset(-0.5) // 修正偏差
+            make.left.equalToSuperview().offset(Metric.searchBarLeft)
+            make.right.equalToSuperview().offset(-Metric.searchBarRight)
+        }
+        super.viewWillLayoutSubviews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,15 +92,39 @@ class HomeViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension HomeViewController: HCNavTitleable {
+    // MARK: - 标题组件
+    private func initTitleView() {
+        let homeNavigationBar = YYHomeNavigationBar()
+        homeNavigationBar.itemClicked = { [weak self] (model) in
+            guard let `self` = self else { return }
+            let type = model.type
+            switch type {
+            case .homeSearchBar:
+                self.jump2SearchResult()
+            case .download, .message, .history:
+                self.jump2Login()
+            default:
+                break
+            }
+        }
+        titleView = self.titleView(titleView: homeNavigationBar)
     }
-    */
+}
 
+// MARK: - 控制器跳转
+extension HomeViewController {
+    // MARK: - 搜索结果
+    func jump2SearchResult() {
+        let controller = ViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    // MARK: - 下载
+    func jump2Login() {
+        let controller = YYBaseNavigationController(rootViewController: LoginViewController())
+        self.present(controller, animated: true, completion: nil)
+    }
 }

@@ -37,9 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.info("启动次数:\(launchCount)")
         
         window = UIWindow(frame: kScreenBounds)
-        self.window!.makeKeyAndVisible()
-        
         self.window?.rootViewController = tabBarController
+        self.window!.makeKeyAndVisible()
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

@@ -15,6 +15,8 @@ public let kScreenBounds: CGRect = UIScreen.main.bounds
 public let IGNavigationTitleColor = UIColor(hex: "#FFFFFF")
 public let IGNavigationBackgroundColor = UIColor(hex: "78C9CC")
 
+let kThemeWhiteColor = UIColor(hex: "#FFFFFF")
+
 //适配iPhoneX
 let isIPhoneX = (kSCREENWIDTH == 375.0 && kSCREENHEIGHT == 812.0 ? true : false)
 let kNavibarH: CGFloat = isIPhoneX ? 88.0 : 64.0

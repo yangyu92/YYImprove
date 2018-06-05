@@ -38,6 +38,12 @@
 		F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */; };
 		F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A482097361800757897 /* UIImageExtensions.swift */; };
 		F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */; };
+		F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E6A20C23C4500CD92EA /* YYBaseViewController.swift */; };
+		F238CE0B20C507F500F9053A /* HCNavTitleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE0420C507F400F9053A /* HCNavTitleable.swift */; };
+		F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */; };
+		F238CE1B20C50BA100F9053A /* HCHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */; };
+		F238CE1F20C50C0500F9053A /* HCNavUniversalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */; };
+		F27622B120C63DB50009A476 /* HCNavBackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622B020C63DB50009A476 /* HCNavBackable.swift */; };
 		F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */; };
 		F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */; };
 		F2A38BFF20BAB90000A340B7 /* LodingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */; };
@@ -110,6 +116,12 @@
 		F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseNavigationController.swift; sourceTree = "<group>"; };
 		F22A0A482097361800757897 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneReachabilityHelpViewController.swift; sourceTree = "<group>"; };
+		F2377E6A20C23C4500CD92EA /* YYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseViewController.swift; sourceTree = "<group>"; };
+		F238CE0420C507F400F9053A /* HCNavTitleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavTitleable.swift; sourceTree = "<group>"; };
+		F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHomeNavigationBar.swift; sourceTree = "<group>"; };
+		F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHomeSearchBarable.swift; sourceTree = "<group>"; };
+		F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavUniversalable.swift; sourceTree = "<group>"; };
+		F27622B020C63DB50009A476 /* HCNavBackable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavBackable.swift; sourceTree = "<group>"; };
 		F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAPIConfig.swift; sourceTree = "<group>"; };
 		F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LodingMessageView.xib; sourceTree = "<group>"; };
@@ -350,6 +362,7 @@
 		F2247A2A20B6F8E5007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -527,6 +540,8 @@
 		F22A0A132094974D00757897 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F2377E6A20C23C4500CD92EA /* YYBaseViewController.swift */,
+				F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -545,11 +560,9 @@
 		F22A0A152094976300757897 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				F238CDFC20C4EDC900F9053A /* UINavigationBar */,
+				F2377E6C20C23FBB00CD92EA /* TabBarController */,
 				F23234D220BC1500001055E2 /* ViewControllers */,
-				F22A0A3B209585A500757897 /* YYRootTabBarController.swift */,
-				F22A0A3D2095873200757897 /* AnimationTabBarView.swift */,
-				F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */,
-				F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -611,6 +624,35 @@
 				F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2377E6C20C23FBB00CD92EA /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F22A0A3B209585A500757897 /* YYRootTabBarController.swift */,
+				F22A0A3D2095873200757897 /* AnimationTabBarView.swift */,
+				F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F238CDFC20C4EDC900F9053A /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				F238CE1720C50B7E00F9053A /* View */,
+				F238CE0420C507F400F9053A /* HCNavTitleable.swift */,
+				F27622B020C63DB50009A476 /* HCNavBackable.swift */,
+				F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		F238CE1720C50B7E00F9053A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -788,6 +830,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -811,6 +854,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -909,12 +953,16 @@
 				F2F84E4B20B90FD700B59B4A /* ReachabilityMessageView.swift in Sources */,
 				F2A38C0120BAB93F00A340B7 /* LodingMessageView.swift in Sources */,
 				F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */,
+				F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */,
+				F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */,
+				F238CE1B20C50BA100F9053A /* HCHomeSearchBarable.swift in Sources */,
 				F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
 				F226FC5620B438A600A01398 /* ApiManager.swift in Sources */,
+				F238CE0B20C507F500F9053A /* HCNavTitleable.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
 				F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */,
@@ -922,7 +970,9 @@
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
+				F238CE1F20C50C0500F9053A /* HCNavUniversalable.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
+				F27622B120C63DB50009A476 /* HCNavBackable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1092,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1096,6 +1147,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1114,7 +1166,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YYImprove/Resource/Global/YYImprove-Bridging-Header.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/YYImprove/Resource/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImprove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YYImprove/Resource/Global/YYImprove-Bridging-Header.h";
@@ -1135,7 +1190,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YYImprove/Resource/Global/YYImprove-Bridging-Header.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/YYImprove/Resource/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImprove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YYImprove/Resource/Global/YYImprove-Bridging-Header.h";
@@ -1153,7 +1211,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
 				INFOPLIST_FILE = YYImproveTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImproveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1171,7 +1233,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
 				INFOPLIST_FILE = YYImproveTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImproveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1188,7 +1254,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
 				INFOPLIST_FILE = YYImproveUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImproveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1205,7 +1275,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
 				INFOPLIST_FILE = YYImproveUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.canyou.YYImproveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

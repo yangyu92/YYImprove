@@ -10,15 +10,14 @@ import Foundation
 import Moya
 
 let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping,
-                                                  stubClosure: MoyaProvider.delayedStub(3), // 延迟3秒使用sampleData中的测试数据返回
+                                                  stubClosure: MoyaProvider.delayedStub(1), // 延迟3秒使用sampleData中的测试数据返回
                                                   plugins: [NetworkLoggerPlugin(verbose: true),
                                                             newworkActivityPlugin,
                                                             RequestLoadingPlugin(true),
                                                             AuthPlugin(token: "")])
 
 private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
-    
-    log.info("请求连接：\(target.baseURL)\(target.path) \n方法：\(target.method)\n参数：\(String(describing: target.headers))")
+    //log.info("请求连接：\(target.baseURL)\(target.path) \n方法：\(target.method)\n参数：\(String(describing: target.headers))")
     let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
     let baseUrl = defaultEndpoint.url.appending("?key=\(mobAppKey)")
     return Endpoint(url: baseUrl, sampleResponseClosure: { .networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)

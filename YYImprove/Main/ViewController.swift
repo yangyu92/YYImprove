@@ -10,7 +10,7 @@ import UIKit
 import SwiftyUserDefaults
 import SwiftMessages
 
-class ViewController: UIViewController {
+class ViewController: YYBaseViewController {
 
     // MARK: - 布局初始化相关
     // MARK: - 类生命周期相关
@@ -25,14 +25,14 @@ class ViewController: UIViewController {
     // MARK: - api调用方法
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         log.verbose("Verbose")
         log.debug("Debug")
         log.info("Info")
         log.warning("Warning")
         log.error("Error")
         log.severe("Severe")
-        self.view.backgroundColor = UIColor(hex: "#ffffff")
-        super.viewDidLoad()
         
         // UserDefault使用
         Defaults[.username] = "你好"
@@ -47,6 +47,7 @@ class ViewController: UIViewController {
             }
             SwiftMessages.showInfo(msg: message)
         }
+        initBack()
     }
     
     fileprivate func showAlert(_ title: String, message: String) {
@@ -65,5 +66,4 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         title = "设置"
     }
-    
 }

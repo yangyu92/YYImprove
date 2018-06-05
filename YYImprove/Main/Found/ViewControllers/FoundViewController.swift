@@ -12,12 +12,10 @@ import RxCocoa
 import SwiftMessages
 import SnapKit
 
-class FoundViewController: UIViewController {
+class FoundViewController: YYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor(hex: "#ffffff")
         
         let label = UILabel().then {
             $0.textAlignment = .center

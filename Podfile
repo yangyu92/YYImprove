@@ -18,7 +18,7 @@ target 'YYImprove' do
     pod 'NSObject+Rx', '4.3.0'
     
     # RxSwift视图手势的反应包装
-#    pod 'RxGesture', '~> 1.2.1'
+    pod 'RxGesture', '1.2.1'
 
     # JSON 解析
     pod 'ObjectMapper', '3.1.0'
@@ -35,6 +35,9 @@ target 'YYImprove' do
 
     # SDCycleScrollView,LLCycleScrollView 无限循环图片、文字轮播器
     # Segmentio 用Swift编写的动画顶部/底部分段控制
+    
+    # 键盘弹出防止txt被遮挡
+#    pod 'IQKeyboardManagerSwift'
 
     # 空状态模式
     # pod 'DZNEmptyDataSet', '1.8.1’

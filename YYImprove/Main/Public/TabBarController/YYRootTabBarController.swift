@@ -49,11 +49,11 @@ extension YYRootTabBarController {
         var tabArr: [UIViewController] = []
         let projectName = self.getProjectName()
         
-        for index in 0..<classNameArr.count {
-            let clsName = classNameArr[index]
-            let moduleName = moduleNameArr[index]
-            let image = UIImage(asset: imageArr[index])
-            let selectedImage = UIImage(asset: selectedImageArr[index])
+        for i in 0..<classNameArr.count {
+            let clsName = classNameArr[i]
+            let moduleName = moduleNameArr[i]
+            let image = UIImage(asset: imageArr[i])
+            let selectedImage = UIImage(asset: selectedImageArr[i])
             let clsType = NSClassFromString("\(projectName)\(clsName)ViewController") as! UIViewController.Type
             let controller = clsType.init()
             controller.title = moduleName
