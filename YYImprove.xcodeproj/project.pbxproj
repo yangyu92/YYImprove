@@ -10,6 +10,9 @@
 		65B32B614BE2F733674029C4 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D151AD2E70C33AE8F17AC4 /* Pods_YYImproveUITests.framework */; };
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
+		F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */; };
+		F21F59DF20C7C915009D7478 /* YYArticleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DE20C7C915009D7478 /* YYArticleNavigationBar.swift */; };
+		F21F59E120C7CB86009D7478 /* YYFoundNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59E020C7CB86009D7478 /* YYFoundNavigationBar.swift */; };
 		F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */; };
 		F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A1420B6F717007A88E9 /* LoginViewController.swift */; };
 		F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */; };
@@ -39,10 +42,7 @@
 		F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A0A482097361800757897 /* UIImageExtensions.swift */; };
 		F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */; };
 		F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E6A20C23C4500CD92EA /* YYBaseViewController.swift */; };
-		F238CE0B20C507F500F9053A /* HCNavTitleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE0420C507F400F9053A /* HCNavTitleable.swift */; };
 		F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */; };
-		F238CE1B20C50BA100F9053A /* HCHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */; };
-		F238CE1F20C50C0500F9053A /* HCNavUniversalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */; };
 		F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622B620C677EB0009A476 /* YYNavUniversalable.swift */; };
 		F27622B920C67DE20009A476 /* YYNavigationTitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622B820C67DE20009A476 /* YYNavigationTitleBar.swift */; };
 		F27622BB20C685B60009A476 /* YYNavTitleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622BA20C685B60009A476 /* YYNavTitleable.swift */; };
@@ -82,6 +82,9 @@
 		C5D6EFCF8C9BE393A4E4CBDB /* Pods-YYImproveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYHomeSearchBarable.swift; sourceTree = "<group>"; };
+		F21F59DE20C7C915009D7478 /* YYArticleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYArticleNavigationBar.swift; sourceTree = "<group>"; };
+		F21F59E020C7CB86009D7478 /* YYFoundNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYFoundNavigationBar.swift; sourceTree = "<group>"; };
 		F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPlugin.swift; sourceTree = "<group>"; };
 		F2247A1420B6F717007A88E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
@@ -120,10 +123,7 @@
 		F22A0A482097361800757897 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		F23234D320BC1592001055E2 /* NoneReachabilityHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneReachabilityHelpViewController.swift; sourceTree = "<group>"; };
 		F2377E6A20C23C4500CD92EA /* YYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseViewController.swift; sourceTree = "<group>"; };
-		F238CE0420C507F400F9053A /* HCNavTitleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavTitleable.swift; sourceTree = "<group>"; };
 		F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHomeNavigationBar.swift; sourceTree = "<group>"; };
-		F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHomeSearchBarable.swift; sourceTree = "<group>"; };
-		F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavUniversalable.swift; sourceTree = "<group>"; };
 		F27622B620C677EB0009A476 /* YYNavUniversalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavUniversalable.swift; sourceTree = "<group>"; };
 		F27622B820C67DE20009A476 /* YYNavigationTitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavigationTitleBar.swift; sourceTree = "<group>"; };
 		F27622BA20C685B60009A476 /* YYNavTitleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavTitleable.swift; sourceTree = "<group>"; };
@@ -310,6 +310,7 @@
 		F2247A2220B6F890007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F21F59E020C7CB86009D7478 /* YYFoundNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +333,7 @@
 		F2247A2520B6F8AE007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F21F59DE20C7C915009D7478 /* YYArticleNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -646,8 +648,6 @@
 			isa = PBXGroup;
 			children = (
 				F238CE1720C50B7E00F9053A /* View */,
-				F238CE0420C507F400F9053A /* HCNavTitleable.swift */,
-				F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */,
 				F27622BA20C685B60009A476 /* YYNavTitleable.swift */,
 				F27622BC20C6B4A20009A476 /* YYNavBackable.swift */,
 				F27622B620C677EB0009A476 /* YYNavUniversalable.swift */,
@@ -658,7 +658,7 @@
 		F238CE1720C50B7E00F9053A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */,
+				F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */,
 				F27622B820C67DE20009A476 /* YYNavigationTitleBar.swift */,
 			);
 			path = View;
@@ -953,6 +953,7 @@
 				F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */,
 				F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
+				F21F59E120C7CB86009D7478 /* YYFoundNavigationBar.swift in Sources */,
 				F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */,
 				F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */,
 				F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */,
@@ -966,15 +967,14 @@
 				F27622BD20C6B4A20009A476 /* YYNavBackable.swift in Sources */,
 				F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */,
 				F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */,
+				F21F59DF20C7C915009D7478 /* YYArticleNavigationBar.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */,
 				F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */,
-				F238CE1B20C50BA100F9053A /* HCHomeSearchBarable.swift in Sources */,
 				F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
 				F226FC5620B438A600A01398 /* ApiManager.swift in Sources */,
-				F238CE0B20C507F500F9053A /* HCNavTitleable.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
 				F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */,
@@ -983,8 +983,8 @@
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
-				F238CE1F20C50C0500F9053A /* HCNavUniversalable.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
+				F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,27 +18,7 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
         self.popDelegate = self.interactivePopGestureRecognizer?.delegate
         self.delegate = self
         
-        //去导航下边线
-        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationBar.shadowImage = UIImage()
-        // 是否透明
-        self.navigationBar.isTranslucent = false
-        
-        // 标题样式
-        let bar = UINavigationBar.appearance()
-        bar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
-                                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18.0)]
-        // 设置返回按钮的样式
-        self.navigationBar.tintColor = IGNavigationTitleColor
-        // 设置返回标识器的颜色
-        self.navigationBar.barTintColor = IGNavigationBackgroundColor
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: IGNavigationTitleColor]
-        
-        let barItem = UIBarButtonItem.appearance()
-        barItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: IGNavigationTitleColor],
-                                       for: .normal)  // 返回按钮文字样式
-        
-        self.navigationBar.isHidden = true
+        initNavigationStyle()
         
 //        log.info("Navigation-init: \(type(of: self))")
     }
@@ -65,6 +45,33 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)
+    }
+}
+extension YYBaseNavigationController {
+
+    // 定义系统导航的样式
+    func initNavigationStyle() {
+        // 去导航下边线
+        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationBar.shadowImage = UIImage()
+        // 是否透明
+        self.navigationBar.isTranslucent = false
+        
+        // 标题样式
+        let bar = UINavigationBar.appearance()
+        bar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
+                                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18.0)]
+        // 设置返回按钮的样式
+        self.navigationBar.tintColor = kNavigationTitleColor
+        // 设置返回标识器的颜色
+        self.navigationBar.barTintColor = kNavigationBackgroundColor
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: kNavigationTitleColor]
+        
+        let barItem = UIBarButtonItem.appearance()
+        barItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kNavigationTitleColor],
+                                       for: .normal)  // 返回按钮文字样式
+        // 隐藏系统自带的导航
+        self.navigationBar.isHidden = true
     }
 }
 

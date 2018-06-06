@@ -1,20 +1,14 @@
 //
-//  HCHomeNavigationBar.swift
-//  RxXMLY
+//  YYArticleNavigationBar.swift
+//  YYImprove
 //
-//  Created by sessionCh on 2017/12/16.
-//  Copyright © 2017年 sessionCh. All rights reserved.
+//  Created by canyou on 2018/6/6.
+//  Copyright © 2018年 com.canyou. All rights reserved.
 //
 
 import UIKit
 
-// MARK: - 常量
-private struct Metric {
-    static let homeBarWidth: CGFloat = kScreenWidth
-    static let homeBarHeight: CGFloat = 44.0
-}
-
-class YYHomeNavigationBar: UIView {
+class YYArticleNavigationBar: UIView {
     
     typealias AddBlock = (_ model: YYNavigationBarItemModel) -> Void
     var itemClicked: AddBlock? = { (_) in
@@ -24,7 +18,7 @@ class YYHomeNavigationBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = kNavigationBackgroundColor.alpha(0.8)
-        initHomeNavigationBar()
+        initArticleNavigationBar()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,9 +35,9 @@ class YYHomeNavigationBar: UIView {
     }
 }
 
-extension YYHomeNavigationBar: YYNavUniversalable, YYHomeSearchBarable {
+extension YYArticleNavigationBar: YYNavUniversalable {
     // MARK: - 初始化 首页 导航栏组件
-    func initHomeNavigationBar() {
+    func initArticleNavigationBar() {
         
         // 创建组件
         let view = UIView().then {
@@ -61,47 +55,41 @@ extension YYHomeNavigationBar: YYNavUniversalable, YYHomeSearchBarable {
             self.itemClicked!(model)
         }
         view.addSubview(message)
-        let history = self.universal(model: YYNavigationBarItemMetric.history) { (model) in
+        let search = self.universal(model: YYNavigationBarItemMetric.search) { (model) in
             self.itemClicked!(model)
         }
-        view.addSubview(history)
-        let download = self.universal(model: YYNavigationBarItemMetric.download) { (model) in
+        view.addSubview(search)
+        
+        let titleItem = YYNavigationBarItemModel(type: .title,
+                                                 position: .center,
+                                                 title: "文章",
+                                                 description: "标题")
+        let titleBtn = self.universal(model: titleItem) { (model) in
             self.itemClicked!(model)
         }
-        view.addSubview(download)
-        // 搜索栏
-        let searchBar = self.searchBar(model: YYNavigationBarItemMetric.homeSearchBar) { (model) in
-            self.itemClicked!(model)
-        }
-        view.addSubview(searchBar)
+        view.addSubview(titleBtn)
         
         message.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.left.equalTo(MetricGlobal.padding)
-            make.right.lessThanOrEqualTo(searchBar.snp.left).priority(.high)
+            make.left.equalTo(MetricGlobal.margin)
+            make.right.lessThanOrEqualTo(titleBtn.snp.left).priority(.high)
             make.width.equalTo(MetricGlobal.navigationItemSize)
             make.height.equalToSuperview()
         }
-        download.snp.makeConstraints { (make) in
+        search.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.right.equalTo(-MetricGlobal.padding)
+            make.right.equalTo(-MetricGlobal.margin)
             make.width.equalTo(MetricGlobal.navigationItemSize)
             make.height.equalToSuperview()
+            make.left.greaterThanOrEqualTo(titleBtn.snp.right).priority(.high)
         }
-        history.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.right.equalTo(download.snp.left)
-            make.width.equalTo(MetricGlobal.navigationItemSize)
-            make.height.equalToSuperview()
-            make.left.greaterThanOrEqualTo(searchBar.snp.right).priority(.high)
-        }
-        searchBar.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.height.equalToSuperview()
+        titleBtn.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.height.equalTo(MetricGlobal.kNavigationTitleHight)
         }
         
         /// Title文本过长时,隐藏超出部分
-        searchBar.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
-        searchBar.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+        titleBtn.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+        titleBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
     }
 }

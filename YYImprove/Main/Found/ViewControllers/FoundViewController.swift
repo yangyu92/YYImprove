@@ -62,21 +62,35 @@ class FoundViewController: YYBaseViewController {
         button1.rx.tap.subscribe({_ in
             lodingSwiftMessage.hide()
         }).disposed(by: rx.disposeBag)
+        
+        initTitleView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// MARK: - 自定义导航
+extension FoundViewController: YYNavTitleable {
+    private func initTitleView() {
+        let homeNavigationBar = YYFoundNavigationBar()
+        
+        homeNavigationBar.itemClicked = { [weak self] (model) in
+            guard let `self` = self else { return }
+            let type = model.type
+            switch type {
+            case .search:
+                let controller = LoginViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            case .download, .message, .history:
+                let controller = RegisteredViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            default:
+                break
+            }
+        }
+        titleView = self.titleView(titleView: homeNavigationBar)
     }
-    */
-
 }

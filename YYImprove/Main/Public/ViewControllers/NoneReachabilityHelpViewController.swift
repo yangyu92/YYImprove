@@ -98,7 +98,7 @@ extension NoneReachabilityHelpViewController {
         }
         
         lblText1.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(kNavbarH + 5)
+            make.top.equalToSuperview().offset(MetricGlobal.kNavigationTitleHight + 5)
             make.right.equalToSuperview().offset(-15)
             make.left.equalToSuperview().offset(15)
             make.height.equalTo(40)

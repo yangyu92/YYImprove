@@ -1,10 +1,10 @@
 //
-//  HCHomeSearchBarable.swift
-//  RxXMLY
+//  YYHomeSearchBarable.swift
+//  YYImprove
 //
-//  Created by sessionCh on 2017/12/15.
-//  Copyright © 2017年 sessionCh. All rights reserved.
-//  首页导航栏 标题搜索
+//  Created by canyou on 2018/6/6.
+//  Copyright © 2018年 com.canyou. All rights reserved.
+//
 
 import UIKit
 import RxSwift
@@ -18,27 +18,24 @@ import SnapKit
 private struct Metric {
     static let title: String = "养生 | 健身 | 艾灸 | 国家宝藏 | 72小时情感急症室"
     static let fontSize: CGFloat = 13.0
-    
-    static let iconWidth: CGFloat = 20.0
-    static let searchBarWidth: CGFloat = kSCREENWIDTH - MetricGlobal.margin * 16
+    static let iconWidth: CGFloat = 30.0
     static let searchBarHeight: CGFloat = 30.0
 }
 
-protocol HCHomeSearchBarable {
+protocol YYHomeSearchBarable {
     
 }
 
-extension HCHomeSearchBarable where Self: UIView {
+extension YYHomeSearchBarable where Self: UIView {
     
-    // MARK: - 自定义组件
-    func searchBar(model: HCNavigationBarItemModel, onNext: @escaping (_ model: HCNavigationBarItemModel) -> Void) -> UIView {
-        
+    // MARK: - 自定义主界面搜索组件
+    func searchBar(model: YYNavigationBarItemModel, onNext: @escaping (_ model: YYNavigationBarItemModel) -> Void) -> UIView {
         // 创建组件
         let view = UIView().then {
             $0.backgroundColor = .clear
         }
         let backView = UIView().then {
-            $0.backgroundColor = IGNavigationTitleColor.alpha(0.5)
+            $0.backgroundColor = kNavigationTitleColor.alpha(0.6)
             $0.layer.cornerRadius = Metric.searchBarHeight / 2
             // 处理点击事件
             $0.rx.tapGesture().when(.recognized)
@@ -48,44 +45,32 @@ extension HCHomeSearchBarable where Self: UIView {
         }
         let icon = UIImageView().then {
             $0.contentMode = .scaleAspectFit
-            $0.image = UIImage(named: "search_btn_norm")
+            $0.image = UIImage(asset: Asset.Navication.navSearchSmallW)
         }
         let lab = UILabel().then {
             $0.textColor = UIColor.gray.alpha(0.5)
             $0.font = UIFont.systemFont(ofSize: Metric.fontSize)
             $0.text = Metric.title
         }
-        
         // 添加组件
         backView.addSubview(icon)
         backView.addSubview(lab)
-        
         view.addSubview(backView)
-        
-        self.addSubview(view)
-        
-        // 添加约束
-        view.snp.makeConstraints { (make) in
-            make.width.equalTo(Metric.searchBarWidth)
+        backView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.left.right.equalToSuperview().inset(MetricGlobal.padding)
             make.height.equalTo(Metric.searchBarHeight)
         }
-        
-        backView.snp.makeConstraints { (make) in
-            make.left.right.top.bottom.equalToSuperview()
-        }
-        
         icon.snp.makeConstraints { (make) in
-            make.width.equalTo(Metric.iconWidth)
-            make.left.equalToSuperview().offset(MetricGlobal.margin)
             make.centerY.equalToSuperview()
+            make.width.equalTo(Metric.iconWidth)
+            make.left.equalToSuperview()
         }
-        
         lab.snp.makeConstraints { (make) in
-            make.left.equalTo(icon.snp.right).offset(MetricGlobal.margin / 2)
+            make.left.equalTo(icon.snp.right)
             make.centerY.equalTo(icon)
             make.right.lessThanOrEqualToSuperview().offset(-MetricGlobal.margin)
         }
-        
         return view
     }
 }

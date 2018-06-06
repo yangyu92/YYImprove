@@ -19,7 +19,7 @@ class YYRootTabBarController: ESTabBarController {
 
         // 修改tabbar背景颜色时需要设置
         self.tabBar.shadowImage = UIImage(color: UIColor.clear, size: CGSize(width: 1, height: 1))
-        self.tabBar.backgroundImage = UIImage(color: IGNavigationBackgroundColor, size: CGSize(width: 1, height: 1))
+        self.tabBar.backgroundImage = UIImage(color: kNavigationBackgroundColor, size: CGSize(width: 1, height: 1))
         
         initSubViewControllers()
     }

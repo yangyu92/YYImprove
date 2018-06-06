@@ -20,8 +20,6 @@ private struct Metric {
 
 class HomeViewController: YYBaseViewController {
 
-    private var titleView: UIView?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,8 +74,6 @@ class HomeViewController: YYBaseViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        // Dispose of any resources that can be recreated.
     }
     
     fileprivate func showAlert(_ title: String, message: String) {
@@ -93,7 +89,7 @@ class HomeViewController: YYBaseViewController {
 extension HomeViewController: YYNavTitleable {
     // MARK: - 标题组件
     private func initTitleView() {
-        let homeNavigationBar = YYNavigationTitleBar("首页")
+        let homeNavigationBar = YYHomeNavigationBar()
         
         homeNavigationBar.itemClicked = { [weak self] (model) in
             guard let `self` = self else { return }
@@ -121,7 +117,10 @@ extension HomeViewController {
     
     // MARK: - 下载
     func jump2Login() {
-        let controller = YYBaseNavigationController(rootViewController: LoginViewController())
-        self.present(controller, animated: true, completion: nil)
+//        let controller = YYBaseNavigationController(rootViewController: LoginViewController())
+//        self.present(controller, animated: true, completion: nil)
+        
+        let controller = LoginViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

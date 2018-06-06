@@ -10,10 +10,13 @@ import UIKit
 
 class YYBaseViewController: UIViewController {
 
+    var titleView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = kThemeWhiteColor
 
+        // 由于默认隐藏系统导航,让布局从初始化位置开始
         automaticallyAdjustsScrollViewInsets = false
         
 //        log.info("init:\(type(of: self))")
@@ -29,14 +32,13 @@ class YYBaseViewController: UIViewController {
     }
 }
 
-// MARK: - 初始化协议
+// MARK: - 通用的导航协议
 extension YYBaseViewController: YYNavBackable {
-
-    // MARK: - 标题组件
+    /// 显示默认的导航(带返回按钮)
     func initTitleView(title: String) -> UIView {
-        let homeNavigationBar = YYNavigationTitleBar(title)
+        let navigationTitleBar = YYNavigationTitleBar(title)
         
-        homeNavigationBar.itemClicked = { [weak self] (model) in
+        navigationTitleBar.itemClicked = { [weak self] (model) in
             guard let `self` = self else { return }
             let type = model.type
             switch type {
@@ -46,9 +48,16 @@ extension YYBaseViewController: YYNavBackable {
                 break
             }
         }
-        return self.navigationBackView(titleView: homeNavigationBar)
+        return self.navigationBackView(titleView: navigationTitleBar)
     }
-    
+}
+extension YYBaseViewController {
+    /// 用户解决兼容问题
+    func compatibility () {
+        if #available(iOS 11.0, *) {
+            
+        }
+    }
 }
 
 // MARK: - 事件 (部分页面失效)

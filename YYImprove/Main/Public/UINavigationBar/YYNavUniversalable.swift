@@ -23,40 +23,39 @@ struct YYNavigationBarItemMetric {
     static let back = YYNavigationBarItemModel(type: .back,
                                                position: .left,
                                                description: "返回",
-                                               imageNamed: "ic_back_w")
+                                               imageNamed: Asset.Navication.navBackW.name)
 
-    // Center
-//    static let homeSearchBar = HCNavigationBarItemModel(type: .homeSearchBar,
-//                                                        position: .center,
-//                                                        description: "首页搜索栏",
-//                                                        imageNamed: "")
-    
     static let message = YYNavigationBarItemModel(type: .message,
                                                   position: .left,
                                                   description: "消息",
-                                                  imageNamed: "top_message_n")
+                                                  imageNamed: Asset.Navication.navMessageW.name)
     
+    // Center
+    static let homeSearchBar = YYNavigationBarItemModel(type: .homeSearchBar,
+                                                        position: .center,
+                                                        description: "首页搜索栏",
+                                                        imageNamed: "")
+    
+    // Right
     static let history = YYNavigationBarItemModel(type: .history,
                                                   position: .right,
                                                   description: "历史记录",
-                                                  imageNamed: "top_history_n")
+                                                  imageNamed: Asset.Navication.navHistoryW.name)
     
     static let download = YYNavigationBarItemModel(type: .download,
                                                    position: .right,
                                                    description: "下载",
-                                                   imageNamed: "top_download_n")
+                                                   imageNamed: Asset.Navication.navDownloadW.name)
     
-//    static let search = YYNavigationBarItemModel(type: .search,
-//                                                 position: .right,
-//                                                 description: "搜索",
-//                                                 imageNamed: "icon_search_n")
+    static let search = YYNavigationBarItemModel(type: .search,
+                                                 position: .right,
+                                                 description: "搜索",
+                                                 imageNamed: Asset.Navication.navSearchW.name)
     
-    // Right
-
     static let setting = YYNavigationBarItemModel(type: .setting,
                                                   position: .right,
                                                   description: "设置",
-                                                  imageNamed: "meSetNor")
+                                                  imageNamed: Asset.Navication.navSettingW.name)
     
 //    // 登录页面-注册
 //    static let loginRegister = YYNavigationBarItemModel(type: .title(index: 0, title: "注册"),
@@ -76,11 +75,13 @@ extension YYNavUniversalable where Self: UIView {
     func universal(model: YYNavigationBarItemModel, onNext: @escaping (_ model: YYNavigationBarItemModel) -> Void) -> UIButton {
         let btn = UIButton().then {
             // 设置属性
-            $0.contentMode = .scaleAspectFit
+//            $0.backgroundColor = UIColor.green
+            
             $0.setTitle(model.title, for: .normal)
             $0.titleLabel?.lineBreakMode = NSLineBreakMode.byTruncatingTail
             if model.imageNamed.count > 0 {
-                $0.setBackgroundImage(UIImage(named: model.imageNamed), for: .normal)
+                $0.setImage(UIImage(named: model.imageNamed), for: .normal)
+                $0.imageView?.contentMode = .scaleAspectFit
             }
             switch model.type {
             case .title:
@@ -88,7 +89,6 @@ extension YYNavUniversalable where Self: UIView {
             default:
                 $0.titleLabel?.font = UIFont.systemFont(ofSize: 17)
             }
-            
             // 处理点击事件
             $0.rx.tapGesture().when(.recognized)
                 .subscribe({ _ in
@@ -173,7 +173,8 @@ struct YYNavigationBarItemModel {
         case message
         case history
         case download
-        case search(index: Int, title: String)
+        case search
+        case searchBar(index: Int, title: String)
         case setting
         case homeSearchBar              // 首页搜索栏
     }

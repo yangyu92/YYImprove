@@ -45,6 +45,13 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Navication {
+    internal static let navBackW = ImageAsset(name: "nav_back_w")
+    internal static let navDownloadW = ImageAsset(name: "nav_download_w")
+    internal static let navHistoryW = ImageAsset(name: "nav_history_w")
+    internal static let navMessageW = ImageAsset(name: "nav_message_w")
+    internal static let navSearchSmallW = ImageAsset(name: "nav_search_small_w")
+    internal static let navSearchW = ImageAsset(name: "nav_search_w")
+    internal static let navSettingW = ImageAsset(name: "nav_setting_w")
     internal static let photoVerybig = ImageAsset(name: "photo_verybig")
     internal static let tabFavor = ImageAsset(name: "tab_favor")
     internal static let tabFavorSelected = ImageAsset(name: "tab_favor_selected")
@@ -68,6 +75,13 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    Navication.navBackW,
+    Navication.navDownloadW,
+    Navication.navHistoryW,
+    Navication.navMessageW,
+    Navication.navSearchSmallW,
+    Navication.navSearchW,
+    Navication.navSettingW,
     Navication.photoVerybig,
     Navication.tabFavor,
     Navication.tabFavorSelected,

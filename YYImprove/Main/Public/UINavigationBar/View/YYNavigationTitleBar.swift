@@ -23,7 +23,7 @@ class YYNavigationTitleBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = IGNavigationBackgroundColor
+        self.backgroundColor = kNavigationBackgroundColor
     }
     
     init(_ title: String) {
@@ -38,10 +38,8 @@ class YYNavigationTitleBar: UIView {
     override func layoutSubviews() {
         // 添加约束
         self.snp.makeConstraints { (make) in
-            make.top.equalTo(0)
-            make.left.equalTo(0)
-            make.width.equalTo(kSCREENWIDTH)
-            make.height.equalTo(kNavbarH)
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(MetricGlobal.kNavigationTabbarHight)
         }
         super.layoutSubviews()
     }
@@ -51,17 +49,22 @@ extension YYNavigationTitleBar: YYNavUniversalable {
     // MARK: - 初始化 首页 导航栏组件
     func initBackNavigationBar(title: String) {
         
+        // 创建组件
+        let view = UIView().then {
+            $0.backgroundColor = .clear
+            self.addSubview($0)
+            $0.snp.makeConstraints({ (make) in
+                make.left.right.equalToSuperview()
+                make.bottom.equalToSuperview()
+                make.height.equalTo(MetricGlobal.kNavigationTitleHight)
+            })
+        }
+        
         // 返回按钮
         let backBtn = self.universal(model: YYNavigationBarItemMetric.back) { (model) in
             self.itemClicked!(model)
         }
-        self.addSubview(backBtn)
-        
-        // 返回按钮
-        let backBtn1 = self.universal(model: YYNavigationBarItemMetric.back) { (model) in
-            self.itemClicked!(model)
-        }
-        self.addSubview(backBtn1)
+        view.addSubview(backBtn)
         
         let titleItem = YYNavigationBarItemModel(type: .title,
                                                  position: .center,
@@ -70,28 +73,29 @@ extension YYNavigationTitleBar: YYNavUniversalable {
         let titleBtn = self.universal(model: titleItem) { (model) in
             self.itemClicked!(model)
         }
-        self.addSubview(titleBtn)
+        view.addSubview(titleBtn)
         backBtn.snp.makeConstraints { (make) in
-            make.bottom.equalTo(self).offset(-Metric.itemBottom)
+            make.centerY.equalToSuperview()
             make.left.equalTo(MetricGlobal.padding)
-            make.width.height.equalTo(Metric.itemSize)
-            make.right.lessThanOrEqualTo(titleBtn.snp.left).priority(500)
+            make.right.lessThanOrEqualTo(titleBtn.snp.left).priority(.high)
+            make.width.equalTo(MetricGlobal.navigationItemSize)
+            make.height.equalToSuperview()
         }
-        
         titleBtn.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self)
-            make.bottom.equalTo(self)
-            make.height.equalTo(kNavTitleH)
+            make.center.equalToSuperview()
+            make.height.equalTo(MetricGlobal.kNavigationTitleHight)
         }
         
-        backBtn.setContentCompressionResistancePriority(UILayoutPriority.required, for: UILayoutConstraintAxis.horizontal)
-        
-        // 内容紧凑 - 优先完全显示内容，且不多占像素。
-//        backBtn.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: UILayoutConstraintAxis.horizontal)
+        /// Title文本过长时,隐藏超出部分
         titleBtn.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
-        
-        // 抵抗 压缩，抗压缩低的，在上一步的基础上，进行压缩调整。
-//        backBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: UILayoutConstraintAxis.horizontal)
         titleBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+
+//        // 内容紧凑 - 优先完全显示内容，且不多占像素。
+//        backBtn.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: UILayoutConstraintAxis.horizontal)
+//        titleBtn.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+//        
+//        // 抵抗 压缩，抗压缩低的，在上一步的基础上，进行压缩调整。
+//        backBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: UILayoutConstraintAxis.horizontal)
+//        titleBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
     }
 }

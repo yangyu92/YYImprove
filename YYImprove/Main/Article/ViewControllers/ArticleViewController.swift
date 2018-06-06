@@ -13,8 +13,6 @@ import SwiftMessages
 
 class ArticleViewController: YYBaseViewController {
 
-    let otherMessages = SwiftMessages()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,11 +64,35 @@ class ArticleViewController: YYBaseViewController {
             let controller = LoginViewController()
             self.navigationController?.pushViewController(controller, animated: true)
         }).disposed(by: rx.disposeBag)
+        
+        initTitleView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+}
+
+// MARK: - 自定义导航
+extension ArticleViewController: YYNavTitleable {
+    private func initTitleView() {
+        let homeNavigationBar = YYArticleNavigationBar()
+        
+        homeNavigationBar.itemClicked = { [weak self] (model) in
+            guard let `self` = self else { return }
+            let type = model.type
+            switch type {
+            case .message:
+                let controller = LoginViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            case .search:
+                let controller = RegisteredViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            default:
+                break
+            }
+        }
+        titleView = self.titleView(titleView: homeNavigationBar)
+    }
 }
