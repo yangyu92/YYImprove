@@ -16,7 +16,7 @@ private struct Metric {
 
 class YYHomeNavigationBar: UIView {
     
-    typealias AddBlock = (_ model: HCNavigationBarItemModel) -> Void
+    typealias AddBlock = (_ model: YYNavigationBarItemModel) -> Void
     var itemClicked: AddBlock? = { (_) in
         return
     }
@@ -41,33 +41,33 @@ class YYHomeNavigationBar: UIView {
     }
 }
 
-extension YYHomeNavigationBar: HCHomeSearchBarable, HCNavUniversalable {
+extension YYHomeNavigationBar: YYNavUniversalable {
     // MARK: - 初始化 首页 导航栏组件
     func initHomeNavigationBar() {
         
         // 消息按钮
-        let message = self.universal(model: HCNavigationBarItemMetric.message) { (model) in
+        let message = self.universal(model: YYNavigationBarItemMetric.message) { (model) in
             self.itemClicked!(model)
             log.info(model.description)
         }
         
         // 历史记录
-        let history = self.universal(model: HCNavigationBarItemMetric.history) { (model) in
+        let history = self.universal(model: YYNavigationBarItemMetric.history) { (model) in
             self.itemClicked!(model)
             log.info(model.description)
         }
         
         // 下载
-        let download = self.universal(model: HCNavigationBarItemMetric.download) { (model) in
+        let download = self.universal(model: YYNavigationBarItemMetric.download) { (model) in
             self.itemClicked!(model)
             log.info(model.description)
         }
         
-        // 搜索栏
-        let searchBar = self.searchBar(model: HCNavigationBarItemMetric.homeSearchBar) { (model) in
-            self.itemClicked!(model)
-            log.info(model.description)
-        }
+//        // 搜索栏
+//        let searchBar = self.searchBar(model: YYNavigationBarItemMetric.homeSearchBar) { (model) in
+//            self.itemClicked!(model)
+//            log.info(model.description)
+//        }
         
         // 布局
         message.snp.makeConstraints { (make) in
@@ -75,15 +75,15 @@ extension YYHomeNavigationBar: HCHomeSearchBarable, HCNavUniversalable {
             make.left.equalToSuperview()
         }
         
-        searchBar.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.left.equalTo(message.snp.right).offset(MetricGlobal.margin)
-        }
+//        searchBar.snp.makeConstraints { (make) in
+//            make.centerY.equalToSuperview()
+//            make.left.equalTo(message.snp.right).offset(MetricGlobal.margin)
+//        }
 
-        history.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.left.equalTo(searchBar.snp.right).offset(MetricGlobal.margin)
-        }
+//        history.snp.makeConstraints { (make) in
+//            make.centerY.equalToSuperview()
+//            make.left.equalTo(searchBar.snp.right).offset(MetricGlobal.margin)
+//        }
 
         download.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()

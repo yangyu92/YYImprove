@@ -38,9 +38,9 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
         barItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: IGNavigationTitleColor],
                                        for: .normal)  // 返回按钮文字样式
         
-//        self.navigationBar.isHidden = true
+        self.navigationBar.isHidden = true
         
-        log.info("Navigation-init: \(type(of: self))")
+//        log.info("Navigation-init: \(type(of: self))")
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +48,7 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
     }
     
     deinit {
-        log.info("Navigation-deinit: \(type(of: self))")
+//        log.info("Navigation-deinit: \(type(of: self))")
     }
     
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
@@ -63,9 +63,6 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
-            let backButton = UIBarButtonItem()
-//            backButton.title = L10n.back
-            viewControllers.last?.navigationItem.backBarButtonItem = backButton
         }
         super.pushViewController(viewController, animated: animated)
     }

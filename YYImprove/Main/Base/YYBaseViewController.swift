@@ -14,10 +14,9 @@ class YYBaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = kThemeWhiteColor
 
-//        automaticallyAdjustsScrollViewInsets = false
-//        self.navigationController?.navigationBar.isHidden = true
+        automaticallyAdjustsScrollViewInsets = false
         
-        log.info("init:\(type(of: self))")
+//        log.info("init:\(type(of: self))")
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,31 +25,30 @@ class YYBaseViewController: UIViewController {
     }
     
     deinit {
-        log.info("deinit: \(type(of: self))")
+//        log.info("deinit: \(type(of: self))")
     }
 }
 
 // MARK: - 初始化协议
-extension YYBaseViewController: HCNavBackable {
-    
-    // MARK: - 协议组件
-    func initBack() {
-//        // 登录页面 返回、注册
-//        let models = [HCNavigationBarItemMetric.back]
-//        self.universals(modelArr: models) { [weak self] (model) in
-//            guard let `self` = self else { return }
-//            log.info(model.description)
-//            let type = model.type
-//            switch type {
-//            case .back:
-//                self.navigationController?.popViewController(animated: true)
-//            default: break
-//            }
-//        }
-        back {
-            self.navigationController?.popViewController(animated: true)
+extension YYBaseViewController: YYNavBackable {
+
+    // MARK: - 标题组件
+    func initTitleView(title: String) -> UIView {
+        let homeNavigationBar = YYNavigationTitleBar(title)
+        
+        homeNavigationBar.itemClicked = { [weak self] (model) in
+            guard let `self` = self else { return }
+            let type = model.type
+            switch type {
+            case .back:
+                self.navigationController?.popViewController(animated: true)
+            default:
+                break
+            }
         }
+        return self.navigationBackView(titleView: homeNavigationBar)
     }
+    
 }
 
 // MARK: - 事件 (部分页面失效)

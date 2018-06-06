@@ -47,7 +47,6 @@ class ViewController: YYBaseViewController {
             }
             SwiftMessages.showInfo(msg: message)
         }
-        initBack()
     }
     
     fileprivate func showAlert(_ title: String, message: String) {

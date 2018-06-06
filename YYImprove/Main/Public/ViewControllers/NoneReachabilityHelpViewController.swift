@@ -22,6 +22,8 @@ class NoneReachabilityHelpViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        
+        _ = initTitleView(title: "无网络连接")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +31,10 @@ class NoneReachabilityHelpViewController: YYBaseViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         appDelegate.reachabilityShow()
     }
     
@@ -53,8 +59,6 @@ extension NoneReachabilityHelpViewController {
     // swiftlint:disable function_body_length
     // MARK: - 初始化视图
     private func initUI() {
-        self.title = "无网络连接"
-        
         let lblText1 = UILabel().then {
             $0.textColor = UIColor(hex: "#5C5F65")
             $0.font = UIFont.systemFont(ofSize: Metric.titleFontSize)
@@ -94,7 +98,7 @@ extension NoneReachabilityHelpViewController {
         }
         
         lblText1.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(kNavbarH + 5)
             make.right.equalToSuperview().offset(-15)
             make.left.equalToSuperview().offset(15)
             make.height.equalTo(40)

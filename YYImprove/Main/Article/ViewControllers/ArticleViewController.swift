@@ -63,7 +63,8 @@ class ArticleViewController: YYBaseViewController {
         //按钮点击响应
         button1.rx.tap.subscribe({_ in
             log.info("点击第二个按钮")
-            SwiftMessages.showWarning(msg: "成功提示信息成功提示信息")
+            let controller = LoginViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         }).disposed(by: rx.disposeBag)
     }
     

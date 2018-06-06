@@ -43,7 +43,10 @@
 		F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */; };
 		F238CE1B20C50BA100F9053A /* HCHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */; };
 		F238CE1F20C50C0500F9053A /* HCNavUniversalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */; };
-		F27622B120C63DB50009A476 /* HCNavBackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622B020C63DB50009A476 /* HCNavBackable.swift */; };
+		F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622B620C677EB0009A476 /* YYNavUniversalable.swift */; };
+		F27622B920C67DE20009A476 /* YYNavigationTitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622B820C67DE20009A476 /* YYNavigationTitleBar.swift */; };
+		F27622BB20C685B60009A476 /* YYNavTitleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622BA20C685B60009A476 /* YYNavTitleable.swift */; };
+		F27622BD20C6B4A20009A476 /* YYNavBackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27622BC20C6B4A20009A476 /* YYNavBackable.swift */; };
 		F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */; };
 		F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */; };
 		F2A38BFF20BAB90000A340B7 /* LodingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */; };
@@ -121,7 +124,10 @@
 		F238CE1520C50B0200F9053A /* YYHomeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHomeNavigationBar.swift; sourceTree = "<group>"; };
 		F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHomeSearchBarable.swift; sourceTree = "<group>"; };
 		F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavUniversalable.swift; sourceTree = "<group>"; };
-		F27622B020C63DB50009A476 /* HCNavBackable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCNavBackable.swift; sourceTree = "<group>"; };
+		F27622B620C677EB0009A476 /* YYNavUniversalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavUniversalable.swift; sourceTree = "<group>"; };
+		F27622B820C67DE20009A476 /* YYNavigationTitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavigationTitleBar.swift; sourceTree = "<group>"; };
+		F27622BA20C685B60009A476 /* YYNavTitleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavTitleable.swift; sourceTree = "<group>"; };
+		F27622BC20C6B4A20009A476 /* YYNavBackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavBackable.swift; sourceTree = "<group>"; };
 		F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAPIConfig.swift; sourceTree = "<group>"; };
 		F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LodingMessageView.xib; sourceTree = "<group>"; };
@@ -641,8 +647,10 @@
 			children = (
 				F238CE1720C50B7E00F9053A /* View */,
 				F238CE0420C507F400F9053A /* HCNavTitleable.swift */,
-				F27622B020C63DB50009A476 /* HCNavBackable.swift */,
 				F238CE1E20C50C0500F9053A /* HCNavUniversalable.swift */,
+				F27622BA20C685B60009A476 /* YYNavTitleable.swift */,
+				F27622BC20C6B4A20009A476 /* YYNavBackable.swift */,
+				F27622B620C677EB0009A476 /* YYNavUniversalable.swift */,
 			);
 			path = UINavigationBar;
 			sourceTree = "<group>";
@@ -651,6 +659,7 @@
 			isa = PBXGroup;
 			children = (
 				F238CE1A20C50BA100F9053A /* HCHomeSearchBarable.swift */,
+				F27622B820C67DE20009A476 /* YYNavigationTitleBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -949,14 +958,17 @@
 				F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */,
 				F2247A2F20B6F933007A88E9 /* FoundViewController.swift in Sources */,
 				F227045A20B7F6E6003ABAD8 /* AppDelegate+Reachability.swift in Sources */,
+				F27622B920C67DE20009A476 /* YYNavigationTitleBar.swift in Sources */,
 				F22A0A492097361800757897 /* UIImageExtensions.swift in Sources */,
 				F2F84E4B20B90FD700B59B4A /* ReachabilityMessageView.swift in Sources */,
 				F2A38C0120BAB93F00A340B7 /* LodingMessageView.swift in Sources */,
 				F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */,
+				F27622BD20C6B4A20009A476 /* YYNavBackable.swift in Sources */,
 				F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */,
 				F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */,
+				F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */,
 				F238CE1B20C50BA100F9053A /* HCHomeSearchBarable.swift in Sources */,
 				F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
@@ -966,13 +978,13 @@
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
 				F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */,
+				F27622BB20C685B60009A476 /* YYNavTitleable.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				F238CE1F20C50C0500F9053A /* HCNavUniversalable.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
-				F27622B120C63DB50009A476 /* HCNavBackable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

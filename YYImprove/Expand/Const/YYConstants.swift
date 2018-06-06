@@ -19,9 +19,10 @@ let kThemeWhiteColor = UIColor(hex: "#FFFFFF")
 
 //适配iPhoneX
 let isIPhoneX = (kSCREENWIDTH == 375.0 && kSCREENHEIGHT == 812.0 ? true : false)
-let kNavibarH: CGFloat = isIPhoneX ? 88.0 : 64.0
-let kTabbarH: CGFloat = isIPhoneX ? 49.0+34.0 : 49.0
+let kNavbarH: CGFloat = isIPhoneX ? 88.0 : 64.0
+let kTabbarH: CGFloat = isIPhoneX ? 49.0 + 34.0 : 49.0
 let kStatusbarH: CGFloat = isIPhoneX ? 44.0 : 20.0
+let kNavTitleH: CGFloat = 44.0
 let iPhoneXBottomH: CGFloat = 34.0
 let iPhoneXTopH: CGFloat = 24.0
 

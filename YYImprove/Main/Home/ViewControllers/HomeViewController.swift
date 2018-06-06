@@ -25,19 +25,19 @@ class HomeViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let gradient: CAGradientLayer = [
-//            UIColor(hex: "#78C9CC"),
-//            UIColor(hex: "#3bb2bb")
-//            ].gradient { gradient in
-//                gradient.speed = 0
-//                gradient.timeOffset = 0
-//                gradient.locations = [0.0, 1.0]
-//                gradient.startPoint = CGPoint(x: 0, y: 0)
-//                gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-//                gradient.frame = self.view.frame
-//                return gradient
-//        }
-//        self.view.layer.addSublayer(gradient)
+        let gradient: CAGradientLayer = [
+            UIColor(hex: "#78C9CC"),
+            UIColor(hex: "#3bb2bb")
+            ].gradient { gradient in
+                gradient.speed = 0
+                gradient.timeOffset = 0
+                gradient.locations = [0.0, 1.0]
+                gradient.startPoint = CGPoint(x: 0, y: 0)
+                gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+                gradient.frame = self.view.frame
+                return gradient
+        }
+        self.view.layer.addSublayer(gradient)
         
         let label = UILabel().then {
             $0.textAlignment = .center
@@ -61,20 +61,16 @@ class HomeViewController: YYBaseViewController {
         }
         //按钮点击响应
         button.rx.tap.subscribe({_ in
-            DispatchQueue.main.async(execute: {
-                SwiftMessages.showInfo(msg: "默认提示信息home")
-            })
+//            DispatchQueue.main.async(execute: {
+//                SwiftMessages.showInfo(msg: "默认提示信息home")
+//            })
+            self.jump2SearchResult()
         }).disposed(by: rx.disposeBag)
         
         initTitleView()
     }
     
     override func viewWillLayoutSubviews() {
-        titleView?.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().offset(-0.5) // 修正偏差
-            make.left.equalToSuperview().offset(Metric.searchBarLeft)
-            make.right.equalToSuperview().offset(-Metric.searchBarRight)
-        }
         super.viewWillLayoutSubviews()
     }
     
@@ -94,10 +90,11 @@ class HomeViewController: YYBaseViewController {
     }
 }
 
-extension HomeViewController: HCNavTitleable {
+extension HomeViewController: YYNavTitleable {
     // MARK: - 标题组件
     private func initTitleView() {
-        let homeNavigationBar = YYHomeNavigationBar()
+        let homeNavigationBar = YYNavigationTitleBar("首页")
+        
         homeNavigationBar.itemClicked = { [weak self] (model) in
             guard let `self` = self else { return }
             let type = model.type
@@ -118,7 +115,7 @@ extension HomeViewController: HCNavTitleable {
 extension HomeViewController {
     // MARK: - 搜索结果
     func jump2SearchResult() {
-        let controller = ViewController()
+        let controller = RegisteredViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
