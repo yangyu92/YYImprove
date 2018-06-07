@@ -11,8 +11,7 @@
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
 		F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */; };
-		F21F59DF20C7C915009D7478 /* YYArticleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DE20C7C915009D7478 /* YYArticleNavigationBar.swift */; };
-		F21F59E120C7CB86009D7478 /* YYFoundNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59E020C7CB86009D7478 /* YYFoundNavigationBar.swift */; };
+		F21F59DF20C7C915009D7478 /* YYMeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DE20C7C915009D7478 /* YYMeNavigationBar.swift */; };
 		F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */; };
 		F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A1420B6F717007A88E9 /* LoginViewController.swift */; };
 		F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */; };
@@ -83,8 +82,7 @@
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYHomeSearchBarable.swift; sourceTree = "<group>"; };
-		F21F59DE20C7C915009D7478 /* YYArticleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYArticleNavigationBar.swift; sourceTree = "<group>"; };
-		F21F59E020C7CB86009D7478 /* YYFoundNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYFoundNavigationBar.swift; sourceTree = "<group>"; };
+		F21F59DE20C7C915009D7478 /* YYMeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYMeNavigationBar.swift; sourceTree = "<group>"; };
 		F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPlugin.swift; sourceTree = "<group>"; };
 		F2247A1420B6F717007A88E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F2247A1620B6F72A007A88E9 /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +279,7 @@
 		F2247A1E20B6F847007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F21F59DE20C7C915009D7478 /* YYMeNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,7 +309,6 @@
 		F2247A2220B6F890007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F21F59E020C7CB86009D7478 /* YYFoundNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,7 +331,6 @@
 		F2247A2520B6F8AE007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F21F59DE20C7C915009D7478 /* YYArticleNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -648,8 +645,8 @@
 			isa = PBXGroup;
 			children = (
 				F238CE1720C50B7E00F9053A /* View */,
-				F27622BA20C685B60009A476 /* YYNavTitleable.swift */,
 				F27622BC20C6B4A20009A476 /* YYNavBackable.swift */,
+				F27622BA20C685B60009A476 /* YYNavTitleable.swift */,
 				F27622B620C677EB0009A476 /* YYNavUniversalable.swift */,
 			);
 			path = UINavigationBar;
@@ -953,7 +950,6 @@
 				F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */,
 				F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
-				F21F59E120C7CB86009D7478 /* YYFoundNavigationBar.swift in Sources */,
 				F22A0A422095A2C100757897 /* YYBaseNavigationController.swift in Sources */,
 				F2247A1720B6F72A007A88E9 /* RegisteredViewController.swift in Sources */,
 				F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */,
@@ -967,7 +963,7 @@
 				F27622BD20C6B4A20009A476 /* YYNavBackable.swift in Sources */,
 				F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */,
 				F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */,
-				F21F59DF20C7C915009D7478 /* YYArticleNavigationBar.swift in Sources */,
+				F21F59DF20C7C915009D7478 /* YYMeNavigationBar.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */,
 				F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */,

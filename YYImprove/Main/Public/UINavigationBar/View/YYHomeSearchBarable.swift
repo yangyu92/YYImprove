@@ -1,7 +1,7 @@
 //
 //  YYHomeSearchBarable.swift
 //  YYImprove
-//
+//  自定义的收银搜索框控件
 //  Created by canyou on 2018/6/6.
 //  Copyright © 2018年 com.canyou. All rights reserved.
 //

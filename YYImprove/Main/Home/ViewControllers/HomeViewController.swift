@@ -23,20 +23,6 @@ class HomeViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let gradient: CAGradientLayer = [
-            UIColor(hex: "#78C9CC"),
-            UIColor(hex: "#3bb2bb")
-            ].gradient { gradient in
-                gradient.speed = 0
-                gradient.timeOffset = 0
-                gradient.locations = [0.0, 1.0]
-                gradient.startPoint = CGPoint(x: 0, y: 0)
-                gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-                gradient.frame = self.view.frame
-                return gradient
-        }
-        self.view.layer.addSublayer(gradient)
-        
         let label = UILabel().then {
             $0.textAlignment = .center
             $0.textColor = .black
@@ -117,10 +103,7 @@ extension HomeViewController {
     
     // MARK: - 下载
     func jump2Login() {
-//        let controller = YYBaseNavigationController(rootViewController: LoginViewController())
-//        self.present(controller, animated: true, completion: nil)
-        
-        let controller = LoginViewController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        let controller = YYBaseNavigationController(rootViewController: LoginViewController())
+        self.present(controller, animated: true, completion: nil)
     }
 }

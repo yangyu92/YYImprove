@@ -16,7 +16,7 @@ class YYBaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = kThemeWhiteColor
 
-        // 由于默认隐藏系统导航,让布局从初始化位置开始
+        // 由于默认隐藏系统导航,让布局从初始化位置开始(不可更改)
         automaticallyAdjustsScrollViewInsets = false
         
 //        log.info("init:\(type(of: self))")
@@ -32,12 +32,10 @@ class YYBaseViewController: UIViewController {
     }
 }
 
-// MARK: - 通用的导航协议
+// MARK: - 通用的导航协议(显示带返回按钮导航)
 extension YYBaseViewController: YYNavBackable {
-    /// 显示默认的导航(带返回按钮)
     func initTitleView(title: String) -> UIView {
         let navigationTitleBar = YYNavigationTitleBar(title)
-        
         navigationTitleBar.itemClicked = { [weak self] (model) in
             guard let `self` = self else { return }
             let type = model.type
@@ -55,7 +53,9 @@ extension YYBaseViewController {
     /// 用户解决兼容问题
     func compatibility () {
         if #available(iOS 11.0, *) {
-            
+//            tableView.estimatedRowHeight = 0.0
+//            tableView.estimatedSectionFooterHeight = 0.0
+//            tableView.estimatedSectionHeaderHeight = 0.0
         }
     }
 }

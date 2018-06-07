@@ -68,29 +68,24 @@ class FoundViewController: YYBaseViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
-// MARK: - 自定义导航
-extension FoundViewController: YYNavTitleable {
+extension FoundViewController: YYNavUniversalable {
     private func initTitleView() {
-        let homeNavigationBar = YYFoundNavigationBar()
-        
-        homeNavigationBar.itemClicked = { [weak self] (model) in
-            guard let `self` = self else { return }
+        let model = YYNavigationBarAggregation(leftItems: [YYNavigationBarItemMetric.message],
+                                               centerItem: YYNavigationBarItemMetric.foundTitle,
+                                               rightItems: [YYNavigationBarItemMetric.history, YYNavigationBarItemMetric.setting])
+        titleView = self.universals(aggregation: model) { (model) in
             let type = model.type
             switch type {
-            case .search:
-                let controller = LoginViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
-            case .download, .message, .history:
-                let controller = RegisteredViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
-            default:
-                break
+            case .message:
+                SwiftMessages.showInfo(msg: "点击了系统信息")
+            case .history:
+                SwiftMessages.showInfo(msg: "点击了历史记录")
+            default: break
             }
         }
-        titleView = self.titleView(titleView: homeNavigationBar)
+        
     }
 }

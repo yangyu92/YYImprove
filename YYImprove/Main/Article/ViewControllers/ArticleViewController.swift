@@ -61,8 +61,8 @@ class ArticleViewController: YYBaseViewController {
         //按钮点击响应
         button1.rx.tap.subscribe({_ in
             log.info("点击第二个按钮")
-            let controller = LoginViewController()
-            self.navigationController?.pushViewController(controller, animated: true)
+            let controller = YYBaseNavigationController(rootViewController: LoginViewController())
+            self.present(controller, animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
         
         initTitleView()
@@ -74,25 +74,22 @@ class ArticleViewController: YYBaseViewController {
     
 }
 
-// MARK: - 自定义导航
-extension ArticleViewController: YYNavTitleable {
+extension ArticleViewController: YYNavUniversalable {
+    
     private func initTitleView() {
-        let homeNavigationBar = YYArticleNavigationBar()
-        
-        homeNavigationBar.itemClicked = { [weak self] (model) in
-            guard let `self` = self else { return }
+        let model = YYNavigationBarAggregation(leftItems: [YYNavigationBarItemMetric.message, YYNavigationBarItemMetric.download],
+                                               centerItem: YYNavigationBarItemMetric.articleTitle,
+                                               rightItems: [YYNavigationBarItemMetric.history])
+        titleView = self.universals(aggregation: model) { (model) in
             let type = model.type
             switch type {
             case .message:
-                let controller = LoginViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
-            case .search:
-                let controller = RegisteredViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
-            default:
-                break
+                SwiftMessages.showInfo(msg: "点击了系统信息")
+            case .history:
+                SwiftMessages.showInfo(msg: "点击了历史记录")
+            default: break
             }
         }
-        titleView = self.titleView(titleView: homeNavigationBar)
+        
     }
 }

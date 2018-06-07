@@ -12,7 +12,6 @@ import Then
 
 // MARK: - 常量
 private struct Metric {
-
     static let titleFontSize: CGFloat = 15.0
     static let descFontSize: CGFloat = 13.0
 }
@@ -22,12 +21,14 @@ class NoneReachabilityHelpViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        
         _ = initTitleView(title: "无网络连接")
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         reachabilitySwiftMessage.hide()
+        // 启用滑动返回
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,17 +43,6 @@ class NoneReachabilityHelpViewController: YYBaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension NoneReachabilityHelpViewController {
     
@@ -98,7 +88,7 @@ extension NoneReachabilityHelpViewController {
         }
         
         lblText1.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(MetricGlobal.kNavigationTitleHight + 5)
+            make.top.equalToSuperview().offset(MetricGlobal.kNavigationTabbarHight + 5)
             make.right.equalToSuperview().offset(-15)
             make.left.equalToSuperview().offset(15)
             make.height.equalTo(40)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YYArticleNavigationBar: UIView {
+class YYMeNavigationBar: UIView {
     
     typealias AddBlock = (_ model: YYNavigationBarItemModel) -> Void
     var itemClicked: AddBlock? = { (_) in
@@ -17,7 +17,7 @@ class YYArticleNavigationBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = kNavigationBackgroundColor.alpha(0.8)
+        self.backgroundColor = UIColor.clear
         initArticleNavigationBar()
     }
     
@@ -35,7 +35,7 @@ class YYArticleNavigationBar: UIView {
     }
 }
 
-extension YYArticleNavigationBar: YYNavUniversalable {
+extension YYMeNavigationBar: YYNavUniversalable {
     // MARK: - 初始化 首页 导航栏组件
     func initArticleNavigationBar() {
         
@@ -55,15 +55,15 @@ extension YYArticleNavigationBar: YYNavUniversalable {
             self.itemClicked!(model)
         }
         view.addSubview(message)
-        let search = self.universal(model: YYNavigationBarItemMetric.search) { (model) in
+        let search = self.universal(model: YYNavigationBarItemMetric.setting) { (model) in
             self.itemClicked!(model)
         }
         view.addSubview(search)
         
         let titleItem = YYNavigationBarItemModel(type: .title,
                                                  position: .center,
-                                                 title: "文章",
-                                                 description: "标题")
+                                                 title: "我的",
+                                                 barItemDescription: "标题")
         let titleBtn = self.universal(model: titleItem) { (model) in
             self.itemClicked!(model)
         }

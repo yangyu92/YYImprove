@@ -8,12 +8,6 @@
 
 import UIKit
 
-// MARK: - 常量
-private struct Metric {
-    static let homeBarWidth: CGFloat = kScreenWidth
-    static let homeBarHeight: CGFloat = 44.0
-}
-
 class YYHomeNavigationBar: UIView {
     
     typealias AddBlock = (_ model: YYNavigationBarItemModel) -> Void
@@ -23,7 +17,7 @@ class YYHomeNavigationBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = kNavigationBackgroundColor.alpha(0.8)
+        self.backgroundColor = kNavigationBackgroundColor
         initHomeNavigationBar()
     }
     
@@ -55,8 +49,6 @@ extension YYHomeNavigationBar: YYNavUniversalable, YYHomeSearchBarable {
                 make.height.equalTo(MetricGlobal.kNavigationTitleHight)
             })
         }
-        
-        // 返回按钮
         let message = self.universal(model: YYNavigationBarItemMetric.message) { (model) in
             self.itemClicked!(model)
         }
@@ -99,8 +91,7 @@ extension YYHomeNavigationBar: YYNavUniversalable, YYHomeSearchBarable {
             make.centerY.equalToSuperview()
             make.height.equalToSuperview()
         }
-        
-        /// Title文本过长时,隐藏超出部分
+        /// 中间可缩放视图进行设置
         searchBar.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
         searchBar.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
     }
