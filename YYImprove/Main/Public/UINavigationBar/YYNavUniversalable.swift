@@ -251,6 +251,7 @@ extension YYNavUniversalable where Self: UIViewController {
         }
         
         // 导航右侧按钮布局
+        guard aggregation.rightItems.count != 0 else { return }
         var beforeRightTemp: UIView?
         for index in (0...aggregation.rightItems.count-1).reversed() {
             let temp = aggregation.rightItems[index]

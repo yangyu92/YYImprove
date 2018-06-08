@@ -34,7 +34,7 @@ extension LoginViewController: YYNavUniversalable {
             let type = model.type
             switch type {
             case .back:
-                self.navigationController?.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             case .loginRegister:
                 let controller = RegisteredViewController()
                 self.navigationController?.pushViewController(controller, animated: true)

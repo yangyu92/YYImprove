@@ -42,7 +42,11 @@ extension AppDelegate {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 reachabilitySwiftMessage.show { _ in
                     let controller = NoneReachabilityHelpViewController()
-                    let navigation = tabBarController.viewControllers![tabBarController.selectedIndex] as! YYBaseNavigationController
+                    var navigation = tabBarController.selectedViewController as! YYBaseNavigationController
+                    /// 获取present之后页面的导航控制器(控制器必须是YYBaseNavigationController)
+                    if let nav = appDelegate.window?.rootViewController?.presentedViewController {
+                        navigation = nav as! YYBaseNavigationController
+                    }
                     navigation.pushViewController(controller, animated: true)
                 }
             }
