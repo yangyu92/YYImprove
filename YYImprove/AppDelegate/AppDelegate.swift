@@ -10,7 +10,7 @@ import UIKit
 import SwiftyUserDefaults
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let tabBarController = YYRootTabBarController()
+let rootTabBarController = YYRootTabBarController()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.info("启动次数:\(launchCount)")
         
         window = UIWindow(frame: kScreenBounds)
-        self.window?.rootViewController = tabBarController
+        self.window?.rootViewController = rootTabBarController
         self.window!.makeKeyAndVisible()
     }
     

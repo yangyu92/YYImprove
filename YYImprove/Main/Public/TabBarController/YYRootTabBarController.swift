@@ -14,14 +14,26 @@ import Then
 
 class YYRootTabBarController: ESTabBarController {
 
+    // 播放按钮
+    var playView = YYTabbarPlayView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 修改tabbar背景颜色时需要设置
-        self.tabBar.shadowImage = UIImage(color: UIColor.clear, size: CGSize(width: 1, height: 1))
-        self.tabBar.backgroundImage = UIImage(color: kNavigationBackgroundColor, size: CGSize(width: 1, height: 1))
-        
         initSubViewControllers()
+        // 设置阴影
+        self.tabBar.layer.shadowColor = kThemeLightGreyColor.alpha(0.8).cgColor
+        self.tabBar.layer.shadowOpacity = 0.6
+        self.tabBar.layer.shadowOffset = CGSize(width: 0, height: -3)
+        self.tabBar.layer.shadowRadius = 3
+        // 去掉线条与透明度
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().backgroundImage = UIImage.init()
+        UITabBar.appearance().shadowImage = UIImage.init()
+//        UITabBar.appearance().barTintColor = kThemeWhiteColor
+//        UITabBar.appearance().tintColor = kThemeTomatoColor
+//        // 修改tabbar背景颜色时需要设置
+//        self.tabBar.shadowImage = UIImage(color: UIColor.clear, size: CGSize(width: 1, height: 1))
+//        self.tabBar.backgroundImage = UIImage(color: kNavigationBackgroundColor, size: CGSize(width: 1, height: 1))
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,10 +79,10 @@ extension YYRootTabBarController {
             tabArr.append(navVc)
         }
         let controller2 = UIViewController()
-        controller2.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(),
+        controller2.tabBarItem = ESTabBarItem.init(playView,
                                                    title: nil,
-                                                   image: UIImage(asset: Asset.Navication.photoVerybig),
-                                                   selectedImage: UIImage(asset: Asset.Navication.photoVerybig))
+                                                   image: nil,
+                                                   selectedImage: nil)
         tabArr.insert(controller2, at: 2)
         self.viewControllers = tabArr
         self.shouldHijackHandler = shouldHijackHandlerEvent
@@ -100,16 +112,16 @@ extension YYRootTabBarController {
     }
     
     private func didHijackHandlerEvent(_ tabBarController: UITabBarController, _ viewController: UIViewController, _ index: Int) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
-            let takePhotoAction = UIAlertAction(title: "打开相机", style: .default, handler: nil)
-            alertController.addAction(takePhotoAction)
-            let selectFromAlbumAction = UIAlertAction(title: "选择照片", style: .default, handler: nil)
-            alertController.addAction(selectFromAlbumAction)
-            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-            alertController.addAction(cancelAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//            let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+//            let takePhotoAction = UIAlertAction(title: "打开相机", style: .default, handler: nil)
+//            alertController.addAction(takePhotoAction)
+//            let selectFromAlbumAction = UIAlertAction(title: "选择照片", style: .default, handler: nil)
+//            alertController.addAction(selectFromAlbumAction)
+//            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+//            alertController.addAction(cancelAction)
+//            self.present(alertController, animated: true, completion: nil)
+//        }
     }
     
     fileprivate func showAlert(_ title: String, message: String) {

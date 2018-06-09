@@ -51,7 +51,7 @@ class RegisteredViewController: YYBaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // 启用滑动返回
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+//        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {

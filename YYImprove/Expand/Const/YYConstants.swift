@@ -16,6 +16,18 @@ public let kNavigationTitleColor = UIColor(hex: "#FFFFFF")
 public let kNavigationBackgroundColor = UIColor(hex: "78C9CC")
 
 public let kThemeWhiteColor = UIColor(hex: "#FFFFFF")
+public let kThemeWhiteSmokeColor = UIColor(hex: "#F5F5F5")
+public let kThemeMistyRoseColor = UIColor(hex: "#FFE4E1")  // 薄雾玫瑰
+public let kThemeGainsboroColor = UIColor(hex: "#F3F4F5")  // 亮灰色
+public let kThemeOrangeRedColor = UIColor(hex: "#FF4500")  // 橙红色
+public let kThemeLimeGreenColor = UIColor(hex: "#32CD32")  // 酸橙绿
+public let kThemeSnowColor = UIColor(hex: "#FFFAFA")
+public let kThemeLightGreyColor = UIColor(hex: "#D3D3D3")
+public let kThemeGreyColor = UIColor(hex: "#A9A9A9")
+public let kThemeTomatoColor = UIColor(hex: "#F7583B")
+public let kThemeDimGrayColor = UIColor(hex: "#696969")
+public let kThemeBlackColor = UIColor(hex: "#000000")
+public let kThemeBackgroundColor = UIColor(hex: "#F4F4F4")
 
 //判断iPhoneX
 public let isIPhoneX = (kScreenWidth == 375.0 && kScreenHeight == 812.0 ? true : false)

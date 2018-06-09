@@ -10,6 +10,7 @@
 		65B32B614BE2F733674029C4 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D151AD2E70C33AE8F17AC4 /* Pods_YYImproveUITests.framework */; };
 		688F44ADA9B3FD74DE2BF08D /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88998935BD1683CEC178C6BC /* Pods_YYImprove.framework */; };
 		8C462AAC28EB602DA1CE0A02 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */; };
+		F201DA7820CB9CCF00023BBB /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */; };
 		F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */; };
 		F21F59DF20C7C915009D7478 /* YYMeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DE20C7C915009D7478 /* YYMeNavigationBar.swift */; };
 		F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */; };
@@ -19,6 +20,7 @@
 		F2247A2F20B6F933007A88E9 /* FoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A2E20B6F933007A88E9 /* FoundViewController.swift */; };
 		F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3020B6F947007A88E9 /* ArticleViewController.swift */; };
 		F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3220B6F953007A88E9 /* HomeViewController.swift */; };
+		F225059B20CA758A005DD922 /* YYTabbarPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225059A20CA7589005DD922 /* YYTabbarPlayView.swift */; };
 		F226FC5620B438A600A01398 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiManager.swift */; };
 		F227045A20B7F6E6003ABAD8 /* AppDelegate+Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */; };
 		F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */; };
@@ -50,7 +52,6 @@
 		F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */; };
 		F2A38BFF20BAB90000A340B7 /* LodingMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */; };
 		F2A38C0120BAB93F00A340B7 /* LodingMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A38C0020BAB93F00A340B7 /* LodingMessageView.swift */; };
-		F2F0F74620C0235B00571E91 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */; };
 		F2F84E4B20B90FD700B59B4A /* ReachabilityMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F84E4A20B90FD700B59B4A /* ReachabilityMessageView.swift */; };
 		F2F84E4D20B9103B00B59B4A /* ReachabilityMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F84E4C20B9103B00B59B4A /* ReachabilityMessageView.xib */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		C5D6EFCF8C9BE393A4E4CBDB /* Pods-YYImproveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFD272D4DC5FF14197F31466 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
 		E27AA6DD3C26C7D75BC56F11 /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
 		F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYHomeSearchBarable.swift; sourceTree = "<group>"; };
 		F21F59DE20C7C915009D7478 /* YYMeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYMeNavigationBar.swift; sourceTree = "<group>"; };
 		F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPlugin.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		F2247A2E20B6F933007A88E9 /* FoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewController.swift; sourceTree = "<group>"; };
 		F2247A3020B6F947007A88E9 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		F2247A3220B6F953007A88E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F225059A20CA7589005DD922 /* YYTabbarPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTabbarPlayView.swift; sourceTree = "<group>"; };
 		F226FC5520B438A600A01398 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Reachability.swift"; sourceTree = "<group>"; };
 		F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessageExtensions.swift; sourceTree = "<group>"; };
@@ -130,7 +133,6 @@
 		F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAPIConfig.swift; sourceTree = "<group>"; };
 		F2A38BFE20BAB90000A340B7 /* LodingMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LodingMessageView.xib; sourceTree = "<group>"; };
 		F2A38C0020BAB93F00A340B7 /* LodingMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingMessageView.swift; sourceTree = "<group>"; };
-		F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
 		F2F84E4A20B90FD700B59B4A /* ReachabilityMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMessageView.swift; sourceTree = "<group>"; };
 		F2F84E4C20B9103B00B59B4A /* ReachabilityMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReachabilityMessageView.xib; sourceTree = "<group>"; };
 		FC24B972CD1523A66729A21B /* Pods_YYImproveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -584,6 +586,7 @@
 			children = (
 				F22A0A482097361800757897 /* UIImageExtensions.swift */,
 				F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */,
+				F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -636,7 +639,7 @@
 			children = (
 				F22A0A3B209585A500757897 /* YYRootTabBarController.swift */,
 				F22A0A3D2095873200757897 /* AnimationTabBarView.swift */,
-				F2F0F74520C0235B00571E91 /* ExampleIrregularityContentView.swift */,
+				F225059A20CA7589005DD922 /* YYTabbarPlayView.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -946,7 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2F0F74620C0235B00571E91 /* ExampleIrregularityContentView.swift in Sources */,
+				F225059B20CA758A005DD922 /* YYTabbarPlayView.swift in Sources */,
 				F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */,
 				F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
@@ -978,6 +981,7 @@
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
+				F201DA7820CB9CCF00023BBB /* CALayerExtension.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
 				F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */,

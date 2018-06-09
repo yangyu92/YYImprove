@@ -48,7 +48,8 @@ class HomeViewController: YYBaseViewController {
 //            DispatchQueue.main.async(execute: {
 //                SwiftMessages.showInfo(msg: "默认提示信息home")
 //            })
-            self.jump2SearchResult()
+//            self.jump2SearchResult()
+            rootTabBarController.playView.isPlay.value = !rootTabBarController.playView.isPlay.value
         }).disposed(by: rx.disposeBag)
         
         initTitleView()

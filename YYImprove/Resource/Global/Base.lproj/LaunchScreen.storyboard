@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,18 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-KI-Sj5">
-                                <rect key="frame" x="142" y="288" width="90" height="90"/>
+                                <rect key="frame" x="162" y="323" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="33j-Rh-Hyk"/>
                                     <constraint firstAttribute="width" constant="90" id="c8E-ht-4m4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©YY improve coding level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-Nb-VzJ">
-                                <rect key="frame" x="109" y="617" width="156.5" height="30"/>
+                                <rect key="frame" x="129" y="686" width="156.66666666666663" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EN1-de-GN7"/>
                                 </constraints>
@@ -51,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="welcomeIcon" width="256" height="256"/>
+        <image name="welcomeIcon" width="341" height="341"/>
     </resources>
 </document>

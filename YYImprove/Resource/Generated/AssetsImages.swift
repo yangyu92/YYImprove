@@ -61,11 +61,13 @@ internal enum Asset {
     internal static let tabMeSelected = ImageAsset(name: "tab_me_selected")
     internal static let tabPhoto = ImageAsset(name: "tab_photo")
     internal static let tabPhotoSelected = ImageAsset(name: "tab_photo_selected")
+    internal static let tabPlayW = ImageAsset(name: "tab_play_w")
   }
   internal enum Public {
     internal static let icNoWifi = ImageAsset(name: "ic_noWifi")
     internal static let icRightArrow = ImageAsset(name: "ic_rightArrow")
     internal static let lodingCancel = ImageAsset(name: "loding_cancel")
+    internal static let playDefault = ImageAsset(name: "play_default")
   }
   internal enum Welcome {
     internal static let welcomeIcon = ImageAsset(name: "welcomeIcon")
@@ -91,9 +93,11 @@ internal enum Asset {
     Navication.tabMeSelected,
     Navication.tabPhoto,
     Navication.tabPhotoSelected,
+    Navication.tabPlayW,
     Public.icNoWifi,
     Public.icRightArrow,
     Public.lodingCancel,
+    Public.playDefault,
     Welcome.welcomeIcon,
   ]
   // swiftlint:enable trailing_comma

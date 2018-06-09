@@ -16,10 +16,11 @@ class AnimationTabBarView: ESTabBarItemContentView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        textColor = kNavigationTitleColor
-        highlightTextColor = kNavigationTitleColor
-        iconColor = kNavigationTitleColor
-        highlightIconColor = kNavigationTitleColor
+//        textColor = kNavigationTitleColor
+//        iconColor = kNavigationTitleColor
+
+        highlightTextColor = kNavigationBackgroundColor
+        highlightIconColor = kNavigationBackgroundColor
         
 //        // 设置tab栏目背景颜色
 //        backdropColor = UIColor(hex: "#78C9CC")
