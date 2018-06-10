@@ -25,7 +25,7 @@ private struct Metric {
 
 class YYTabbarPlayView: ESTabBarItemContentView {
     
-    var isPlay: Variable<Bool> = Variable(false)                // 播放状态
+    var isPlay: BehaviorRelay<Bool> = BehaviorRelay(value: false)                // 播放状态
     
     // MARK: - 成功回调
     typealias AddBlock = (_ isPlay: Bool) -> Void
@@ -140,7 +140,7 @@ extension YYTabbarPlayView {
         self.rx.tapGesture().when(.recognized).subscribe({ [weak self]  _ in
             guard let `self` = self else { return }
             // 点击 进入 播放状态
-            self.isPlay.value = !self.isPlay.value
+            self.isPlay.accept(!self.isPlay.value)
         }).disposed(by: rx.disposeBag)
     }
 }

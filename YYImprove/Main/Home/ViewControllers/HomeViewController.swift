@@ -49,7 +49,7 @@ class HomeViewController: YYBaseViewController {
 //                SwiftMessages.showInfo(msg: "默认提示信息home")
 //            })
 //            self.jump2SearchResult()
-            rootTabBarController.playView.isPlay.value = !rootTabBarController.playView.isPlay.value
+            rootTabBarController.playView.isPlay.accept(!rootTabBarController.playView.isPlay.value)
         }).disposed(by: rx.disposeBag)
         
         initTitleView()

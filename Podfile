@@ -9,8 +9,8 @@ target 'YYImprove' do
     # 基于Alamofire的网络抽象层
     pod 'Moya', '11.0.2’
     pod 'Moya/RxSwift', '11.0.2'
-    pod 'RxSwift', '4.1.2'
-    pod 'RxCocoa', '4.1.2'
+    pod 'RxSwift', '4.2'
+    pod 'RxCocoa', '4.2'
     pod 'Alamofire', '4.7.2’
     pod 'ReachabilitySwift', '4.1.0'
     
@@ -22,6 +22,7 @@ target 'YYImprove' do
 
     # JSON 解析
     pod 'ObjectMapper', '3.1.0'
+#    pod 'RxSwift-ObjectMapper', '~> 1.1'
     # pod 'SwiftyJSON', '4.1.0’
     
     # Then语法糖
@@ -54,7 +55,7 @@ target 'YYImprove' do
     pod 'Hue', '3.0.1'
 
     # 依赖注入框架
-    pod 'Swinject', '2.4.0'
+    pod 'Swinject', '2.4.1'
 
     # 信息提示
     pod 'SwiftMessages', '4.1.4'
