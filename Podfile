@@ -22,7 +22,7 @@ target 'YYImprove' do
 
     # JSON 解析
     pod 'ObjectMapper', '3.1.0'
-#    pod 'RxSwift-ObjectMapper', '~> 1.1'
+    pod 'Moya-ObjectMapper/RxSwift', '2.6'
     # pod 'SwiftyJSON', '4.1.0’
     
     # Then语法糖

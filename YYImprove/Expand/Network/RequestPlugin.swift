@@ -14,7 +14,6 @@ let newworkActivityPlugin = NetworkActivityPlugin { (change: NetworkActivityChan
     switch change {
     case .ended:
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//        Thread.sleep(forTimeInterval: 3.0)
     case .began:
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }

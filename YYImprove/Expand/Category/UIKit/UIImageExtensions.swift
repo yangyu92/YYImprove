@@ -147,19 +147,49 @@ public extension UIImage {
     /// - Returns: UIImage with all corners rounded
     public func withRoundedCorners(radius: CGFloat? = nil) -> UIImage? {
         let maxRadius = min(size.width, size.height) / 2
-        let cornerRadius: CGFloat
+        var cornerRadius: CGFloat
         if let radius = radius, radius > 0 && radius <= maxRadius {
             cornerRadius = radius
         } else {
             cornerRadius = maxRadius
         }
-        
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         
         let rect = CGRect(origin: .zero, size: size)
         UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
         draw(in: rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    /// 生成带边框的圆角图片
+    ///
+    /// - Parameters:
+    ///   - borderWith: 边框宽度
+    ///   - borderColor: 边框颜色
+    ///   - radius: 圆角半径(非必填,不填写默认圆形)
+    /// - Returns: UIImage with all corners rounded
+    public func withRoundedCorners(borderWith: CGFloat, borderColor: UIColor, radius: CGFloat? = nil) -> UIImage? {
+        let maxRadius = min(size.width, size.height) / 2
+        var cornerRadius: CGFloat
+        if let radius = radius, radius > 0 && radius <= maxRadius {
+            cornerRadius = radius
+        } else {
+            cornerRadius = maxRadius
+        }
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        let space = borderWith * 2
+        let point = CGPoint(x: borderWith, y: borderWith)
+        let middleSize = CGSize(width: size.width - space, height: size.height - space)
         
+        let rect = CGRect(origin: point, size: middleSize)
+        let bezierPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius - space)
+        borderColor.setStroke()
+        bezierPath.lineWidth = space
+        bezierPath.stroke(with: .normal, alpha: 1.0)
+        bezierPath.addClip()
+        draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image

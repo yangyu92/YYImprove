@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 class RegisteredViewController: YYBaseViewController {
 
@@ -38,10 +39,11 @@ class RegisteredViewController: YYBaseViewController {
         }
         //按钮点击响应
         button.rx.tap.subscribe({_ in
-            DispatchQueue.main.async(execute: {
-                let controller = RegisteredViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
-            })
+            let viewModel = RegisteredViewModel()
+            viewModel.login(username: "13397470679", pwd: "000000").subscribe(onNext: { (loginModel) in
+                log.info("---\(String(describing: loginModel.retCode!))")
+                SwiftMessages.showSuccess(msg: loginModel.msg!)
+            }).disposed(by: self.rx.disposeBag)
         }).disposed(by: rx.disposeBag)
     }
     

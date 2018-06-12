@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping,
-                                                  stubClosure: MoyaProvider.delayedStub(1), // 延迟3秒使用sampleData中的测试数据返回
+//                                                  stubClosure: MoyaProvider.delayedStub(1), // 延迟3秒使用sampleData中的测试数据返回
                                                   plugins: [NetworkLoggerPlugin(verbose: true),
                                                             newworkActivityPlugin,
                                                             RequestLoadingPlugin(true),
@@ -31,19 +31,7 @@ enum ApiManager {
     case login(phone:String, password:String)
 }
 
-extension ApiManager: TargetType {
-    
-    var headers: [String: String]? {
-        return headerFields
-    }
-    
-    /// The target's base `URL`.
-    var baseURL: URL {
-        switch self {
-        case .rigister, .login:
-            return baseApiDevelopment
-        }
-    }
+extension ApiManager: TargetType, MoyaAddable {
     
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: String {
