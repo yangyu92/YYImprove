@@ -18,6 +18,7 @@ private struct Metric {
     static let topMargin: CGFloat = 18.0
     static let spaceWidth: CGFloat = 8.0    // 圆环间距
     static let imageWidth: CGFloat = Metric.width - Metric.spaceWidth * 2
+    static let imageBorderWidth: CGFloat = 10.0
     static let iconWidth: CGFloat = 30
     
     static let imageAnimKey: String = "backgroundImageAnim"
@@ -39,12 +40,15 @@ class YYTabbarPlayView: ESTabBarItemContentView {
         $0.layer.cornerRadius = Metric.width / 2
     }
     
+    private let effectView = UIVisualEffectView().then {
+        $0.effect = UIBlurEffect(style: .extraLight)
+        $0.alpha = 0.3
+        $0.layer.masksToBounds = true
+        $0.layer.cornerRadius = (Metric.imageWidth - Metric.imageBorderWidth) / 2
+    }
+    
     var backgroundImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
-        $0.layer.masksToBounds = true
-        $0.layer.cornerRadius = Metric.imageWidth / 2
-        $0.layer.borderColor = kThemeGainsboroColor.cgColor
-        $0.layer.borderWidth = 0.5
     }
 
     let iconView = UIImageView().then {
@@ -91,6 +95,12 @@ extension YYTabbarPlayView {
             make.width.height.equalTo(Metric.imageWidth)
         }
         
+        backgroundView.addSubview(effectView)
+        effectView.snp.makeConstraints { (make) in
+            make.center.equalTo(backgroundImageView)
+            make.width.height.equalTo(Metric.imageWidth - Metric.imageBorderWidth)
+        }
+        
         backgroundView.addSubview(iconView)
         iconView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
@@ -100,7 +110,7 @@ extension YYTabbarPlayView {
     }
     
     func addRotationAnimation(image: UIImage) {
-        backgroundImageView.image = image
+        backgroundImageView.image = image.withRoundedCorners(borderWith: Metric.imageBorderWidth, borderColor: kThemeGainsboroColor)
         
         let anim = CABasicAnimation(keyPath: "transform.rotation.z").then {
             $0.fromValue = 0.0
@@ -118,9 +128,11 @@ extension YYTabbarPlayView {
     private func updatePlayStatus(isPlay: Bool) {
         if isPlay {
             self.iconView.isHidden = true
+            self.effectView.isHidden = true
             backgroundImageView.layer.resumeAnimate()
         } else {
             self.iconView.isHidden = false
+            self.effectView.isHidden = false
             backgroundImageView.layer.pauseAnimate()
         }
     }
