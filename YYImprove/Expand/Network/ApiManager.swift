@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 let apiManagerProvider = MoyaProvider<ApiManager>(endpointClosure: endpointMapping,
-//                                                  stubClosure: MoyaProvider.delayedStub(1), // 延迟3秒使用sampleData中的测试数据返回
+                                                  stubClosure: MoyaProvider.delayedStub(1), // 延迟3秒使用sampleData中的测试数据返回
                                                   plugins: [NetworkLoggerPlugin(verbose: true),
                                                             newworkActivityPlugin,
                                                             RequestLoadingPlugin(true),
@@ -55,7 +55,7 @@ extension ApiManager: TargetType, MoyaAddable {
     var sampleData: Data {
         switch self {
         case .rigister:
-            return "{ \"retCode\": \"200\", \"msg\": \"success\", \"uid\": \"e5b0d1b60461ea4605cf27947f739bce\" }".utf8Encoded
+            return "[{ \"retCode\": \"200\", \"msg\": \"success\", \"uid\": \"e5b0d1b60461ea4605cf27947f739bce\" }".utf8Encoded
         default:
             return "".utf8Encoded
         }

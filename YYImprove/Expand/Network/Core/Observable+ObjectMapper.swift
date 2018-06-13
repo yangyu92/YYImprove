@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import RxSwift
 import Moya
 import ObjectMapper
@@ -19,6 +18,8 @@ enum RxSwiftMoyaError: Swift.Error {
     case noData
     case couldNotMakeObjectError
     case bizError(resultCode: String, resultMsg: String)
+    case requestFailed
+    case noResponse
 }
 
 extension RxSwiftMoyaError: LocalizedError {
@@ -36,18 +37,31 @@ extension RxSwiftMoyaError: LocalizedError {
             return "CouldNotMakeObjectError."
         case .bizError(resultCode: let resultCode, resultMsg: let resultMsg):
             return "错误码: \(resultCode), 错误信息: \(resultMsg)"
+        case .requestFailed:
+            return "网络请求发生错误"
+        case .noResponse:
+            return "接收到的返回没有data"
         }
     }
 }
 
 extension Observable {
     func mapObject<T: Mappable>(type: T.Type) -> Observable<T> {
-        return self.map { response in
-            //if response is a dictionary, then use ObjectMapper to map the dictionary
-            //if not throw an error
-            guard let dict = response as? [String: Any] else {
+        return map { response in
+            //返回response
+            guard let response = response as? Moya.Response else {
+                throw RxSwiftMoyaError.noResponse
+            }
+            //检查状态码
+            guard (200...209) ~= response.statusCode else {
+                throw RxSwiftMoyaError.requestFailed
+            }
+            guard let dict = try? JSONSerialization.jsonObject(with: response.data, options: JSONSerialization.ReadingOptions(rawValue: 0))  as! [String: Any] else {
                 throw RxSwiftMoyaError.parseJSONError
             }
+//            guard let dict = response.data as? [String: Any] else {
+//                throw RxSwiftMoyaError.parseJSONError
+//            }
             return Mapper<T>().map(JSON: dict)!
         }
     }

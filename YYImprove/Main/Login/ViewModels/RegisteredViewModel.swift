@@ -13,10 +13,10 @@ class RegisteredViewModel {
     
     func login(username: String, pwd: String) -> Observable<LoginModel> {
         return apiManagerProvider.rx.request(ApiManager.rigister(username: username, password: pwd, email: "yang_yu92@foxmail.com"))
-            .asObservable()
             .filterSuccessfulStatusCodes()
-            .mapJSON()
-            .showAPIErrorToast()
+            .asObservable()
+//            .mapJSON()
             .mapObject(type: LoginModel.self)
+            .showAPIErrorToast()
     }
 }
