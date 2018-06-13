@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1E978620D0F08300963C09 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978520D0F08300963C09 /* BaseModel.swift */; };
 		1BE45E0820CFC5700030F756 /* MoyaAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0720CFC5700030F756 /* MoyaAddable.swift */; };
 		1BE45E0C20CFEB090030F756 /* RegisteredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */; };
-		1BE45E0E20CFEB6E0030F756 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0D20CFEB6E0030F756 /* LoginModel.swift */; };
+		1BE45E0E20CFEB6E0030F756 /* RegisteredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */; };
 		1BE45E1020CFEE470030F756 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0F20CFEE470030F756 /* Observable+ObjectMapper.swift */; };
 		1BE45E1220CFEE940030F756 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E1120CFEE940030F756 /* Observable+Extension.swift */; };
 		65B32B614BE2F733674029C4 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D151AD2E70C33AE8F17AC4 /* Pods_YYImproveUITests.framework */; };
@@ -79,9 +80,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B1E978520D0F08300963C09 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		1BE45E0720CFC5700030F756 /* MoyaAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaAddable.swift; sourceTree = "<group>"; };
 		1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewModel.swift; sourceTree = "<group>"; };
-		1BE45E0D20CFEB6E0030F756 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredModel.swift; sourceTree = "<group>"; };
 		1BE45E0F20CFEE470030F756 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		1BE45E1120CFEE940030F756 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		21157AEF3AB73FBC6ADECCF4 /* Pods-YYImprove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1E978420D0F02800963C09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B1E978520D0F08300963C09 /* BaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1BE45E0520CFC45E0030F756 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +244,7 @@
 		F2247A0E20B6F5C6007A88E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1BE45E0D20CFEB6E0030F756 /* LoginModel.swift */,
+				1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -578,6 +588,7 @@
 		F22A0A132094974D00757897 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				1B1E978420D0F02800963C09 /* Models */,
 				F2377E6A20C23C4500CD92EA /* YYBaseViewController.swift */,
 				F22A0A412095A2C100757897 /* YYBaseNavigationController.swift */,
 			);
@@ -1016,9 +1027,10 @@
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
-				1BE45E0E20CFEB6E0030F756 /* LoginModel.swift in Sources */,
+				1BE45E0E20CFEB6E0030F756 /* RegisteredModel.swift in Sources */,
 				F201DA7820CB9CCF00023BBB /* CALayerExtension.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
+				1B1E978620D0F08300963C09 /* BaseModel.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
 				F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */,
 			);

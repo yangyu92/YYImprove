@@ -11,15 +11,17 @@ import RxSwift
 import Moya
 import ObjectMapper
 
+public struct ResponseCode {
+    static let successResponseStatus = "200"     // 接口成功调用
+    static let forceLogoutError = "100000"     // 请重新登录
+}
+
 enum RxSwiftMoyaError: Swift.Error {
     case parseJSONError
-    case noRepresentor
-    case notSuccessfulHTTP
-    case noData
-    case couldNotMakeObjectError
-    case bizError(resultCode: String, resultMsg: String)
-    case requestFailed
-    case noResponse
+    // 登录状态变化
+    case loginStateIsexpired(message: String?)
+    // 自定义错误
+    case customException(message: String, code: String)
 }
 
 extension RxSwiftMoyaError: LocalizedError {
@@ -27,20 +29,10 @@ extension RxSwiftMoyaError: LocalizedError {
         switch self {
         case .parseJSONError:
             return "数据解析失败"
-        case .noRepresentor:
-            return "NoRepresentor."
-        case .notSuccessfulHTTP:
-            return "NotSuccessfulHTTP."
-        case .noData:
-            return "NoData."
-        case .couldNotMakeObjectError:
-            return "CouldNotMakeObjectError."
-        case .bizError(resultCode: let resultCode, resultMsg: let resultMsg):
-            return "错误码: \(resultCode), 错误信息: \(resultMsg)"
-        case .requestFailed:
-            return "网络请求发生错误"
-        case .noResponse:
-            return "接收到的返回没有data"
+        case .loginStateIsexpired:
+            return "token过期"
+        case .customException(message: let message, code: let code):
+            return "错误码: \(message), 错误信息: \(code)"
         }
     }
 }
@@ -49,19 +41,12 @@ extension Observable {
     func mapObject<T: Mappable>(type: T.Type) -> Observable<T> {
         return map { response in
             //返回response
-            guard let response = response as? Moya.Response else {
-                throw RxSwiftMoyaError.noResponse
-            }
-            //检查状态码
-            guard (200...209) ~= response.statusCode else {
-                throw RxSwiftMoyaError.requestFailed
-            }
-            guard let dict = try? JSONSerialization.jsonObject(with: response.data, options: JSONSerialization.ReadingOptions(rawValue: 0))  as! [String: Any] else {
+            guard let dict = response as? [String: Any] else {
                 throw RxSwiftMoyaError.parseJSONError
             }
-//            guard let dict = response.data as? [String: Any] else {
-//                throw RxSwiftMoyaError.parseJSONError
-//            }
+            guard  dict["retCode"] as? String == ResponseCode.successResponseStatus else {
+                throw RxSwiftMoyaError.customException(message: dict["msg"] as! String, code: dict["retCode"] as! String)
+            }
             return Mapper<T>().map(JSON: dict)!
         }
     }

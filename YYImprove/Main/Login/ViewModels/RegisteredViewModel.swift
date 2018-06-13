@@ -11,12 +11,14 @@ import RxSwift
 
 class RegisteredViewModel {
     
-    func login(username: String, pwd: String) -> Observable<LoginModel> {
-        return apiManagerProvider.rx.request(ApiManager.rigister(username: username, password: pwd, email: "yang_yu92@foxmail.com"))
+    func registered(username: String, password: String, email: String) -> Observable<RegisteredModel> {
+        return apiManagerProvider.rx.request(ApiManager.rigister(username: username,
+                                                                 password: password,
+                                                                 email: email))
             .filterSuccessfulStatusCodes()
             .asObservable()
-//            .mapJSON()
-            .mapObject(type: LoginModel.self)
+            .mapJSON()
+            .mapObject(type: RegisteredModel.self)
             .showAPIErrorToast()
     }
 }
