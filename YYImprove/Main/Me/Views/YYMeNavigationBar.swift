@@ -2,8 +2,8 @@
 //  YYArticleNavigationBar.swift
 //  YYImprove
 //
-//  Created by canyou on 2018/6/6.
-//  Copyright © 2018年 com.canyou. All rights reserved.
+//  Created by yuyangstudio on 2018/6/6.
+//  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
 import UIKit

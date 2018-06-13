@@ -3,7 +3,7 @@
 //  YYImprove
 //
 //  Created by YY on 2018/6/12.
-//  Copyright © 2018年 com.canyou. All rights reserved.
+//  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
 import Foundation

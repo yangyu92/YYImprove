@@ -2,8 +2,8 @@
 //  YYNavigationTitleBar.swift
 //  YYImprove
 //  带返回按钮与Title的布局(在BaseViewController中方便调用)
-//  Created by canyou on 2018/6/5.
-//  Copyright © 2018年 com.canyou. All rights reserved.
+//  Created by YY on 2018/6/5.
+//  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
 import UIKit

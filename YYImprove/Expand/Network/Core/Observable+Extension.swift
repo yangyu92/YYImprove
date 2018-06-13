@@ -24,7 +24,6 @@ extension Observable {
         }, onCompleted: {
         }, onSubscribe: {
         }, onDispose: {
-            log.info("dispose")
         })
     }
     

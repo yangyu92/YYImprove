@@ -2,8 +2,8 @@
 //  AppDelegate+Reachability.swift
 //  YYImprove
 //  网络监测类
-//  Created by canyou on 2018/5/25.
-//  Copyright © 2018年 com.canyou. All rights reserved.
+//  Created by YY on 2018/5/25.
+//  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
 import Foundation

@@ -2,8 +2,8 @@
 //  YYNavTitleable.swift
 //  YYImprove
 //  将自定义导航View添加到导航位置
-//  Created by canyou on 2018/6/5.
-//  Copyright © 2018年 com.canyou. All rights reserved.
+//  Created by yuyangstudio on 2018/6/5.
+//  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
 import UIKit
