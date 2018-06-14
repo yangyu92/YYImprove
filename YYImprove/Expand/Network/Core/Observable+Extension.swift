@@ -51,7 +51,7 @@ extension Observable {
         }
     }
     
-    // 处理moya异常错误信息
+    // 处理自定义业务异常错误信息
     private func handleBusinessError(error: RxSwiftMoyaError) {
         switch error {
         case .parseJSONError:

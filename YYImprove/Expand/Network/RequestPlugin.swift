@@ -9,7 +9,9 @@
 import Foundation
 import Moya
 import Result
+import SwiftyUserDefaults
 
+// 状态栏转圈提示
 let newworkActivityPlugin = NetworkActivityPlugin { (change: NetworkActivityChangeType, target: TargetType) in
     switch change {
     case .ended:
@@ -19,17 +21,21 @@ let newworkActivityPlugin = NetworkActivityPlugin { (change: NetworkActivityChan
     }
 }
 
-struct AuthPlugin: PluginType {
-    let token: String
-    
+// 在请求头中添加token
+struct AuthPluginToken: PluginType {
+
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         var request = request
         request.timeoutInterval = 30
-        request.addValue(token, forHTTPHeaderField: "token")
+        
+        if let token = Defaults[.token] {
+            request.addValue(token, forHTTPHeaderField: "token")
+        }
         return request
     }
 }
 
+// 显示加载动画
 public final class RequestLoadingPlugin: PluginType {
     var hide: Bool
     init(_ hideView: Bool) {

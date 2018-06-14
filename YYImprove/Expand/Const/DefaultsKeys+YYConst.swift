@@ -12,6 +12,8 @@ import SwiftyUserDefaults
 extension DefaultsKeys {
     // 登录的用户名
     static let username = DefaultsKey<String?>("username")
+    // 登录的用户token
+    static let token = DefaultsKey<String?>("token")
     // app打开次数
     static let launchCount = DefaultsKey<Int>("launchCount")
 }

@@ -1,5 +1,5 @@
 //
-//  BaseResponse.swift
+//  PageModel.swift
 //  YYImprove
 //
 //  Created by YY on 2018/6/13.
@@ -9,16 +9,18 @@
 import Foundation
 import ObjectMapper
 
-class BaseModel: Mappable {
+class PageModel<T: Mappable>: Mappable {
     
-    var retCode: String!
-    var msg: String!
+    var curPage: String!
+    var total: String!
+    var list: [T]?
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        retCode <- map["retCode"]
-        msg <- map["msg"]
+        curPage <- map["curPage"]
+        total <- map["total"]
+        list <- map["list"]
     }
 }

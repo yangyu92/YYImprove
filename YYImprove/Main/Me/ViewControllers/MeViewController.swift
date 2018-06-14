@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import SwiftyUserDefaults
 
 class MeViewController: YYBaseViewController {
 
@@ -52,11 +53,20 @@ class MeViewController: YYBaseViewController {
             make.top.equalTo(label.snp.bottom).offset(15)
         }
         //按钮点击响应
-        button.rx.tap.subscribe({_ in
-            DispatchQueue.main.async(execute: {
-                let controller = ViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
-            })
+        button.rx.tap.subscribe(onNext: {_ in
+            
+//            DispatchQueue.main.async(execute: {
+//                let controller = ViewController()
+//                self.navigationController?.pushViewController(controller, animated: true)
+//            })
+            
+            if button.isSelected {
+                Defaults[.token] = "tokenTest"
+            } else {
+                Defaults[.token] = ""
+            }
+            button.isSelected = !button.isSelected
+            
         }).disposed(by: rx.disposeBag)
         
         initTitleView()

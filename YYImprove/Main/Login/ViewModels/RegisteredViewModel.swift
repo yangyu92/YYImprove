@@ -8,13 +8,15 @@
 
 import Foundation
 import RxSwift
+import Moya
 
 class RegisteredViewModel {
     
     func registered(username: String, password: String, email: String) -> Observable<RegisteredModel> {
-        return apiManagerProvider.rx.request(ApiManager.rigister(username: username,
-                                                                 password: password,
-                                                                 email: email))
+        
+        let target = MultiTarget(ApiUser.rigister(username: username, password: password, email: email))
+        let provider = ApiManager.provider(showLoding: true).rx.request(target)
+        return provider
             .filterSuccessfulStatusCodes()
             .asObservable()
             .mapJSON()

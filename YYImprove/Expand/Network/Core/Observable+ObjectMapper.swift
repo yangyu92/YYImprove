@@ -40,7 +40,6 @@ extension RxSwiftMoyaError: LocalizedError {
 extension Observable {
     func mapObject<T: Mappable>(type: T.Type) -> Observable<T> {
         return map { response in
-            //返回response
             guard let dict = response as? [String: Any] else {
                 throw RxSwiftMoyaError.parseJSONError
             }
@@ -53,8 +52,6 @@ extension Observable {
     
     func mapArray<T: Mappable>(type: T.Type) -> Observable<[T]> {
         return self.map { response in
-            //if response is an array of dictionaries, then use ObjectMapper to map the dictionary
-            //if not, throw an error
             guard let array = response as? [[String: Any]] else {
                 throw RxSwiftMoyaError.parseJSONError
             }

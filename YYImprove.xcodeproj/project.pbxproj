@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B1E978620D0F08300963C09 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978520D0F08300963C09 /* BaseModel.swift */; };
+		1B1E978E20D1048100963C09 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978D20D1048100963C09 /* PageModel.swift */; };
+		1B1E979020D1073500963C09 /* BasePageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978F20D1073500963C09 /* BasePageModel.swift */; };
+		1B1E979220D1582700963C09 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E979120D1582700963C09 /* ApiManager.swift */; };
 		1BE45E0820CFC5700030F756 /* MoyaAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0720CFC5700030F756 /* MoyaAddable.swift */; };
 		1BE45E0C20CFEB090030F756 /* RegisteredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */; };
 		1BE45E0E20CFEB6E0030F756 /* RegisteredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */; };
@@ -27,7 +30,7 @@
 		F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3020B6F947007A88E9 /* ArticleViewController.swift */; };
 		F2247A3320B6F953007A88E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2247A3220B6F953007A88E9 /* HomeViewController.swift */; };
 		F225059B20CA758A005DD922 /* YYTabbarPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225059A20CA7589005DD922 /* YYTabbarPlayView.swift */; };
-		F226FC5620B438A600A01398 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiManager.swift */; };
+		F226FC5620B438A600A01398 /* ApiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226FC5520B438A600A01398 /* ApiUser.swift */; };
 		F227045A20B7F6E6003ABAD8 /* AppDelegate+Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */; };
 		F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */; };
 		F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */; };
@@ -81,6 +84,9 @@
 
 /* Begin PBXFileReference section */
 		1B1E978520D0F08300963C09 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		1B1E978D20D1048100963C09 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		1B1E978F20D1073500963C09 /* BasePageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageModel.swift; sourceTree = "<group>"; };
+		1B1E979120D1582700963C09 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		1BE45E0720CFC5700030F756 /* MoyaAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaAddable.swift; sourceTree = "<group>"; };
 		1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewModel.swift; sourceTree = "<group>"; };
 		1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredModel.swift; sourceTree = "<group>"; };
@@ -105,7 +111,7 @@
 		F2247A3020B6F947007A88E9 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		F2247A3220B6F953007A88E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F225059A20CA7589005DD922 /* YYTabbarPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTabbarPlayView.swift; sourceTree = "<group>"; };
-		F226FC5520B438A600A01398 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F226FC5520B438A600A01398 /* ApiUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUser.swift; sourceTree = "<group>"; };
 		F227045920B7F6E6003ABAD8 /* AppDelegate+Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Reachability.swift"; sourceTree = "<group>"; };
 		F227045C20B8120D003ABAD8 /* SwiftMessageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessageExtensions.swift; sourceTree = "<group>"; };
 		F228792920AE745900A6B9E0 /* AppDelegate+XCGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+XCGLogger.swift"; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				1B1E978520D0F08300963C09 /* BaseModel.swift */,
+				1B1E978F20D1073500963C09 /* BasePageModel.swift */,
+				1B1E978D20D1048100963C09 /* PageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 		1BE45E0520CFC45E0030F756 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				F226FC5520B438A600A01398 /* ApiUser.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -580,7 +589,7 @@
 				1BE45E0620CFC46C0030F756 /* Core */,
 				F2A274FC20B2EAD100E69799 /* YYAPIConfig.swift */,
 				F2247A0A20B6CC0E007A88E9 /* RequestPlugin.swift */,
-				F226FC5520B438A600A01398 /* ApiManager.swift */,
+				1B1E979120D1582700963C09 /* ApiManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -993,6 +1002,7 @@
 			files = (
 				1BE45E1020CFEE470030F756 /* Observable+ObjectMapper.swift in Sources */,
 				F225059B20CA758A005DD922 /* YYTabbarPlayView.swift in Sources */,
+				1B1E978E20D1048100963C09 /* PageModel.swift in Sources */,
 				F2247A2D20B6F91B007A88E9 /* MeViewController.swift in Sources */,
 				F2A274FB20B2E91300E69799 /* UIDeviceExtension.swift in Sources */,
 				F22A0A232094999400757897 /* ViewController.swift in Sources */,
@@ -1009,16 +1019,18 @@
 				F228795F20AFF2B900A6B9E0 /* L10n-Constants.swift in Sources */,
 				F27622BD20C6B4A20009A476 /* YYNavBackable.swift in Sources */,
 				F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */,
+				1B1E979020D1073500963C09 /* BasePageModel.swift in Sources */,
 				F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */,
 				1BE45E0C20CFEB090030F756 /* RegisteredViewModel.swift in Sources */,
 				F21F59DF20C7C915009D7478 /* YYMeNavigationBar.swift in Sources */,
 				F22A0A3C209585A500757897 /* YYRootTabBarController.swift in Sources */,
 				F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */,
+				1B1E979220D1582700963C09 /* ApiManager.swift in Sources */,
 				F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */,
 				F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
 				F22A0A1C2094982900757897 /* YYConstants.swift in Sources */,
-				F226FC5620B438A600A01398 /* ApiManager.swift in Sources */,
+				F226FC5620B438A600A01398 /* ApiUser.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
 				F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */,

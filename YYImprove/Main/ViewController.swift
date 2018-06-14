@@ -40,15 +40,6 @@ class ViewController: YYBaseViewController {
         Defaults[.username] = "你好"
         let username = Defaults[.username]
         log.info(username)
-        
-        apiManagerProvider.request(ApiManager.rigister(username: "13397471159", password: "123456", email: "yang_yu92@foxmail.com")) { (result) in
-            var message = "数据解析异常"
-            if case let .success(response) = result {
-                let jsonString = try? response.mapString()
-                message = jsonString ?? message
-            }
-            SwiftMessages.showInfo(msg: message)
-        }
     }
     
     fileprivate func showAlert(_ title: String, message: String) {
