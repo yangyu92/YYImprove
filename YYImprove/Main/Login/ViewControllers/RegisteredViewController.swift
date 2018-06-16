@@ -9,44 +9,31 @@
 import UIKit
 import SwiftMessages
 
+// MARK: - 常量
+private struct Metric {
+    
+    static let fieldHeight: CGFloat = 45.0
+}
+
 class RegisteredViewController: YYBaseViewController {
 
+    let lblTitle = UILabel().then {
+//        $0.font = UIFont(name: "PartyLetPlain", size: 45)
+        $0.font = UIFont(name: "SavoyeLetPlain", size: 60)
+//        $0.font = UIFont(name: "Zapfino", size: 35)
+        $0.textAlignment = .center
+        $0.text = "Improve"
+        $0.textColor = UIColor.white
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        _ = initTitleView(title: "注册")
+        titleView = initTitleView(title: "注册")
+        titleView?.backgroundColor = UIColor.clear
         
-        let label = UILabel().then {
-            $0.textAlignment = .center
-            $0.textColor = .black
-            $0.text = L10n.tabTitleMe
-        }
-        self.view.addSubview(label)
+        self.initSubViewControllers()
         
-        label.snp.makeConstraints { (make) in
-            make.center.equalTo(self.view)
-        }
-        
-        let button = UIButton().then {
-            $0.setTitle("确认", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
-        }
-        self.view.addSubview(button)
-        button.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: 80, height: 45))
-            make.centerX.equalTo(label.snp.centerX)
-            make.top.equalTo(label.snp.bottom).offset(15)
-        }
-        //按钮点击响应
-        button.rx.tap.subscribe({_ in
-            let viewModel = RegisteredViewModel()
-            viewModel.registered(username: "13397470679",
-                                 password: "000000",
-                                 email: "yang_yu92@foxmail.com").subscribe(onNext: { (loginModel) in
-//                log.info("---\(String(describing: loginModel.retCode!))")
-                SwiftMessages.showSuccess(msg: "注册成功")
-            }).disposed(by: self.rx.disposeBag)
-        }).disposed(by: rx.disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +47,124 @@ class RegisteredViewController: YYBaseViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+extension RegisteredViewController: HCAccountLoginable {
+    
+    private func initSubViewControllers() {
+        let gradient: CAGradientLayer = [
+            UIColor(hex: "#78C9CC"),
+            UIColor(hex: "#3bb2bb")
+            ].gradient { gradient in
+                gradient.speed = 1
+                gradient.timeOffset = 3
+                gradient.locations = [0.0, 1.0]
+                gradient.startPoint = CGPoint(x: 1, y: 0)
+                gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+                gradient.frame = self.view.frame
+                return gradient
+        }
+        self.view.layer.addSublayer(gradient)
+        
+        self.view.addSubview(lblTitle)
+        lblTitle.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().multipliedBy(0.4)
+            make.centerX.equalToSuperview()
+        }
+        
+        self.initEnableMudule()
+    }
+    
+    // MARK: - 初始化 登录 输入框
+    private func initEnableMudule() {
+        
+        // 创建 容器组件
+        let scrollView = UIScrollView().then {
+            $0.showsHorizontalScrollIndicator = false
+            $0.showsVerticalScrollIndicator = false
+        }
+        
+        // 创建 协议组件
+        let accountField = initAccountField { }
+        let passwordField = initPasswordField { }
+        let (loginBtnView, loginBtn) = initLoginBtnView { event in
+//            HCLog(event.title)
+        }
+//        let otherLoginView = initOtherLoginView { event in
+//            HCLog(event.title)
+//        }
+        
+        // 创建 视图模型
+        let accountLoginView = HCAccountLoginViewModel(input: (accountField, passwordField, loginBtn), service: HCAccountLoginService.shareInstance)
+        
+        accountLoginView.accountUseable.drive(accountField.rx.validationResult).disposed(by: rx.disposeBag)
+        accountLoginView.passwordUseable.drive(passwordField.rx.validationResult).disposed(by: rx.disposeBag)
+        accountLoginView.loginBtnEnable.drive(onNext: { (beel) in
+            loginBtn.isEnabled = beel
+        }).disposed(by: rx.disposeBag)
+        
+        accountLoginView.loginResult.drive(onNext: { (result) in
+            switch result {
+            case .success:
+//                HCLog("\(result.description)")
+                break
+            case .empty:
+                break
+            case .failed:
+//                HCLog("\(result.description)")
+                break
+            }
+        }).disposed(by: rx.disposeBag)
+        
+        // 添加
+        view.addSubview(scrollView)
+        scrollView.addSubview(accountField)
+        scrollView.addSubview(passwordField)
+        scrollView.addSubview(loginBtnView)
+//        scrollView.addSubview(otherLoginView)
+        
+        // 布局
+        scrollView.snp.makeConstraints { (make) in
+            make.top.equalTo(lblTitle.snp.bottom)
+            make.left.bottom.equalToSuperview()
+            make.width.equalTo(kScreenWidth)
+        }
+        
+        accountField.snp.makeConstraints { (make) in
+            if kScreenWidth <= 320 {
+                make.left.equalToSuperview().offset(MetricGlobal.margin * 2)
+            } else {
+                make.left.equalToSuperview().offset(MetricGlobal.margin * 3)
+            }
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(MetricGlobal.margin * 2)
+            make.height.equalTo(Metric.fieldHeight)
+        }
+        
+        passwordField.snp.makeConstraints { (make) in
+            make.left.equalTo(accountField.snp.left)
+            make.right.equalTo(accountField.snp.right)
+            make.top.equalTo(accountField.snp.bottom).offset(MetricGlobal.margin * 2)
+            make.height.equalTo(Metric.fieldHeight)
+        }
+        
+        loginBtnView.snp.makeConstraints { (make) in
+            make.left.equalTo(accountField.snp.left)
+            make.right.equalTo(accountField.snp.right)
+            make.top.equalTo(passwordField.snp.bottom).offset(MetricGlobal.margin * 2)
+        }
+        
+//        otherLoginView.snp.makeConstraints { (make) in
+//            if kScreenW <= 320 {
+//                make.left.equalTo(accountField.snp.left).offset(-MetricGlobal.margin * 1)
+//            } else {
+//                make.left.equalTo(accountField.snp.left).offset(-MetricGlobal.margin * 2)
+//            }
+//            make.centerX.equalToSuperview()
+//            make.top.equalTo(loginBtnView.snp.bottom)
+//            make.bottom.equalToSuperview()
+//        }
     }
     
 }

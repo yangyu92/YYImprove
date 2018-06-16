@@ -42,8 +42,8 @@ extension ApiUser: TargetType, MoyaAddable {
         switch self {
         case .rigister:
             return "{ \"retCode\": \"200\", \"msg\": \"success\", \"uid\": \"e5b0d1b60461ea4605cf27947f739bce\" }".utf8Encoded
-        default:
-            return "".utf8Encoded
+        case .login:
+            return "{\"msg\":\"success\",\"result\":{\"token\":\"eae502fff9c63895d5d256da51bdd34b\",\"uid\":\"92d4d01b2f24aa60dd2b5f7d10a72da4ed127ffe\"},\"retCode\":\"200\"}".utf8Encoded
         }
     }
     
@@ -51,9 +51,16 @@ extension ApiUser: TargetType, MoyaAddable {
     var task: Task {
         switch self {
         case .rigister(let username, let password, let email):
-            return .requestParameters(parameters: ["username": username, "password": password, "email": email], encoding: URLEncoding.default)
+            var params: [String: Any] = [:]
+            params["username"] = username
+            params["password"] = password
+            params["email"] = email
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
         case .login(let username, let password):
-            return .requestParameters(parameters: ["username": username, "password": password], encoding: URLEncoding.default)
+            var params: [String: Any] = [:]
+            params["username"] = username
+            params["password"] = password
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }
     
@@ -61,14 +68,4 @@ extension ApiUser: TargetType, MoyaAddable {
     var validate: Bool {
         return false
     }
-}
-extension String {
-    var urlEscaped: String {
-        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-    
-    var utf8Encoded: Data {
-        return data(using: .utf8)!
-    }
-    
 }

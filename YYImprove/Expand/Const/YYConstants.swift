@@ -34,6 +34,11 @@ public let isIPhoneX = (kScreenWidth == 375.0 && kScreenHeight == 812.0 ? true :
 
 // MARK: - 常量
 struct MetricGlobal {
+    
+    // 绘制一像素的线
+    static let kSingleLineWidth: CGFloat = (1 / UIScreen.main.scale)
+    static let kSingleLineAdjustOffset: CGFloat = ((1 / UIScreen.main.scale) / 2)
+
     static let padding: CGFloat = 10.0
     static let margin: CGFloat = 10.0
     

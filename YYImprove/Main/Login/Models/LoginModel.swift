@@ -2,16 +2,15 @@
 //  LoginModel.swift
 //  YYImprove
 //
-//  Created by YY on 2018/6/12.
+//  Created by YY on 2018/6/17.
 //  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import ObjectMapper
 
-class RegisteredModel: BaseModel {
-    var result: String?
-    var token: String?
+class LoginModel: BaseModel {
+    var success: String?
     var uid: String?
     
     required init?(map: Map) {
@@ -20,8 +19,7 @@ class RegisteredModel: BaseModel {
     
     override func mapping(map: Map) {
         super.mapping(map: map)
-        result <- map["result"]
-        token <- map["token"]
         uid <- map["uid"]
+        success <- map["success"]
     }
 }

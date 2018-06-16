@@ -44,7 +44,14 @@ internal struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal enum Login {
+    internal static let loginAccountW = ImageAsset(name: "login_account_w")
+    internal static let loginInvisibleW = ImageAsset(name: "login_invisible_w")
+    internal static let loginPasswordW = ImageAsset(name: "login_password_w")
+    internal static let loginVisibleW = ImageAsset(name: "login_visible_w")
+  }
   internal enum Navication {
+    internal static let navBackB = ImageAsset(name: "nav_back_b")
     internal static let navBackW = ImageAsset(name: "nav_back_w")
     internal static let navDownloadW = ImageAsset(name: "nav_download_w")
     internal static let navHistoryW = ImageAsset(name: "nav_history_w")
@@ -77,6 +84,11 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    Login.loginAccountW,
+    Login.loginInvisibleW,
+    Login.loginPasswordW,
+    Login.loginVisibleW,
+    Navication.navBackB,
     Navication.navBackW,
     Navication.navDownloadW,
     Navication.navHistoryW,

@@ -19,6 +19,11 @@ struct YYNavigationBarItemMetric {
                                                position: .left,
                                                barItemDescription: "返回",
                                                imageNamed: Asset.Navication.navBackW.name)
+    
+    static let backBlack = YYNavigationBarItemModel(type: .back,
+                                               position: .left,
+                                               barItemDescription: "返回",
+                                               imageNamed: Asset.Navication.navBackB.name)
 
     static let message = YYNavigationBarItemModel(type: .message,
                                                   position: .left,

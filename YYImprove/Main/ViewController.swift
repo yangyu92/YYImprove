@@ -40,6 +40,14 @@ class ViewController: YYBaseViewController {
         Defaults[.username] = "你好"
         let username = Defaults[.username]
         log.info(username)
+        
+        let viewModel = RegisteredViewModel()
+        viewModel.registered(username: "13397470679",
+                             password: "000000",
+                             email: "yang_yu92@foxmail.com").subscribe(onNext: { (loginModel) in
+                                //                log.info("---\(String(describing: loginModel.retCode!))")
+                                SwiftMessages.showSuccess(msg: "注册成功")
+                             }).disposed(by: self.rx.disposeBag)
     }
     
     fileprivate func showAlert(_ title: String, message: String) {

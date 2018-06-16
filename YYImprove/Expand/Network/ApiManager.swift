@@ -10,6 +10,7 @@ import Foundation
 import Moya
 import SwiftyUserDefaults
 
+/// 在所有url后面拼接key参数
 private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
     let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
     let baseUrl = defaultEndpoint.url.appending("?key=\(mobAppKey)")
@@ -19,8 +20,7 @@ private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
 private func stubMapping<Target: TargetType>(_: Target) -> StubBehavior {
     // 实时请求api
 //    return StubBehavior.never
-    
-    // 延迟1秒使用sampleData中的测试数据返回
+    // 模拟请求(延迟1秒使用sampleData中的测试数据返回)
     return StubBehavior.delayed(seconds: 1)
 }
 
