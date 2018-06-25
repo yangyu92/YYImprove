@@ -21,7 +21,7 @@ target 'YYImprove' do
     pod 'RxGesture', '1.2.1'
 
     # JSON 解析
-    pod 'ObjectMapper', '3.1.0'
+    pod 'ObjectMapper', '3.3.0'
 #    pod 'Moya-ObjectMapper/RxSwift', '2.6'
     # pod 'SwiftyJSON', '4.1.0’
     
@@ -48,7 +48,7 @@ target 'YYImprove' do
     pod 'ESTabBarController-swift', '2.6.2'
 
     # 加载内容页
-    pod 'SkeletonView', '1.1.1'
+    pod 'SkeletonView', '1.2.1'
 
     # 皮肤
     # pod 'SwiftTheme', '0.4.1'
@@ -65,7 +65,7 @@ target 'YYImprove' do
     pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
     
     # 日志
-    pod 'XCGLogger', '6.0.2'
+    pod 'XCGLogger', '6.0.4'
 
   target 'YYImproveTests' do
     inherit! :search_paths

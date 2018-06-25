@@ -12,10 +12,10 @@ import RxCocoa
 
 class LoginViewModel {
     
-    let accountUseable: Driver<HCAccountLoginResult>
-    let passwordUseable: Driver<HCAccountLoginResult>
+    let accountUseable: Driver<YYAccountLoginResult>
+    let passwordUseable: Driver<YYAccountLoginResult>
     let loginBtnEnable: Driver<Bool>
-    let loginResult: Driver<HCAccountLoginResult>
+    let loginResult: Driver<YYAccountLoginResult>
     
     init(input:
         (accountField: UITextField, passwordField: UITextField, loginBtn: UIButton),

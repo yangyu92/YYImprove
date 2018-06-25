@@ -68,6 +68,10 @@ extension LoginViewController: YYAccountLoginabel {
         let passwordField = initPassWordFiled { }
         let (loginBtnView, loginBtn) = initLoginBtnView { (event) in
             log.info(event.title)
+            if event.type == .registered {
+                let controller = RegisteredViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
         }
         loginBtn.isEnabled = false
         
@@ -117,8 +121,10 @@ extension LoginViewController: YYAccountLoginabel {
         
         loginViewModel.loginResult.drive(onNext: { (result) in
             switch result {
-            case .success(let massage):
-                SwiftMessages.showSuccess(msg: massage)
+            case .success(let massage, let model as LoginModel):
+                SwiftMessages.showSuccess(msg: "\(massage)\(model.uid!)")
+                self.view.endEditing(true)
+                self.dismiss(animated: true, completion: nil)
             case .failed(let massage):
                 SwiftMessages.showWarning(msg: massage)
             default:

@@ -18,31 +18,31 @@ class LoginService {
     private init() {}
     
     // 验证账号是否合法
-    func validationAccount(_ account: String) -> Observable<HCAccountLoginResult> {
+    func validationAccount(_ account: String) -> Observable<YYAccountLoginResult> {
         
         if account.count == 0 { // 当字符串为空的时候，什么也不做
-            return Observable.just(HCAccountLoginResult.empty)
+            return Observable.just(YYAccountLoginResult.empty)
         }
         if !HCInputValidator.isValidPhone(phone: account) {
-            return Observable.just(HCAccountLoginResult.failed(message: "账号非法"))
+            return Observable.just(YYAccountLoginResult.failed(message: "账号非法"))
         }
-        return Observable.just(HCAccountLoginResult.success(message: "账号合法"))
+        return Observable.just(YYAccountLoginResult.success(message: "账号合法", data: nil))
     }
     
     // 验证密码是否合法
-    func validationPassword(_ passsword: String) -> Observable<HCAccountLoginResult> {
-        if passsword.count == 0 { // 当字符串为空的时候，什么也不做
-            return Observable.just(HCAccountLoginResult.empty)
+    func validationPassword(_ password: String) -> Observable<YYAccountLoginResult> {
+        if password.count == 0 { // 当字符串为空的时候，什么也不做
+            return Observable.just(YYAccountLoginResult.empty)
         }
-        if !HCInputValidator.isvalidationPassword(password: passsword) {
-            return Observable.just(HCAccountLoginResult.failed(message: "密码非法"))
+        if !HCInputValidator.isvalidationPassword(password: password) {
+            return Observable.just(YYAccountLoginResult.failed(message: "密码非法"))
         }
         
-        return Observable.just(HCAccountLoginResult.success(message: "密码合法"))
+        return Observable.just(YYAccountLoginResult.success(message: "密码合法", data: nil))
     }
     
     // 登录请求
-    func login(account: String, password: String) -> Observable<HCAccountLoginResult> {
+    func login(account: String, password: String) -> Observable<YYAccountLoginResult> {
 //        let target = MultiTarget(ApiUser.rigister(username: account, password: password, email: "yang_yu92@foxmail.com"))
 //        let provider = ApiManager.provider(showLoding: true).rx.request(target)
 //        return provider
@@ -61,8 +61,9 @@ class LoginService {
             .asObservable()
             .mapJSON()
             .mapObject(type: LoginModel.self)
-            .showAPIErrorToast().map({ (model) -> HCAccountLoginResult in
-                return HCAccountLoginResult.success(message: "登录成功")
+            .showAPIErrorToast()
+            .map({ model in
+                return YYAccountLoginResult.success(message: "登录成功", data: model)
             })
     }
     

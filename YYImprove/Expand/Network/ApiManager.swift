@@ -19,9 +19,9 @@ private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
 
 private func stubMapping<Target: TargetType>(_: Target) -> StubBehavior {
     // 实时请求api
-//    return StubBehavior.never
+    return StubBehavior.never
     // 模拟请求(延迟1秒使用sampleData中的测试数据返回)
-    return StubBehavior.delayed(seconds: 1)
+//    return StubBehavior.delayed(seconds: 1)
 }
 
 private struct ProviderMetric {

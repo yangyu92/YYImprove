@@ -87,7 +87,7 @@ extension YYAccountLoginabel where Self: LoginViewController {
             $0.placeholder = Metric.passswordPlaceholder
             $0.rightViewMode = .always
             #if DEBUG
-            $0.text = "000000"
+            $0.text = "123456"
             #endif
         }
         let rightView = self.passwordRightView { (btn) in

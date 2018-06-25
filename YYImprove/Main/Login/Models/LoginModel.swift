@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 class LoginModel: BaseModel {
-    var success: String?
+    var token: String?
     var uid: String?
     
     required init?(map: Map) {
@@ -19,7 +19,7 @@ class LoginModel: BaseModel {
     
     override func mapping(map: Map) {
         super.mapping(map: map)
-        uid <- map["uid"]
-        success <- map["success"]
+        token <- map["result.token"]
+        uid <- map["result.uid"]
     }
 }

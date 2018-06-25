@@ -95,27 +95,27 @@ extension RegisteredViewController: HCAccountLoginable {
 //            HCLog(event.title)
 //        }
         
-        // 创建 视图模型
-        let accountLoginView = HCAccountLoginViewModel(input: (accountField, passwordField, loginBtn), service: HCAccountLoginService.shareInstance)
-        
-        accountLoginView.accountUseable.drive(accountField.rx.validationResult).disposed(by: rx.disposeBag)
-        accountLoginView.passwordUseable.drive(passwordField.rx.validationResult).disposed(by: rx.disposeBag)
-        accountLoginView.loginBtnEnable.drive(onNext: { (beel) in
-            loginBtn.isEnabled = beel
-        }).disposed(by: rx.disposeBag)
-        
-        accountLoginView.loginResult.drive(onNext: { (result) in
-            switch result {
-            case .success:
-//                HCLog("\(result.description)")
-                break
-            case .empty:
-                break
-            case .failed:
-//                HCLog("\(result.description)")
-                break
-            }
-        }).disposed(by: rx.disposeBag)
+//        // 创建 视图模型
+//        let accountLoginView = HCAccountLoginViewModel(input: (accountField, passwordField, loginBtn), service: HCAccountLoginService.shareInstance)
+//        
+//        accountLoginView.accountUseable.drive(accountField.rx.validationResult).disposed(by: rx.disposeBag)
+//        accountLoginView.passwordUseable.drive(passwordField.rx.validationResult).disposed(by: rx.disposeBag)
+//        accountLoginView.loginBtnEnable.drive(onNext: { (beel) in
+//            loginBtn.isEnabled = beel
+//        }).disposed(by: rx.disposeBag)
+//        
+//        accountLoginView.loginResult.drive(onNext: { (result) in
+//            switch result {
+//            case .success:
+////                HCLog("\(result.description)")
+//                break
+//            case .empty:
+//                break
+//            case .failed:
+////                HCLog("\(result.description)")
+//                break
+//            }
+//        }).disposed(by: rx.disposeBag)
         
         // 添加
         view.addSubview(scrollView)

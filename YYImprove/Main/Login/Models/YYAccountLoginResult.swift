@@ -1,25 +1,25 @@
 //
-//  HCAccountLoginResult.swift
-//  RxXMLY
+//  YYAccountLoginResult.swift
+//  YYImprove
 //
-//  Created by sessionCh on 2018/1/3.
-//  Copyright © 2018年 sessionCh. All rights reserved.
+//  Created by YY on 2018/6/19.
+//  Copyright © 2018年 com.yuyangstudio. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-enum HCAccountLoginResult {
-    case success(message:String)
+enum YYAccountLoginResult {
+    case success(message:String, data: Any?)
     case empty
     case failed(message:String)
 }
 
-extension HCAccountLoginResult {
+extension YYAccountLoginResult {
     var description: String {
         switch self {
-        case let .success(message):
+        case let .success(message, _):
             return message
         case .empty:
             return ""
@@ -29,7 +29,7 @@ extension HCAccountLoginResult {
     }
 }
 
-extension HCAccountLoginResult {
+extension YYAccountLoginResult {
     var borderColor: CGColor {
         switch self {
         case .success:
@@ -44,7 +44,7 @@ extension HCAccountLoginResult {
 
 extension Reactive where Base: UITextField {
     
-    var validationResult: Binder<HCAccountLoginResult> {
+    var validationResult: Binder<YYAccountLoginResult> {
         return Binder(self.base) { field, result in
             field.layer.borderColor = result.borderColor
         }
