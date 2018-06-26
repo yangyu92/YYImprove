@@ -8,6 +8,30 @@
 
 import UIKit
 
+// MARK: - 事件
+struct AccountLoginEvent {
+    
+    // MARK: - 事件类型
+    enum AccountLoginType {
+        
+        case login
+        case registered
+        case forget
+        case weixin
+        case weibo
+        case qqClick
+    }
+    
+    var type: AccountLoginType
+    var title: String?
+    
+    init(type: AccountLoginType, title: String?) {
+        
+        self.type = type
+        self.title = title
+    }
+}
+
 private struct Metric {
     
     static let tipBtnWidth: CGFloat = 40.0
@@ -31,6 +55,22 @@ protocol YYAccountLoginabel {
 }
 
 extension YYAccountLoginabel where Self: LoginViewController {
+    
+    func initGradient() {
+        let gradient: CAGradientLayer = [
+            UIColor(hex: "#78C9CC"),
+            UIColor(hex: "#3bb2bb")
+            ].gradient { gradient in
+                gradient.speed = 1
+                gradient.timeOffset = 3
+                gradient.locations = [0.0, 1.0]
+                gradient.startPoint = CGPoint(x: 1, y: 0)
+                gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+                gradient.frame = self.view.frame
+                return gradient
+        }
+        self.view.layer.addSublayer(gradient)
+    }
     
     func initAccountFiled(onNext: () -> Void) -> UITextField {
         let field = UITextField().then {
@@ -215,5 +255,26 @@ extension YYAccountLoginabel where Self: LoginViewController {
             $0.setTitle(Metric.loginBtnTitle, for: .normal)
         }
         return loginBtn
+    }
+    
+    // MARK:- 其他登录方式
+    func initOtherLoginView(onNext: @escaping (_ event: AccountLoginEvent) -> Void) -> UIView {
+        
+        // 创建
+        let otherLoginView = YYOtherLoginView.loadFromNib()
+        
+        otherLoginView.weixinBtn.rx.tap.do(onNext: {
+            onNext(AccountLoginEvent.init(type: .weixin, title: "微信登陆"))
+        }).subscribe().disposed(by: rx.disposeBag)
+        
+        otherLoginView.weiboBtn.rx.tap.do(onNext: {
+            onNext(AccountLoginEvent.init(type: .weibo, title: "微博登陆"))
+        }).subscribe().disposed(by: rx.disposeBag)
+        
+        otherLoginView.qqBtn.rx.tap.do(onNext: {
+            onNext(AccountLoginEvent.init(type: .qqClick, title: "QQ登陆"))
+        }).subscribe().disposed(by: rx.disposeBag)
+        
+        return otherLoginView
     }
 }

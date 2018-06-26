@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1B1C499620D23F7600093DD7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C499520D23F7600093DD7 /* StringExtension.swift */; };
-		1B1CD9F420D34DA6001D377D /* HCAccountLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD9F320D34DA6001D377D /* HCAccountLoginable.swift */; };
-		1B1CD9F620D35169001D377D /* HCAccountLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD9F520D35169001D377D /* HCAccountLoginViewModel.swift */; };
 		1B1CD9FE20D35352001D377D /* HCInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD9FD20D35352001D377D /* HCInputValidator.swift */; };
 		1B1CDA0020D36C15001D377D /* YYAccountLoginabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD9FF20D36C15001D377D /* YYAccountLoginabel.swift */; };
 		1B1E978620D0F08300963C09 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978520D0F08300963C09 /* BaseModel.swift */; };
 		1B1E978E20D1048100963C09 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978D20D1048100963C09 /* PageModel.swift */; };
 		1B1E979020D1073500963C09 /* BasePageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E978F20D1073500963C09 /* BasePageModel.swift */; };
 		1B1E979220D1582700963C09 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E979120D1582700963C09 /* ApiManager.swift */; };
+		1B694FCE20E20E85001FDA1C /* YYOtherLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B694FCD20E20E85001FDA1C /* YYOtherLoginView.swift */; };
+		1B694FD020E20E92001FDA1C /* YYOtherLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B694FCF20E20E92001FDA1C /* YYOtherLoginView.xib */; };
+		1B694FD420E210A6001FDA1C /* YYNibloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B694FD320E210A6001FDA1C /* YYNibloadable.swift */; };
+		1B694FD620E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */; };
 		1B6A13E820D8F65400838070 /* YYAccountLoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A13E720D8F65400838070 /* YYAccountLoginResult.swift */; };
 		1B7CB21F20D5809C008C68AC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB21E20D5809C008C68AC /* LoginModel.swift */; };
 		1BE2212920D41CC000682C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2212820D41CC000682C0A /* LoginViewModel.swift */; };
 		1BE2212B20D4227000682C0A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2212A20D4227000682C0A /* LoginService.swift */; };
 		1BE45E0820CFC5700030F756 /* MoyaAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0720CFC5700030F756 /* MoyaAddable.swift */; };
-		1BE45E0C20CFEB090030F756 /* RegisteredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */; };
 		1BE45E0E20CFEB6E0030F756 /* RegisteredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */; };
 		1BE45E1020CFEE470030F756 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0F20CFEE470030F756 /* Observable+ObjectMapper.swift */; };
 		1BE45E1220CFEE940030F756 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E1120CFEE940030F756 /* Observable+Extension.swift */; };
@@ -93,20 +94,21 @@
 
 /* Begin PBXFileReference section */
 		1B1C499520D23F7600093DD7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		1B1CD9F320D34DA6001D377D /* HCAccountLoginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCAccountLoginable.swift; sourceTree = "<group>"; };
-		1B1CD9F520D35169001D377D /* HCAccountLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCAccountLoginViewModel.swift; sourceTree = "<group>"; };
 		1B1CD9FD20D35352001D377D /* HCInputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCInputValidator.swift; sourceTree = "<group>"; };
 		1B1CD9FF20D36C15001D377D /* YYAccountLoginabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAccountLoginabel.swift; sourceTree = "<group>"; };
 		1B1E978520D0F08300963C09 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		1B1E978D20D1048100963C09 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		1B1E978F20D1073500963C09 /* BasePageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageModel.swift; sourceTree = "<group>"; };
 		1B1E979120D1582700963C09 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		1B694FCD20E20E85001FDA1C /* YYOtherLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYOtherLoginView.swift; sourceTree = "<group>"; };
+		1B694FCF20E20E92001FDA1C /* YYOtherLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYOtherLoginView.xib; sourceTree = "<group>"; };
+		1B694FD320E210A6001FDA1C /* YYNibloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNibloadable.swift; sourceTree = "<group>"; };
+		1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintOnePixelLine.swift; sourceTree = "<group>"; };
 		1B6A13E720D8F65400838070 /* YYAccountLoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAccountLoginResult.swift; sourceTree = "<group>"; };
 		1B7CB21E20D5809C008C68AC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1BE2212820D41CC000682C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1BE2212A20D4227000682C0A /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		1BE45E0720CFC5700030F756 /* MoyaAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaAddable.swift; sourceTree = "<group>"; };
-		1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewModel.swift; sourceTree = "<group>"; };
 		1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredModel.swift; sourceTree = "<group>"; };
 		1BE45E0F20CFEE470030F756 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		1BE45E1120CFEE940030F756 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
@@ -228,6 +230,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1B694FD120E2106B001FDA1C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1B694FD220E2107E001FDA1C /* View */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1B694FD220E2107E001FDA1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B694FD320E210A6001FDA1C /* YYNibloadable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1BE45E0520CFC45E0030F756 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,8 +290,6 @@
 		F2247A0C20B6F5B2007A88E9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1B1CD9F520D35169001D377D /* HCAccountLoginViewModel.swift */,
-				1BE45E0B20CFEB090030F756 /* RegisteredViewModel.swift */,
 				1BE2212820D41CC000682C0A /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
@@ -282,8 +298,9 @@
 		F2247A0D20B6F5BE007A88E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B1CD9F320D34DA6001D377D /* HCAccountLoginable.swift */,
 				1B1CD9FF20D36C15001D377D /* YYAccountLoginabel.swift */,
+				1B694FCD20E20E85001FDA1C /* YYOtherLoginView.swift */,
+				1B694FCF20E20E92001FDA1C /* YYOtherLoginView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -582,6 +599,7 @@
 		F22A09BB2094962400757897 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				1B694FD120E2106B001FDA1C /* Protocol */,
 				F22A0A10209496A600757897 /* Const */,
 				F22A0A0F2094969500757897 /* Category */,
 				F22A0A12209496D700757897 /* Network */,
@@ -680,6 +698,7 @@
 				F22A0A482097361800757897 /* UIImageExtensions.swift */,
 				F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */,
 				F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */,
+				1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -872,6 +891,7 @@
 			files = (
 				F228795320AECB5200A6B9E0 /* LaunchScreen.storyboard in Resources */,
 				F228793E20AEBC8E00A6B9E0 /* InfoPlist.strings in Resources */,
+				1B694FD020E20E92001FDA1C /* YYOtherLoginView.xib in Resources */,
 				F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */,
 				F2F84E4D20B9103B00B59B4A /* ReachabilityMessageView.xib in Resources */,
 				F22A0A27209499A800757897 /* Assets.xcassets in Resources */,
@@ -1010,7 +1030,7 @@
 		};
 		F228795920AFD59000A6B9E0 /* Swiftgen */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -1018,7 +1038,7 @@
 			name = Swiftgen;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/zh-Hans.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
 		};
@@ -1065,7 +1085,6 @@
 				F238CE1620C50B0200F9053A /* YYHomeNavigationBar.swift in Sources */,
 				1B1E979020D1073500963C09 /* BasePageModel.swift in Sources */,
 				F2377E6B20C23C4500CD92EA /* YYBaseViewController.swift in Sources */,
-				1BE45E0C20CFEB090030F756 /* RegisteredViewModel.swift in Sources */,
 				1B1CDA0020D36C15001D377D /* YYAccountLoginabel.swift in Sources */,
 				1B7CB21F20D5809C008C68AC /* LoginModel.swift in Sources */,
 				F21F59DF20C7C915009D7478 /* YYMeNavigationBar.swift in Sources */,
@@ -1073,7 +1092,6 @@
 				F2A274FD20B2EAD100E69799 /* YYAPIConfig.swift in Sources */,
 				1B1E979220D1582700963C09 /* ApiManager.swift in Sources */,
 				F27622B720C677EB0009A476 /* YYNavUniversalable.swift in Sources */,
-				1B1CD9F420D34DA6001D377D /* HCAccountLoginable.swift in Sources */,
 				1BE2212B20D4227000682C0A /* LoginService.swift in Sources */,
 				F228795E20AFF2B900A6B9E0 /* AssetsImages.swift in Sources */,
 				F22A0A212094998B00757897 /* AppDelegate.swift in Sources */,
@@ -1082,10 +1100,10 @@
 				F226FC5620B438A600A01398 /* ApiUser.swift in Sources */,
 				F228792A20AE745900A6B9E0 /* AppDelegate+XCGLogger.swift in Sources */,
 				F2247A1520B6F717007A88E9 /* LoginViewController.swift in Sources */,
+				1B694FCE20E20E85001FDA1C /* YYOtherLoginView.swift in Sources */,
 				F23234D420BC1592001055E2 /* NoneReachabilityHelpViewController.swift in Sources */,
 				1BE45E1220CFEE940030F756 /* Observable+Extension.swift in Sources */,
 				F27622BB20C685B60009A476 /* YYNavTitleable.swift in Sources */,
-				1B1CD9F620D35169001D377D /* HCAccountLoginViewModel.swift in Sources */,
 				F22A0A3E2095873200757897 /* AnimationTabBarView.swift in Sources */,
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
@@ -1093,6 +1111,8 @@
 				F201DA7820CB9CCF00023BBB /* CALayerExtension.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				1B1E978620D0F08300963C09 /* BaseModel.swift in Sources */,
+				1B694FD420E210A6001FDA1C /* YYNibloadable.swift in Sources */,
+				1B694FD620E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift in Sources */,
 				F228792C20AE821200A6B9E0 /* DefaultsKeys+YYConst.swift in Sources */,
 				1B1C499620D23F7600093DD7 /* StringExtension.swift in Sources */,
 				F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */,

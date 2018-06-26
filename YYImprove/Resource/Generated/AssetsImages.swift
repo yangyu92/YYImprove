@@ -45,10 +45,14 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Login {
+    internal static let lastLoginTip = ImageAsset(name: "lastLoginTip")
     internal static let loginAccountW = ImageAsset(name: "login_account_w")
     internal static let loginInvisibleW = ImageAsset(name: "login_invisible_w")
     internal static let loginPasswordW = ImageAsset(name: "login_password_w")
     internal static let loginVisibleW = ImageAsset(name: "login_visible_w")
+    internal static let registerAndLoginQqButton = ImageAsset(name: "registerAndLogin_qq_button")
+    internal static let registerAndLoginWechatButton = ImageAsset(name: "registerAndLogin_wechat_button")
+    internal static let registerAndLoginWeiboButton = ImageAsset(name: "registerAndLogin_weibo_button")
   }
   internal enum Navication {
     internal static let navBackB = ImageAsset(name: "nav_back_b")
@@ -84,10 +88,14 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    Login.lastLoginTip,
     Login.loginAccountW,
     Login.loginInvisibleW,
     Login.loginPasswordW,
     Login.loginVisibleW,
+    Login.registerAndLoginQqButton,
+    Login.registerAndLoginWechatButton,
+    Login.registerAndLoginWeiboButton,
     Navication.navBackB,
     Navication.navBackW,
     Navication.navDownloadW,
