@@ -39,6 +39,8 @@ class YYBaseViewController: UIViewController {
 
 // MARK: - 通用的导航协议(显示带返回按钮导航)
 extension YYBaseViewController: YYNavBackable {
+    
+    @discardableResult
     func initTitleView(title: String) -> UIView {
         let navigationTitleBar = YYNavigationTitleBar(title)
         navigationTitleBar.itemClicked = { [weak self] (model) in

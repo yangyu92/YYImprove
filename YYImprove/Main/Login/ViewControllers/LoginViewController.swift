@@ -121,8 +121,10 @@ extension LoginViewController: YYAccountLoginabel {
         
         loginViewModel.loginResult.drive(onNext: { (result) in
             switch result {
-            case .success(let massage, let model as LoginModel):
-                SwiftMessages.showSuccess(msg: "\(massage)\(model.uid!)")
+            case .success(let massage, let model):
+                if let model = model as? LoginModel {
+                    SwiftMessages.showSuccess(msg: "\(massage)\(model.uid!)")
+                }
                 self.view.endEditing(true)
                 self.dismiss(animated: true, completion: nil)
             case .failed(let massage):

@@ -19,38 +19,45 @@ private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint {
 
 private func stubMapping<Target: TargetType>(_: Target) -> StubBehavior {
     // 实时请求api
-    return StubBehavior.never
+//    return StubBehavior.never
     // 模拟请求(延迟1秒使用sampleData中的测试数据返回)
-//    return StubBehavior.delayed(seconds: 1)
+    return StubBehavior.delayed(seconds: 1)
 }
 
 private struct ProviderMetric {
 
     /// 显示加载提示
     static let loading = MoyaProvider<MultiTarget>(endpointClosure: endpointMapping,
-                                                             stubClosure: stubMapping,
-        plugins: [NetworkLoggerPlugin(verbose: true),
-                  newworkActivityPlugin,
-                  RequestLoadingPlugin(true),
-                  AuthPluginToken()])
+                                                   stubClosure: stubMapping,
+                                                   plugins: [NetworkLoggerPlugin(verbose: true),
+                                                             newworkActivityPlugin,
+                                                             RequestLoadingPlugin(true),
+                                                             AuthPluginToken()])
     
     /// 不显示加载提示
     static let noLoading = MoyaProvider<MultiTarget>(endpointClosure: endpointMapping,
-                                                       stubClosure: stubMapping,
-        plugins: [NetworkLoggerPlugin(verbose: true),
-                  newworkActivityPlugin,
-                  RequestLoadingPlugin(false),
-                  AuthPluginToken()])
+                                                     stubClosure: stubMapping,
+                                                     plugins: [NetworkLoggerPlugin(verbose: true),
+                                                               newworkActivityPlugin,
+                                                               RequestLoadingPlugin(false),
+                                                               AuthPluginToken()])
     
 }
 
 class ApiManager {
+    
+    enum ProviderType {
+        case loding
+        case noLoading
+    }
+    
     // 创建moya请求类
     @discardableResult
-    static func provider(showLoding: Bool) -> MoyaProvider<MultiTarget> {
-        if showLoding {
+    static func provider(_ providerType: ProviderType) -> MoyaProvider<MultiTarget> {
+        switch providerType {
+        case .loding:
             return ProviderMetric.loading
-        } else {
+        case .noLoading:
             return ProviderMetric.noLoading
         }
     }

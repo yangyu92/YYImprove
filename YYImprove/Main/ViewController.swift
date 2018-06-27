@@ -27,7 +27,7 @@ class ViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = initTitleView(title: "测试登录页面测试登录页面测试登录页面测试登录页面测试登录页面")
+        initTitleView(title: "测试登录页面测试登录页面测试登录页面测试登录页面测试登录页面")
         
         log.verbose("Verbose")
         log.debug("Debug")

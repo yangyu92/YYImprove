@@ -257,7 +257,7 @@ extension YYAccountLoginabel where Self: LoginViewController {
         return loginBtn
     }
     
-    // MARK:- 其他登录方式
+    // MARK: - 其他登录方式
     func initOtherLoginView(onNext: @escaping (_ event: AccountLoginEvent) -> Void) -> UIView {
         
         // 创建

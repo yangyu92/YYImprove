@@ -43,27 +43,17 @@ class LoginService {
     
     // 登录请求
     func login(account: String, password: String) -> Observable<YYAccountLoginResult> {
-//        let target = MultiTarget(ApiUser.rigister(username: account, password: password, email: "yang_yu92@foxmail.com"))
-//        let provider = ApiManager.provider(showLoding: true).rx.request(target)
-//        return provider
-//            .filterSuccessfulStatusCodes()
-//            .asObservable()
-//            .mapJSON()
-//            .mapObject(type: RegisteredModel.self)
-//            .showAPIErrorToast().map({ (model) -> HCAccountLoginResult in
-//                return HCAccountLoginResult.success(message: "登录成功")
-//            })
-        
         let target = MultiTarget(ApiUser.login(phone: account, password: password))
-        let provider = ApiManager.provider(showLoding: true).rx.request(target)
-        return provider
-            .filterSuccessfulStatusCodes()
+        let provider = ApiManager.provider(.loding)
+        
+        return provider.rx.request(target)
             .asObservable()
+            .filterSuccessfulStatusCodes()
             .mapJSON()
             .mapObject(type: LoginModel.self)
             .showAPIErrorToast()
-            .map({ model in
-                return YYAccountLoginResult.success(message: "登录成功", data: model)
+            .flatMapLatest({ (model) in
+                return Observable.just(YYAccountLoginResult.success(message: "登录成功", data: model))
             })
     }
     

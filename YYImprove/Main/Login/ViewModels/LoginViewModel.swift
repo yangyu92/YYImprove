@@ -42,7 +42,7 @@ class LoginViewModel {
             return service.loginBtnEnable(account: account, password: password).asDriver(onErrorJustReturn: false)
         }
         
-        loginResult = loginTapDriver.withLatestFrom(accountAndPassword).flatMapLatest { (account, password)  in
+        loginResult = loginTapDriver.withLatestFrom(accountAndPassword).flatMap { (account, password) in
             return service.login(account: account, password: password).asDriver(onErrorJustReturn: .empty)
         }
     }
