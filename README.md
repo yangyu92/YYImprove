@@ -4,7 +4,7 @@ demo地址: <https://github.com/yangyu92/YYImprove>
 
 该项目使用swift编写,使用CocoaPods管理组件库,集成了一些常用的基础组件;为了避免重复搭建app项目
 
-[TOC]
+![GitHub set up](https://github.com/yangyu92/YYImprove/blob/master/image/improve.gif)
 
 ## 项目目录结构说明
 
