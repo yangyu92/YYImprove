@@ -22,10 +22,13 @@ class AnimationTabBarView: ESTabBarItemContentView {
         highlightTextColor = kNavigationBackgroundColor
         highlightIconColor = kNavigationBackgroundColor
         
+        itemContentMode = .alwaysOriginal
+        
 //        // 设置tab栏目背景颜色
 //        backdropColor = UIColor(hex: "#78C9CC")
 //        highlightBackdropColor = UIColor(hex: "#FFFFFF")
         
+        titleLabel.font = UIFont.systemFont(ofSize: 12)
     }
     
     public required init?(coder aDecoder: NSCoder) {

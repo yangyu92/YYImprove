@@ -21,10 +21,16 @@ class YYBaseViewController: UIViewController {
         
 //        log.info("init:\(type(of: self))")
     }
+    
     override func viewWillLayoutSubviews() {
         if let titleView = titleView {
             self.view.bringSubview(toFront: titleView)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func didReceiveMemoryWarning() {

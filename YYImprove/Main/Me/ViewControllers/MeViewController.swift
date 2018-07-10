@@ -55,23 +55,23 @@ class MeViewController: YYBaseViewController {
         //按钮点击响应
         button.rx.tap.subscribe(onNext: {_ in
             
-//            DispatchQueue.main.async(execute: {
-//                let controller = ViewController()
-//                self.navigationController?.pushViewController(controller, animated: true)
-//            })
+            DispatchQueue.main.async(execute: {
+                let controller = ViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            })
             
-            if button.isSelected {
-                Defaults[.token] = "tokenTest"
-            } else {
-                Defaults[.token] = ""
-            }
-            button.isSelected = !button.isSelected
+//            if button.isSelected {
+//                Defaults[.token] = "tokenTest"
+//            } else {
+//                Defaults[.token] = ""
+//            }
+//            button.isSelected = !button.isSelected
             
         }).disposed(by: rx.disposeBag)
         
         initTitleView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

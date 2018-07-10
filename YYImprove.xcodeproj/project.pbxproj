@@ -20,6 +20,8 @@
 		1B694FD620E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */; };
 		1B6A13E820D8F65400838070 /* YYAccountLoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A13E720D8F65400838070 /* YYAccountLoginResult.swift */; };
 		1B7CB21F20D5809C008C68AC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB21E20D5809C008C68AC /* LoginModel.swift */; };
+		1BBBFA9120F4A60900649E95 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBFA9020F4A60900649E95 /* Colors.txt */; };
+		1BBBFA9520F4A6B400649E95 /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBFA9420F4A6B300649E95 /* ColorName.swift */; };
 		1BE2212920D41CC000682C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2212820D41CC000682C0A /* LoginViewModel.swift */; };
 		1BE2212B20D4227000682C0A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2212A20D4227000682C0A /* LoginService.swift */; };
 		1BE45E0820CFC5700030F756 /* MoyaAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0720CFC5700030F756 /* MoyaAddable.swift */; };
@@ -106,6 +108,8 @@
 		1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintOnePixelLine.swift; sourceTree = "<group>"; };
 		1B6A13E720D8F65400838070 /* YYAccountLoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAccountLoginResult.swift; sourceTree = "<group>"; };
 		1B7CB21E20D5809C008C68AC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1BBBFA9020F4A60900649E95 /* Colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
+		1BBBFA9420F4A6B300649E95 /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		1BE2212820D41CC000682C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1BE2212A20D4227000682C0A /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		1BE45E0720CFC5700030F756 /* MoyaAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaAddable.swift; sourceTree = "<group>"; };
@@ -501,6 +505,7 @@
 		F228795B20AFF2B900A6B9E0 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				1BBBFA9420F4A6B300649E95 /* ColorName.swift */,
 				F228795C20AFF2B900A6B9E0 /* AssetsImages.swift */,
 				F228795D20AFF2B900A6B9E0 /* L10n-Constants.swift */,
 			);
@@ -719,6 +724,7 @@
 				F22A0A2D209499B200757897 /* YYImprove-Bridging-Header.h */,
 				F228794020AEBC8E00A6B9E0 /* InfoPlist.strings */,
 				F228793120AEAFB100A6B9E0 /* Localizable.strings */,
+				1BBBFA9020F4A60900649E95 /* Colors.txt */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -891,6 +897,7 @@
 			files = (
 				F228795320AECB5200A6B9E0 /* LaunchScreen.storyboard in Resources */,
 				F228793E20AEBC8E00A6B9E0 /* InfoPlist.strings in Resources */,
+				1BBBFA9120F4A60900649E95 /* Colors.txt in Resources */,
 				1B694FD020E20E92001FDA1C /* YYOtherLoginView.xib in Resources */,
 				F228792F20AEAFB100A6B9E0 /* Localizable.strings in Resources */,
 				F2F84E4D20B9103B00B59B4A /* ReachabilityMessageView.xib in Resources */,
@@ -1030,7 +1037,7 @@
 		};
 		F228795920AFD59000A6B9E0 /* Swiftgen */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -1038,9 +1045,9 @@
 			name = Swiftgen;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/zh-Hans.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/zh-Hans.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen colors -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/Colors.txt\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/ColorName.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
 		};
 		F22A0A382094A25C00757897 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1063,6 +1070,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBBFA9520F4A6B400649E95 /* ColorName.swift in Sources */,
 				1BE45E1020CFEE470030F756 /* Observable+ObjectMapper.swift in Sources */,
 				F225059B20CA758A005DD922 /* YYTabbarPlayView.swift in Sources */,
 				1B1E978E20D1048100963C09 /* PageModel.swift in Sources */,

@@ -37,10 +37,12 @@ class RegisteredViewController: YYBaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        UIApplication.shared.statusBarStyle = .default
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
         // 启用滑动返回
 //        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }

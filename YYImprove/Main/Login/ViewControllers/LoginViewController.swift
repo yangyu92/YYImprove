@@ -25,6 +25,10 @@ class LoginViewController: YYBaseViewController {
         initUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
