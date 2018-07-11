@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupReachability()
         
-        Thread.sleep(forTimeInterval: 1.0)
-        
         loadRootViewController()
         
         return true
@@ -38,7 +36,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: kScreenBounds)
         self.window?.rootViewController = rootTabBarController
+        self.loadLaunchScreen()
         self.window!.makeKeyAndVisible()
+    }
+    
+    func loadLaunchScreen() {
+        let viewController = UIStoryboard.init(name: "LaunchScreen", bundle: nil).instantiateViewController(withIdentifier: "LaunchScreenIdentity")
+        let launchView = viewController.view
+        launchView?.frame = kScreenBounds
+        self.window?.rootViewController?.view.addSubview(launchView!)
+        
+        UIView.animate(withDuration: 1.0, delay: 0.5, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+            launchView?.alpha = 0.0
+            launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
+        }, completion: { finish in
+            launchView?.removeFromSuperview()
+        })
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
