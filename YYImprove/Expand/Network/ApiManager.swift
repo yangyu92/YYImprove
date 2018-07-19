@@ -56,7 +56,12 @@ class ApiManager {
     static func provider(_ providerType: ProviderType) -> MoyaProvider<MultiTarget> {
         switch providerType {
         case .loding:
-            return ProviderMetric.loading
+            return MoyaProvider<MultiTarget>(endpointClosure: endpointMapping,
+                                             stubClosure: stubMapping,
+                                             plugins: [NetworkLoggerPlugin(verbose: true),
+                                                       newworkActivityPlugin,
+                                                       RequestLoadingPlugin(true),
+                                                       AuthPluginToken()])
         case .noLoading:
             return ProviderMetric.noLoading
         }

@@ -12,10 +12,10 @@ import RxCocoa
 import NSObject_Rx
 import Moya
 
-class LoginService {
+class LoginService: NSObject {
     
     static let shareInstance = LoginService()
-    private init() {}
+    override init() {}
     
     // 验证账号是否合法
     func validationAccount(_ account: String) -> Observable<YYAccountLoginResult> {
@@ -42,19 +42,25 @@ class LoginService {
     }
     
     // 登录请求
-    func login(account: String, password: String) -> Observable<YYAccountLoginResult> {
+    func login(account: String, password: String) -> Driver<YYAccountLoginResult> {
         let target = MultiTarget(ApiUser.login(phone: account, password: password))
         let provider = ApiManager.provider(.loding)
         
-        return provider.rx.request(target)
+        let vmDatas = BehaviorRelay<LoginModel?>(value: nil)
+        
+        provider.rx.request(target)
             .asObservable()
             .filterSuccessfulStatusCodes()
             .mapJSON()
             .mapObject(type: LoginModel.self)
             .showAPIErrorToast()
-            .flatMapLatest({ (model) in
-                return Observable.just(YYAccountLoginResult.success(message: "登录成功", data: model))
-            })
+            .subscribe(onNext: { (model) in
+                vmDatas.accept(model)
+            }).disposed(by: self.rx.disposeBag)
+        
+        return vmDatas.asObservable().map({ (model) -> YYAccountLoginResult in
+            return YYAccountLoginResult.success(message: "登录成功", data: model)
+        }).asDriver(onErrorJustReturn: .empty)
     }
     
     // 登录按钮是否可用

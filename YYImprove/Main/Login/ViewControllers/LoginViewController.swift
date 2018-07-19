@@ -122,7 +122,7 @@ extension LoginViewController: YYAccountLoginabel {
         loginViewModel.loginBtnEnable.drive(onNext: { (beel) in
             loginBtn.isEnabled = beel
         }).disposed(by: rx.disposeBag)
-        
+
         loginViewModel.loginResult.drive(onNext: { (result) in
             switch result {
             case .success(let massage, let model):
