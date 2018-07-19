@@ -42,7 +42,7 @@ class LoginService: NSObject {
     }
     
     // 登录请求
-    func login(account: String, password: String) -> Driver<YYAccountLoginResult> {
+    func login(account: String, password: String) -> Observable<YYAccountLoginResult> {
         let target = MultiTarget(ApiUser.login(phone: account, password: password))
         let provider = ApiManager.provider(.loding)
         
@@ -58,9 +58,13 @@ class LoginService: NSObject {
                 vmDatas.accept(model)
             }).disposed(by: self.rx.disposeBag)
         
-        return vmDatas.asObservable().map({ (model) -> YYAccountLoginResult in
+        return vmDatas.asObservable().filter({ $0 != nil }).map({ (model) -> YYAccountLoginResult in
             return YYAccountLoginResult.success(message: "登录成功", data: model)
-        }).asDriver(onErrorJustReturn: .empty)
+        })
+        
+//        return vmDatas.asObservable().flatMapLatest({ (model) -> YYAccountLoginResult in
+//            return YYAccountLoginResult.success(message: "登录成功", data: model)
+//        })
     }
     
     // 登录按钮是否可用
