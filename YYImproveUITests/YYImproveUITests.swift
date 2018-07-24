@@ -25,6 +25,7 @@ class YYImproveUITests: XCTestCase {
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sleep(1)
         super.tearDown()
     }
     
@@ -56,11 +57,18 @@ class YYImproveUITests: XCTestCase {
         secureTextField.tap()
         app.buttons["登 录"].tap()
         
+        wait(interval: 1.0)
         let tabBarsQuery = app.tabBars
         tabBarsQuery.children(matching: .other).element(boundBy: 4).tap()
+        wait(interval: 1.0)
         tabBarsQuery.otherElements["发现 - tab - 4 of 5"].tap()
+        wait(interval: 1.0)
         tabBarsQuery.otherElements["文章 - tab - 2 of 5"].tap()
         
+    }
+    
+    func wait(interval: TimeInterval) {
+        RunLoop.current.run(until: Date().addingTimeInterval(interval))
     }
     
 }
