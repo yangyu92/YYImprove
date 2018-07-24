@@ -22,12 +22,16 @@ PODS:
   - ObjectMapper (3.3.0)
   - ReachabilitySwift (4.1.0)
   - Result (3.2.4)
+  - RxBlocking (4.2.0):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxGesture (1.2.1):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
+  - RxTest (4.2.0):
+    - RxSwift (~> 4.0)
   - SkeletonView (1.2.1)
   - SnapKit (4.0.0)
   - SwiftMessages (4.1.4):
@@ -52,9 +56,11 @@ DEPENDENCIES:
   - NVActivityIndicatorView (= 4.2.1)
   - ObjectMapper (= 3.3.0)
   - ReachabilitySwift (= 4.1.0)
+  - RxBlocking (= 4.2)
   - RxCocoa (= 4.2)
   - RxGesture (= 1.2.1)
   - RxSwift (= 4.2)
+  - RxTest (= 4.2)
   - SkeletonView (= 1.2.1)
   - SnapKit (= 4.0.0)
   - SwiftMessages (= 4.1.4)
@@ -76,9 +82,11 @@ SPEC REPOS:
     - ObjectMapper
     - ReachabilitySwift
     - Result
+    - RxBlocking
     - RxCocoa
     - RxGesture
     - RxSwift
+    - RxTest
     - SkeletonView
     - SnapKit
     - SwiftMessages
@@ -99,9 +107,11 @@ SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
   SkeletonView: 98a31213f9282076149e6eb23f46734604f02086
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
@@ -110,6 +120,6 @@ SPEC CHECKSUMS:
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 3eddf85df159e99eaf0380c7bb6d0708925df111
+PODFILE CHECKSUM: 09a6b85c310f7082b54e808f5b3e3215e0934a9d
 
 COCOAPODS: 1.5.3

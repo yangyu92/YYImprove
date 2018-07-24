@@ -70,11 +70,15 @@ target 'YYImprove' do
   target 'YYImproveTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '4.2'
+    pod 'RxTest',     '4.2'
   end
 
   target 'YYImproveUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '4.2'
+    pod 'RxTest',     '4.2'
   end
 
 end

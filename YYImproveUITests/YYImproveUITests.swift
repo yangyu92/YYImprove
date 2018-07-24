@@ -31,6 +31,36 @@ class YYImproveUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        app.children(matching: .window)
+            .element(boundBy: 0).children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .other)
+            .element.children(matching: .button)
+            .element(boundBy: 0).tap()
+        
+        let textField = app.textFields["请输入手机号"]
+        textField.tap()
+        app/*@START_MENU_TOKEN@*/.buttons["清除文本"]/*[[".textFields[\"请输入手机号\"].buttons[\"清除文本\"]",".buttons[\"清除文本\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        textField.typeText("13397470679")
+        textField.tap()
+        
+        let secureTextField = app.secureTextFields["请输入密码"]
+        secureTextField.tap()
+        app.buttons["登 录"].tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.children(matching: .other).element(boundBy: 4).tap()
+        tabBarsQuery.otherElements["发现 - tab - 4 of 5"].tap()
+        tabBarsQuery.otherElements["文章 - tab - 2 of 5"].tap()
+        
     }
     
 }
