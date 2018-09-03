@@ -20,6 +20,7 @@
 		1B694FD620E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */; };
 		1B6A13E820D8F65400838070 /* YYAccountLoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A13E720D8F65400838070 /* YYAccountLoginResult.swift */; };
 		1B7CB21F20D5809C008C68AC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7CB21E20D5809C008C68AC /* LoginModel.swift */; };
+		1BA83BFA2127BC5700DACE1E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA83BF92127BC5700DACE1E /* UIViewExtension.swift */; };
 		1BBBFA9120F4A60900649E95 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBFA9020F4A60900649E95 /* Colors.txt */; };
 		1BBBFA9520F4A6B400649E95 /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBFA9420F4A6B300649E95 /* ColorName.swift */; };
 		1BE2212920D41CC000682C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2212820D41CC000682C0A /* LoginViewModel.swift */; };
@@ -108,6 +109,7 @@
 		1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintOnePixelLine.swift; sourceTree = "<group>"; };
 		1B6A13E720D8F65400838070 /* YYAccountLoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAccountLoginResult.swift; sourceTree = "<group>"; };
 		1B7CB21E20D5809C008C68AC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1BA83BF92127BC5700DACE1E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1BBBFA9020F4A60900649E95 /* Colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
 		1BBBFA9420F4A6B300649E95 /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		1BE2212820D41CC000682C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 				F2A274FA20B2E91300E69799 /* UIDeviceExtension.swift */,
 				F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */,
 				1B694FD520E21D0C001FDA1C /* NSLayoutConstraintOnePixelLine.swift */,
+				1BA83BF92127BC5700DACE1E /* UIViewExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1162,6 +1165,7 @@
 				F227045D20B8120D003ABAD8 /* SwiftMessageExtensions.swift in Sources */,
 				F2247A3120B6F947007A88E9 /* ArticleViewController.swift in Sources */,
 				1BE45E0E20CFEB6E0030F756 /* RegisteredModel.swift in Sources */,
+				1BA83BFA2127BC5700DACE1E /* UIViewExtension.swift in Sources */,
 				F201DA7820CB9CCF00023BBB /* CALayerExtension.swift in Sources */,
 				F2247A0B20B6CC0E007A88E9 /* RequestPlugin.swift in Sources */,
 				1B1E978620D0F08300963C09 /* BaseModel.swift in Sources */,

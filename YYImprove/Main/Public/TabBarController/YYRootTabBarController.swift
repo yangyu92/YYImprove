@@ -87,6 +87,9 @@ extension YYRootTabBarController {
         self.viewControllers = tabArr
         self.shouldHijackHandler = shouldHijackHandlerEvent
         self.didHijackHandler = didHijackHandlerEvent
+        playView.playBtnClickedBlock = { _ in
+            log.info("test")
+        }
     }
     
     private func getProjectName() -> String {

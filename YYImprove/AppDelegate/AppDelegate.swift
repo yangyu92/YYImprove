@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchCount = Defaults[.launchCount]
         log.info("启动次数:\(launchCount)")
         
+        log.info("系统版本:\(UIDevice.current.modelName)")
+        
         window = UIWindow(frame: kScreenBounds)
         self.window?.rootViewController = rootTabBarController
         self.loadLaunchScreen()
