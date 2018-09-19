@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.2)
   - ESTabBarController-swift (2.6.2)
+  - GDPerformanceView-Swift (1.3.2)
   - Hue (3.0.1)
   - Kingfisher (4.7.0)
   - Moya (11.0.2):
@@ -48,6 +49,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
   - ESTabBarController-swift (= 2.6.2)
+  - GDPerformanceView-Swift (~> 1.3.2)
   - Hue (= 3.0.1)
   - Kingfisher (= 4.7.0)
   - Moya (= 11.0.2)
@@ -73,6 +75,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ESTabBarController-swift
+    - GDPerformanceView-Swift
     - Hue
     - Kingfisher
     - Moya
@@ -98,6 +101,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
+  GDPerformanceView-Swift: a74cd679587b199e4526492b6e68ce61593c6123
   Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -120,6 +124,6 @@ SPEC CHECKSUMS:
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 09a6b85c310f7082b54e808f5b3e3215e0934a9d
+PODFILE CHECKSUM: 663e1d82a6abd42af14e8605d93b90601ed90b61
 
 COCOAPODS: 1.5.3

@@ -30,7 +30,15 @@ public let kThemeBlackColor = UIColor(hex: "#000000")
 public let kThemeBackgroundColor = UIColor(hex: "#F4F4F4")
 
 //判断iPhoneX
-public let isIPhoneX = (kScreenWidth == 375.0 && kScreenHeight == 812.0 ? true : false)
+public func isIPhoneX() -> Bool {
+    if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
+        return false
+    }
+    guard #available(iOS 11.0, *) else {
+        return false
+    }
+    return UIApplication.shared.windows[0].safeAreaInsets.bottom > 0.0
+}
 
 // MARK: - 常量
 struct MetricGlobal {
@@ -46,9 +54,9 @@ struct MetricGlobal {
     static let navigationItemSize: CGFloat = 30
     
     //适配iPhoneX
-    static let kNavigationTabbarHight: CGFloat = isIPhoneX ? 88.0 : 64.0
-    static let kTabbarHight: CGFloat = isIPhoneX ? 49.0 + 34.0 : 49.0
-    static let kStatusbarHight: CGFloat = isIPhoneX ? 44.0 : 20.0
+    static let kNavigationTabbarHight: CGFloat = isIPhoneX() ? 88.0 : 64.0
+    static let kTabbarHight: CGFloat = isIPhoneX() ? 49.0 + 34.0 : 49.0
+    static let kStatusbarHight: CGFloat = UIApplication.shared.statusBarFrame.height
     static let kNavigationTitleHight: CGFloat = 44.0
     static let kIPhoneXBottomHight: CGFloat = 34.0
     static let kIPhoneXTopHight: CGFloat = 24.0

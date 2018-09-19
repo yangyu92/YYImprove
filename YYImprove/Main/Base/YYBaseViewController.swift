@@ -30,7 +30,10 @@ class YYBaseViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func didReceiveMemoryWarning() {

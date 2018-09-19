@@ -23,6 +23,10 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
 //        log.info("Navigation-init: \(type(of: self))")
     }
 
+    override var childViewControllerForStatusBarStyle: UIViewController? {
+        return visibleViewController
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

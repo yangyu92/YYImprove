@@ -42,6 +42,7 @@ extension SwiftMessages {
     
     private static func showMsgPrefix(_ theme: Theme, message: String) {
         var config = SwiftMessages.defaultConfig
+        config.preferredStatusBarStyle = UIApplication.shared.statusBarStyle
         config.presentationStyle = .center
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureBackgroundView(width: 200)
@@ -65,6 +66,7 @@ extension SwiftMessages {
     /// - Parameter reachabilityFunction: 点击浮动层执行事件
     func show(reachabilityFunction: @escaping (_ view: BaseView) -> Void) {
         var config = SwiftMessages.defaultConfig
+        config.preferredStatusBarStyle = UIApplication.shared.statusBarStyle
         config.duration = .forever
         config.presentationStyle = .top
         config.interactiveHide = false
@@ -87,6 +89,7 @@ extension SwiftMessages {
     /// 显示加载动画
     func showLoding() {
         var config = SwiftMessages.defaultConfig
+        config.preferredStatusBarStyle = UIApplication.shared.statusBarStyle
         config.presentationContext = .window(windowLevel: UIWindowLevelAlert)
         config.duration = .forever
         config.presentationStyle = .center

@@ -1,6 +1,18 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 
+swift_41_pod_targets = ['GDPerformanceView-Swift','SwiftyUserDefaults','Then','ReusableKit','SwiftMessages','SwiftTheme','JTAppleCalendar','RxSwift','RxCocoa','RxDataSources','RxGesture']
+
+post_install do | installer |
+    installer.pods_project.targets.each do |target|
+        if swift_41_pod_targets.include?(target.name)
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.1'
+            end
+        end
+    end
+end
+
 inhibit_all_warnings!   # 去除第三方的警告
 use_frameworks!         # 修改引入方式，加了这句引入使用#import””;未加使用#import <>
 
@@ -46,6 +58,9 @@ target 'YYImprove' do
     # 导航
     # pod 'URLNavigator', '2.0.4'
     pod 'ESTabBarController-swift', '2.6.2'
+    
+    # 在状态栏显示FPS
+    pod 'GDPerformanceView-Swift', '~> 1.3.2'
 
     # 加载内容页
     pod 'SkeletonView', '1.2.1'

@@ -40,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = rootTabBarController
         self.loadLaunchScreen()
         self.window!.makeKeyAndVisible()
+        
+        setupStartMonitoring()
     }
     
     func loadLaunchScreen() {

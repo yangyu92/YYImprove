@@ -127,6 +127,10 @@ extension YYRootTabBarController {
 //        }
     }
     
+    override var childViewControllerForStatusBarStyle: UIViewController? {
+        return selectedViewController
+    }
+    
     fileprivate func showAlert(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "确定", style: .default) { (action) in

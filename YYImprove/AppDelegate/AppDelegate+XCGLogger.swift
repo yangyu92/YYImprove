@@ -8,6 +8,7 @@
 
 import Foundation
 import XCGLogger
+import GDPerformanceView_Swift
 
 let log = XCGLogger.default
 
@@ -35,5 +36,13 @@ extension AppDelegate {
         #endif
         
         log.logAppDetails()
+    }
+    
+    func setupStartMonitoring() {
+        //        GDPerformanceMonitor.sharedInstance.startMonitoring()
+        let gdp = GDPerformanceMonitor.sharedInstance
+        gdp.appVersionHidden = true
+        gdp.deviceVersionHidden = true
+        gdp.startMonitoring()
     }
 }

@@ -62,7 +62,17 @@ class ViewController: YYBaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-        
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 禁用滑动返回
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         title = "设置"
     }

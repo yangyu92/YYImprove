@@ -977,6 +977,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -1001,6 +1002,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -1096,7 +1098,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/zh-Hans.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen colors -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/Colors.txt\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/ColorName.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+			shellScript = "if which \"$PROJECT_DIR\"/swiftgen/bin/swiftgen >/dev/null;\nthen\nset -e\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Image/Assets.xcassets\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/AssetsImages.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/zh-Hans.lproj/Localizable.strings\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/L10n-Constants.swift\"\n\"$PROJECT_DIR\"/swiftgen/bin/swiftgen colors -t swift4 \"$PROJECT_DIR/YYImprove/Resource/Global/Colors.txt\" --output \"$PROJECT_DIR/YYImprove/Resource/Generated/ColorName.swift\"\nelse\necho \"##run echo warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
 		};
 		F22A0A382094A25C00757897 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
