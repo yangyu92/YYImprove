@@ -51,8 +51,8 @@ extension YYHomeSearchBarable where Self: UIView {
             $0.textColor = UIColor.gray.alpha(0.5)
             $0.font = UIFont.systemFont(ofSize: Metric.fontSize)
             $0.text = Metric.title
-            $0.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
-            $0.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+            $0.setContentHuggingPriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
+            $0.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
         }
         // 添加组件
         backView.addSubview(icon)

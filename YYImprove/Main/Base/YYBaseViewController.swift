@@ -24,7 +24,7 @@ class YYBaseViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         if let titleView = titleView {
-            self.view.bringSubview(toFront: titleView)
+            self.view.bringSubviewToFront(titleView)
         }
     }
     

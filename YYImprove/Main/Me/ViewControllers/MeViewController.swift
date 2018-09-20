@@ -55,8 +55,8 @@ class MeViewController: YYBaseViewController {
         }
         
         let button = UIButton().then {
-            $0.setTitle("确认", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.setTitle("确认", for: UIControl.State.normal)
+            $0.setTitleColor(UIColor.black, for: UIControl.State.normal)
             scrollview.addSubview($0)
             $0.snp.makeConstraints { (make) in
                 make.size.equalTo(CGSize(width: 80, height: 45))

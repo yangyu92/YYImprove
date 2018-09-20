@@ -23,6 +23,12 @@ class HomeViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _ = UIImageView().then {
+            self.view.addSubview($0)
+            $0.snp.makeConstraints({ (make) in
+                make.edges.equalToSuperview()
+            })
+        }
         let label = UILabel().then {
             $0.textAlignment = .center
             $0.textColor = .black
@@ -34,8 +40,8 @@ class HomeViewController: YYBaseViewController {
         }
         
         let button = UIButton().then {
-            $0.setTitle("确认", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.setTitle("确认", for: UIControl.State.normal)
+            $0.setTitleColor(UIColor.black, for: UIControl.State.normal)
         }
         self.view.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -77,7 +83,6 @@ extension HomeViewController: YYNavTitleable {
     // MARK: - 标题组件
     private func initTitleView() {
         let homeNavigationBar = YYHomeNavigationBar()
-        
         homeNavigationBar.itemClicked = { [weak self] (model) in
             guard let `self` = self else { return }
             let type = model.type

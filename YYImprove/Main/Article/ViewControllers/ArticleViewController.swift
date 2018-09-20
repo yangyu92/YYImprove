@@ -28,8 +28,8 @@ class ArticleViewController: YYBaseViewController {
         }
         
         let button = UIButton().then {
-            $0.setTitle("确认", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.setTitle("确认", for: UIControl.State.normal)
+            $0.setTitleColor(UIColor.black, for: UIControl.State.normal)
             $0.tag = 1
         }
         self.view.addSubview(button)
@@ -48,8 +48,8 @@ class ArticleViewController: YYBaseViewController {
         }).disposed(by: rx.disposeBag)
 
         let button1 = UIButton().then {
-            $0.setTitle("确认", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.setTitle("确认", for: UIControl.State.normal)
+            $0.setTitleColor(UIColor.black, for: UIControl.State.normal)
             $0.tag = 2
         }
         self.view.addSubview(button1)

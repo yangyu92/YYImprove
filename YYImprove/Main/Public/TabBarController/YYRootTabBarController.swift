@@ -127,7 +127,7 @@ extension YYRootTabBarController {
 //        }
     }
     
-    override var childViewControllerForStatusBarStyle: UIViewController? {
+    override var childForStatusBarStyle: UIViewController? {
         return selectedViewController
     }
     

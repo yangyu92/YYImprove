@@ -92,7 +92,7 @@ extension YYHomeNavigationBar: YYNavUniversalable, YYHomeSearchBarable {
             make.height.equalToSuperview()
         }
         /// 中间可缩放视图进行设置
-        searchBar.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
-        searchBar.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+        searchBar.setContentHuggingPriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
+        searchBar.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
     }
 }

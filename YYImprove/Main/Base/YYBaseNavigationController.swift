@@ -23,7 +23,7 @@ class YYBaseNavigationController: UINavigationController, UINavigationController
 //        log.info("Navigation-init: \(type(of: self))")
     }
 
-    override var childViewControllerForStatusBarStyle: UIViewController? {
+    override var childForStatusBarStyle: UIViewController? {
         return visibleViewController
     }
     
@@ -63,16 +63,16 @@ extension YYBaseNavigationController {
         
         // 标题样式
         let bar = UINavigationBar.appearance()
-        bar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
-                                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18.0)]
+        bar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                   NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0)]
         // 设置返回按钮的样式
         self.navigationBar.tintColor = kNavigationTitleColor
         // 设置返回标识器的颜色
         self.navigationBar.barTintColor = kNavigationBackgroundColor
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: kNavigationTitleColor]
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: kNavigationTitleColor]
         
         let barItem = UIBarButtonItem.appearance()
-        barItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kNavigationTitleColor],
+        barItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: kNavigationTitleColor],
                                        for: .normal)  // 返回按钮文字样式
         // 隐藏系统自带的导航
         self.navigationBar.isHidden = true

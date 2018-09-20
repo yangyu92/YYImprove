@@ -57,7 +57,7 @@ extension YYNavigationTitleBar: YYNavUniversalable {
         let titleBtn = self.universal(model: YYNavigationBarItemMetric.title) { (model) in
             self.itemClicked!(model)
         }
-        titleBtn.setTitle(title, for: UIControlState.normal)
+        titleBtn.setTitle(title, for: UIControl.State.normal)
         view.addSubview(titleBtn)
         backBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
@@ -71,8 +71,8 @@ extension YYNavigationTitleBar: YYNavUniversalable {
             make.height.equalToSuperview()
         }
         /// Title文本过长时,隐藏超出部分
-        titleBtn.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
-        titleBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+        titleBtn.setContentHuggingPriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
+        titleBtn.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
         
 //        // 内容紧凑 - 优先完全显示内容，且不多占像素。
 //        backBtn.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: UILayoutConstraintAxis.horizontal)

@@ -16,7 +16,7 @@ extension YYNavTitleable where Self: UIViewController {
     // MARK: - 导航栏 自定义标题 通用组件
     func titleView(titleView: UIView) -> UIView {
         self.view.addSubview(titleView)
-        self.view.bringSubview(toFront: titleView)
+        self.view.bringSubviewToFront(titleView)
         return titleView
     }
 }

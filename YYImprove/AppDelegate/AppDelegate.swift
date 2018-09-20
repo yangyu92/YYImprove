@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupXCGLogger()
         
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchView?.frame = kScreenBounds
         self.window?.rootViewController?.view.addSubview(launchView!)
         
-        UIView.animate(withDuration: 1.0, delay: 0.5, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.5, options: UIView.AnimationOptions.beginFromCurrentState, animations: {
             launchView?.alpha = 0.0
             launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
         }, completion: { finish in

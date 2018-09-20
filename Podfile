@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 
-swift_41_pod_targets = ['GDPerformanceView-Swift','SwiftyUserDefaults','Then','ReusableKit','SwiftMessages','SwiftTheme','JTAppleCalendar','RxSwift','RxCocoa','RxDataSources','RxGesture']
+swift_41_pod_targets = ['GDPerformanceView-Swift','SwiftyUserDefaults','Then','ESTabBarController-swift','ReusableKit','SwiftMessages','SwiftTheme','JTAppleCalendar','RxSwift','RxCocoa','RxDataSources','RxGesture']
 
 post_install do | installer |
     installer.pods_project.targets.each do |target|
@@ -19,12 +19,14 @@ use_frameworks!         # 修改引入方式，加了这句引入使用#import�
 target 'YYImprove' do
 
     # 基于Alamofire的网络抽象层
-    pod 'Moya', '11.0.2’
-    pod 'Moya/RxSwift', '11.0.2'
-    pod 'RxSwift', '4.2'
-    pod 'RxCocoa', '4.2'
-    pod 'Alamofire', '4.7.2’
-    pod 'ReachabilitySwift', '4.1.0'
+    pod 'Moya', '12.0.0-beta.1’
+    pod 'Moya/RxSwift', '12.0.0-beta.1'
+    pod 'RxSwift', '4.3'
+    pod 'RxCocoa', '4.3'
+    pod 'RxDataSources', '3.1.0'
+    pod 'ReusableKit', '2.0.1'
+    pod 'Alamofire', '4.7.3’
+    pod 'ReachabilitySwift', '4.2.1'
     
     # 如果您使用的是RxSwift，那么您可能会多次遇到以下代码。使用此库将"disposeBag"添加到您的任何子类NSObject
     pod 'NSObject+Rx', '4.3.0'
@@ -41,7 +43,7 @@ target 'YYImprove' do
     pod 'Then', '2.3.0'
     
     # 页面布局
-    pod 'SnapKit', '4.0.0’
+    pod 'SnapKit', '4.0.1’
 
     # 下载图片
     pod 'Kingfisher', '4.7.0’
@@ -63,7 +65,7 @@ target 'YYImprove' do
     pod 'GDPerformanceView-Swift', '~> 1.3.2'
 
     # 加载内容页
-    pod 'SkeletonView', '1.2.1'
+#    pod 'SkeletonView', '1.2.1'
 
     # 皮肤
     # pod 'SwiftTheme', '0.4.1'
@@ -74,7 +76,7 @@ target 'YYImprove' do
 
     # 信息提示
     pod 'SwiftMessages', '4.1.4'
-    pod 'NVActivityIndicatorView', '4.2.1'
+    pod 'NVActivityIndicatorView', '4.4.0'
     
     # 数据持久化
     pod 'SwiftyUserDefaults', '4.0.0-alpha.1'

@@ -131,7 +131,7 @@ extension YYNavUniversalable where Self: UIViewController {
         let titleView = UIView().then {
             $0.backgroundColor = kNavigationBackgroundColor
             self.view.addSubview($0)
-            self.view.bringSubview(toFront: $0)
+            self.view.bringSubviewToFront($0)
             $0.snp.makeConstraints({ (make) in
                 make.top.left.right.equalToSuperview()
                 make.height.equalTo(MetricGlobal.kNavigationTabbarHight)
@@ -200,8 +200,8 @@ extension YYNavUniversalable where Self: UIViewController {
             itemCenterBtn = self.universal(model: aggregation.centerItem!) { model in
                 onNext(model)
             }
-            itemCenterBtn!.setContentHuggingPriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
-            itemCenterBtn!.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: UILayoutConstraintAxis.horizontal)
+            itemCenterBtn!.setContentHuggingPriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
+            itemCenterBtn!.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
             view.addSubview(itemCenterBtn!)
             itemCenterBtn!.snp.makeConstraints { (make) in
                 switch aggregation.centerItem!.position {

@@ -33,8 +33,8 @@ class FoundViewController: YYBaseViewController {
         }
         
         let button = UIButton().then {
-            $0.setTitle("加载框", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.setTitle("加载框", for: UIControl.State.normal)
+            $0.setTitleColor(UIColor.black, for: UIControl.State.normal)
         }
         self.view.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -48,8 +48,8 @@ class FoundViewController: YYBaseViewController {
         }).disposed(by: rx.disposeBag)
         
         let button1 = UIButton().then {
-            $0.setTitle("隐藏", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.setTitle("隐藏", for: UIControl.State.normal)
+            $0.setTitleColor(UIColor.black, for: UIControl.State.normal)
             $0.tag = 2
         }
         self.view.addSubview(button1)
