@@ -29,8 +29,6 @@
 		1BE45E0E20CFEB6E0030F756 /* RegisteredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0D20CFEB6E0030F756 /* RegisteredModel.swift */; };
 		1BE45E1020CFEE470030F756 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E0F20CFEE470030F756 /* Observable+ObjectMapper.swift */; };
 		1BE45E1220CFEE940030F756 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE45E1120CFEE940030F756 /* Observable+Extension.swift */; };
-		8286AD35C08F7453FC80E6D3 /* Pods_YYImproveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC515E10B795CB31D47A138 /* Pods_YYImproveUITests.framework */; };
-		D56B90810E5DCB29070AD4A5 /* Pods_YYImproveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EE4F14DB8EC9517306054B /* Pods_YYImproveTests.framework */; };
 		E0B63E48B4A77F9EF33B2F8F /* Pods_YYImprove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF9FD6D90FC28D44261CBA4 /* Pods_YYImprove.framework */; };
 		F201DA7820CB9CCF00023BBB /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */; };
 		F21F59DD20C7C7E8009D7478 /* YYHomeSearchBarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */; };
@@ -120,12 +118,8 @@
 		1BE45E1120CFEE940030F756 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		1DF9FD6D90FC28D44261CBA4 /* Pods_YYImprove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImprove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234C54E1AF59EA2B6E3F2E06 /* Pods-YYImprove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.debug.xcconfig"; sourceTree = "<group>"; };
-		24067CCB6925A9193377875D /* Pods-YYImproveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests.debug.xcconfig"; sourceTree = "<group>"; };
-		70BC6754A7EAFB437EB5B5D0 /* Pods-YYImproveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AC515E10B795CB31D47A138 /* Pods_YYImproveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A920EBBF400EB9704AD44A8B /* Pods-YYImproveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC33C9E94BB95677E95E2AE4 /* Pods-YYImprove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImprove.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove.release.xcconfig"; sourceTree = "<group>"; };
-		B33B0AB900970B55063D1C70 /* Pods-YYImproveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYImproveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6EE4F14DB8EC9517306054B /* Pods_YYImproveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYImproveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F201DA7720CB9CCF00023BBB /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
 		F21F59DC20C7C7E8009D7478 /* YYHomeSearchBarable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYHomeSearchBarable.swift; sourceTree = "<group>"; };
@@ -195,7 +189,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D56B90810E5DCB29070AD4A5 /* Pods_YYImproveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +196,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8286AD35C08F7453FC80E6D3 /* Pods_YYImproveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +277,6 @@
 			children = (
 				234C54E1AF59EA2B6E3F2E06 /* Pods-YYImprove.debug.xcconfig */,
 				AC33C9E94BB95677E95E2AE4 /* Pods-YYImprove.release.xcconfig */,
-				24067CCB6925A9193377875D /* Pods-YYImproveTests.debug.xcconfig */,
-				70BC6754A7EAFB437EB5B5D0 /* Pods-YYImproveTests.release.xcconfig */,
-				A920EBBF400EB9704AD44A8B /* Pods-YYImproveUITests.debug.xcconfig */,
-				B33B0AB900970B55063D1C70 /* Pods-YYImproveUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -814,11 +802,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F22A09AF20935FD100757897 /* Build configuration list for PBXNativeTarget "YYImproveTests" */;
 			buildPhases = (
-				B7495D4C356B9E6E44145F80 /* [CP] Check Pods Manifest.lock */,
 				F22A099420935FD000757897 /* Sources */,
 				F22A099520935FD000757897 /* Frameworks */,
 				F22A099620935FD000757897 /* Resources */,
-				C57006162C08F5FA491EDFD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -834,11 +820,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F22A09B220935FD100757897 /* Build configuration list for PBXNativeTarget "YYImproveUITests" */;
 			buildPhases = (
-				BD7B89D994873B602265BBF9 /* [CP] Check Pods Manifest.lock */,
 				F22A099F20935FD100757897 /* Sources */,
 				F22A09A020935FD100757897 /* Frameworks */,
 				F22A09A120935FD100757897 /* Resources */,
-				CE493DF99101FE915C8F6BC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -928,76 +912,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B7495D4C356B9E6E44145F80 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YYImproveTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD7B89D994873B602265BBF9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YYImproveUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C57006162C08F5FA491EDFD5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYImproveTests/Pods-YYImproveTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C9DE63952874457AFEA8BDEF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1064,32 +978,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYImprove/Pods-YYImprove-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE493DF99101FE915C8F6BC4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYImproveUITests/Pods-YYImproveUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D90EF0ACCD47CC129CE8A6BA /* [CP] Check Pods Manifest.lock */ = {
@@ -1272,6 +1160,7 @@
 		F22A09AA20935FD100757897 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1334,6 +1223,7 @@
 		F22A09AB20935FD100757897 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1395,6 +1285,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YYImprove/Resource/Global/YYImprove-Bridging-Header.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/YYImprove/Resource/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1419,6 +1310,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P78FA3G2VS;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YYImprove/Resource/Global/YYImprove-Bridging-Header.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/YYImprove/Resource/Plist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1436,7 +1328,6 @@
 		};
 		F22A09B020935FD100757897 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24067CCB6925A9193377875D /* Pods-YYImproveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1458,7 +1349,6 @@
 		};
 		F22A09B120935FD100757897 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70BC6754A7EAFB437EB5B5D0 /* Pods-YYImproveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1480,7 +1370,6 @@
 		};
 		F22A09B320935FD100757897 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A920EBBF400EB9704AD44A8B /* Pods-YYImproveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1501,7 +1390,6 @@
 		};
 		F22A09B420935FD100757897 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B33B0AB900970B55063D1C70 /* Pods-YYImproveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

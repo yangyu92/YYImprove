@@ -70,8 +70,7 @@ extension SwiftMessages {
         config.duration = .forever
         config.presentationStyle = .top
         config.interactiveHide = false
-        config.presentationContext = .window(windowLevel: UIWindow.Level.statusBar.rawValue)
-        
+        config.presentationContext = .window(windowLevel: UIWindow.Level.alert)
         var view: ReachabilityMessageView
         do {
 //            let view = SwiftMessages.viewFromNib(named: "ReachabilityMessageView")
@@ -90,7 +89,7 @@ extension SwiftMessages {
     func showLoding() {
         var config = SwiftMessages.defaultConfig
         config.preferredStatusBarStyle = UIApplication.shared.statusBarStyle
-        config.presentationContext = .window(windowLevel: UIWindow.Level.alert.rawValue)
+        config.presentationContext = .window(windowLevel: UIWindow.Level.alert)
         config.duration = .forever
         config.presentationStyle = .center
         config.interactiveHide = false

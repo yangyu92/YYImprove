@@ -14,8 +14,10 @@ let log = XCGLogger.default
 
 extension AppDelegate {
     func setupXCGLogger() {
-        log.remove(destinationWithIdentifier: XCGLogger.Constants.baseConsoleDestinationIdentifier)
-        log.add(destination: AppleSystemLogDestination(identifier: XCGLogger.Constants.systemLogDestinationIdentifier))
+        
+        // 默认添加一个日志文件
+//        log.remove(destinationWithIdentifier: XCGLogger.Constants.baseConsoleDestinationIdentifier)
+//        log.add(destination: AppleSystemLogDestination(identifier: XCGLogger.Constants.systemLogDestinationIdentifier))
 
         let urls = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
         // Create a file log destination
@@ -30,9 +32,11 @@ extension AppDelegate {
         autoRotatingFileDestination.logQueue = XCGLogger.logQueue
         log.add(destination: autoRotatingFileDestination)
         #if DEBUG
-            log.outputLevel = .debug
+        log.outputLevel = .debug
+        print("debug")
         #else
-            log.outputLevel = .error
+        log.outputLevel = .error
+        print("error")
         #endif
         
         log.logAppDetails()

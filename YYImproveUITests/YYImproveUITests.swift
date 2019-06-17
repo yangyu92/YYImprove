@@ -46,10 +46,10 @@ class YYImproveUITests: XCTestCase {
             .element.children(matching: .other)
             .element.children(matching: .button)
             .element(boundBy: 0).tap()
-        
+                
         let textField = app.textFields["请输入手机号"]
         textField.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["清除文本"]/*[[".textFields[\"请输入手机号\"].buttons[\"清除文本\"]",".buttons[\"清除文本\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["清除文本"].tap()
         textField.typeText("13397470679")
         textField.tap()
         

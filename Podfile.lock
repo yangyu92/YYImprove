@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (4.7.3)
   - Differentiator (3.1.0)
-  - ESTabBarController-swift (2.6.2)
+  - ESTabBarController-swift (2.6.3)
   - GDPerformanceView-Swift (1.3.2)
   - Hue (3.0.1)
-  - Kingfisher (4.7.0)
+  - Kingfisher (4.10.0)
   - Moya (12.0.0-beta.1):
     - Moya/Core (= 12.0.0-beta.1)
   - Moya/Core (12.0.0-beta.1):
@@ -13,8 +13,8 @@ PODS:
   - Moya/RxSwift (12.0.0-beta.1):
     - Moya/Core
     - RxSwift (~> 4.0)
-  - "NSObject+Rx (4.3.0)":
-    - RxSwift (~> 4.0)
+  - "NSObject+Rx (4.4.0)":
+    - RxSwift (~> 4.3)
   - NVActivityIndicatorView (4.4.0):
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
@@ -24,30 +24,26 @@ PODS:
   - ObjectMapper (3.3.0)
   - ReachabilitySwift (4.2.1)
   - Result (4.0.0)
-  - ReusableKit (2.0.1):
-    - ReusableKit/Core (= 2.0.1)
-  - ReusableKit/Core (2.0.1)
-  - RxBlocking (4.2.0):
-    - RxSwift (~> 4.0)
-  - RxCocoa (4.3.0):
+  - ReusableKit (2.1.0):
+    - ReusableKit/Core (= 2.1.0)
+  - ReusableKit/Core (2.1.0)
+  - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxDataSources (3.1.0):
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - RxGesture (1.2.1):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.3.0)
-  - RxTest (4.2.0):
-    - RxSwift (~> 4.0)
-  - SnapKit (4.0.1)
-  - SwiftMessages (4.1.4):
-    - SwiftMessages/App (= 4.1.4)
-  - SwiftMessages/App (4.1.4)
+  - RxGesture (2.0.0):
+    - RxCocoa (~> 4.3.1)
+    - RxSwift (~> 4.3.1)
+  - RxSwift (4.3.1)
+  - SnapKit (4.2.0)
+  - SwiftMessages (6.0.0):
+    - SwiftMessages/App (= 6.0.0)
+  - SwiftMessages/App (6.0.0)
   - SwiftyUserDefaults (4.0.0-alpha.1)
   - Swinject (2.4.1)
-  - Then (2.3.0)
+  - Then (2.4.0)
   - XCGLogger (6.0.4):
     - XCGLogger/Core (= 6.0.4)
   - XCGLogger/Core (6.0.4):
@@ -55,28 +51,26 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
-  - ESTabBarController-swift (= 2.6.2)
+  - ESTabBarController-swift (= 2.6.3)
   - GDPerformanceView-Swift (~> 1.3.2)
   - Hue (= 3.0.1)
-  - Kingfisher (= 4.7.0)
+  - Kingfisher (= 4.10.0)
   - Moya (= 12.0.0-beta.1)
   - Moya/RxSwift (= 12.0.0-beta.1)
-  - "NSObject+Rx (= 4.3.0)"
+  - "NSObject+Rx (= 4.4.0)"
   - NVActivityIndicatorView (= 4.4.0)
   - ObjectMapper (= 3.3.0)
   - ReachabilitySwift (= 4.2.1)
-  - ReusableKit (= 2.0.1)
-  - RxBlocking (= 4.2)
-  - RxCocoa (= 4.3)
+  - ReusableKit (= 2.1.0)
+  - RxCocoa (= 4.3.1)
   - RxDataSources (= 3.1.0)
-  - RxGesture (= 1.2.1)
-  - RxSwift (= 4.3)
-  - RxTest (= 4.2)
-  - SnapKit (= 4.0.1)
-  - SwiftMessages (= 4.1.4)
+  - RxGesture (= 2.0.0)
+  - RxSwift (= 4.3.1)
+  - SnapKit (= 4.2.0)
+  - SwiftMessages (= 6.0.0)
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - Swinject (= 2.4.1)
-  - Then (= 2.3.0)
+  - Then (= 2.4.0)
   - XCGLogger (= 6.0.4)
 
 SPEC REPOS:
@@ -95,12 +89,10 @@ SPEC REPOS:
     - ReachabilitySwift
     - Result
     - ReusableKit
-    - RxBlocking
     - RxCocoa
     - RxDataSources
     - RxGesture
     - RxSwift
-    - RxTest
     - SnapKit
     - SwiftMessages
     - SwiftyUserDefaults
@@ -111,31 +103,29 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
+  ESTabBarController-swift: edb8d8bc2cd043a8ddb43ab501fefdf9865ac519
   GDPerformanceView-Swift: a74cd679587b199e4526492b6e68ce61593c6123
   Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
-  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Moya: 1b8d16b4dac4302c323ca95077a733836e73484a
-  "NSObject+Rx": 9a5eeff5e08156f849fa973514456f28eef08742
+  "NSObject+Rx": 3291262e7eddc434b6c98d1e85dedc4faa451ace
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   ReachabilitySwift: 35720ffea59c1c76d15f885be77fd33e33985427
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
-  ReusableKit: 11b5bde14553a35bcf3979412dbfd1e690392f14
-  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
-  RxCocoa: 71b9cce833fbcb89a8eec11816dd225830c2bd3c
+  ReusableKit: d0b040de03b293288b0ca27a78602691d3346d9b
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
-  RxSwift: a9717a34df3179fe63563f76e046ad345078dd3a
-  RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  RxGesture: b329dd74ea8d607b176484063e728d6db06c6d59
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   Swinject: f7f15a9672e99328c1f07f277091087917215700
-  Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 3095932a4d92015d0086cce3877815254bfe54ec
+PODFILE CHECKSUM: b10e59d47d0655d6bdd258e48813d501563a5bab
 
 COCOAPODS: 1.5.3
